@@ -67,6 +67,15 @@
     figure.append(image,caption,source);return figure;
   }
 
+  function renderTerrainLayoutReference(structured){
+    const reference=structured?.terrainLayoutReference;if(!reference)return null;
+    const figure=document.createElement('figure');figure.className='deployment-reference terrain-layout-reference';
+    const image=document.createElement('img');image.src=reference.url;image.alt=reference.alt;image.loading='lazy';image.decoding='async';image.referrerPolicy='no-referrer';
+    const caption=document.createElement('figcaption');caption.textContent=`Accepted secondary measurements reference · Layout ${reference.variant} · ${reference.battlefieldWidthInches}\" × ${reference.battlefieldHeightInches}\" battlefield · Official Event Companion remains authoritative`;
+    const source=document.createElement('a');source.href=reference.url;source.target='_blank';source.rel='noopener noreferrer';source.textContent='Open measurements reference →';
+    figure.append(image,caption,source);return figure;
+  }
+
   function renderReferences(label,ids,limit=24){
     const resolved=[...new Set(ids)].map(id=>api.get(id)).filter(Boolean);
     if(!resolved.length)return null;
@@ -102,6 +111,7 @@
     if(summaryText&&!placeholder.test(summaryText)&&!repeatsDefinition(summaryText,definitionText)){const quick=renderDefinition(summaryText);quick.classList.add('summary');detail.append(sectionLabel('Quick rule'),quick);}
     const profile=renderProfile(term.structured);if(profile)detail.append(sectionLabel('Profile'),profile);
     const deploymentReference=renderDeploymentReference(term.structured);if(deploymentReference)detail.append(sectionLabel('Deployment reference'),deploymentReference);
+    const terrainLayoutReference=renderTerrainLayoutReference(term.structured);if(terrainLayoutReference)detail.append(sectionLabel('Terrain layout reference'),terrainLayoutReference);
     if(definitionText&&!placeholder.test(definitionText)&&term.presentation!=='profile')detail.append(sectionLabel(normalize(definitionText)===normalize(summaryText)?'Rule':'Full rule'),renderDefinition(definitionText));
     if(term.fullRulePath){const action=document.createElement('a');action.className='full-rule-action';action.href=new URL(`../${term.fullRulePath.replace(/^\/+/, '')}`,location.href).href;action.textContent='Open full rule →';action.addEventListener('click',()=>window.WHGlossaryReturn?.setRestoreMode('manual'));detail.append(action);}
     const groups=[['Rules of this unit type',term.references?.intrinsicRules||[]],['Referenced by core rules',term.references?.referencedByRules||[]],['Common rules',term.references?.commonRules||[]],['Faction terms',term.references?.factionTerms||[]],['Related keywords',term.references?.relatedKeywords||[]],['Related terms',term.related||[]]];

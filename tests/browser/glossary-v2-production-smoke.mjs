@@ -23,6 +23,7 @@ const twistIds=['missions::twist-night-fighting','missions::twist-mirrored-world
 const forceDispositionId='missions::force-disposition-disruption';
 const matchupId='missions::force-disposition-matchup-disruption--priority-assets';
 const deploymentIds=['missions::deployment-crucible-of-battle','missions::deployment-dawn-of-war','missions::deployment-hammer-and-anvil'];
+const terrainLayoutIds=['missions::terrain-layout-disruption--disruption-a','missions::terrain-layout-priority-assets--priority-assets-b','missions::terrain-layout-purge-the-foe--reconnaissance-c'];
 const compact=value=>String(value).replace(/\s+/g,' ').trim();
 const mime={'.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp'};
 const server=createServer((request,response)=>{try{
@@ -37,6 +38,7 @@ try{
   for(const viewport of [{name:'phone',width:390,height:844},{name:'desktop',width:1440,height:900}]){
     const context=await browser.newContext({viewport,serviceWorkers:'block'}),page=await context.newPage(),errors=[];
     await page.route(/https:\/\/wahapedia\.ru\/wh40k11ed\/img\/maps\/cards\/CA7_.*\.png/,route=>route.fulfill({status:200,contentType:'image/png',body:Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=','base64')}));
+    await page.route(/https:\/\/game-datamissions\.com\/assets\/11th\/layouts\/with-measurements\/.*\.png/,route=>route.fulfill({status:200,contentType:'image/png',body:Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=','base64')}));
     page.on('pageerror',error=>errors.push(error.message));
     page.on('console',message=>{if(message.type()==='error')errors.push(message.text());});
 
@@ -133,6 +135,34 @@ try{
       assert.equal(compact(await page.locator('#termPopupSummary').innerText()),article,`${viewport.name}: ${id} popup/article parity`);
       await page.locator('#termPopupClose').click();
     }
+    for(const id of terrainLayoutIds){
+      const expected=byId.get(id),facts=expected.facts;
+      await page.goto(`${base}/glossary/index.html#${encodeURIComponent(id)}`);await page.locator('body.article-open').waitFor();
+      const image=page.locator('#termDetail .terrain-layout-reference img');await image.waitFor();
+      assert.equal(await image.getAttribute('src'),facts.visualReferences.measurements.url,`${viewport.name}: ${id} accepted measurements visual`);
+      await page.waitForFunction(()=>{const image=document.querySelector('#termDetail .terrain-layout-reference img');return image?.complete&&image.naturalWidth>0;});
+      assert.equal(await image.getAttribute('alt'),`${expected.label} measured terrain layout reference`,`${viewport.name}: ${id} visual alternative text`);
+      assert(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),`${viewport.name}: ${id} must not cause page-wide horizontal overflow`);
+      const article=compact(await page.locator('#termDetail .definition').last().innerText());
+      assert(article.includes(`LAYOUT VARIANT ${facts.variant}`),`${viewport.name}: ${id} variant`);
+      assert.match(article,/BATTLEFIELD 44\" × 60\"\./,`${viewport.name}: ${id} battlefield dimensions`);
+      assert(article.includes(byId.get(`missions::${facts.matchupId}`).label),`${viewport.name}: ${id} matchup`);
+      assert.match(article,/remain pending digitization\./,`${viewport.name}: ${id} pending geometry status`);
+      await page.evaluate(termId=>{const trigger=document.createElement('button');trigger.type='button';trigger.dataset.autolink='';trigger.dataset.term=termId;trigger.textContent='Terrain Layout';document.querySelector('#termDetail').append(trigger);},id);
+      await page.locator(`[data-autolink][data-term="${id}"]`).click();await page.locator('#termPopup[open]').waitFor();
+      assert.equal(compact(await page.locator('#termPopupSummary').innerText()),article,`${viewport.name}: ${id} popup/article parity`);
+      await page.locator('#termPopupClose').click();
+    }
+    await page.goto(`${base}/glossary/index.html#${encodeURIComponent(forceDispositionId)}`);await page.locator('body.article-open').waitFor();
+    await page.evaluate(()=>document.querySelector('.search-another').click());await page.locator('#search').fill('Disruption and Priority Assets');await page.waitForTimeout(180);
+    await page.locator('.term-button').filter({hasText:'Disruption and Priority Assets',has:page.locator('small',{hasText:'Force Disposition Matchup'})}).click();await page.locator('body.article-open').waitFor();
+    assert.equal(decodeURIComponent(new URL(page.url()).hash.slice(1)),matchupId,`${viewport.name}: Force Disposition to matchup navigation`);
+    const chainLayoutId='missions::terrain-layout-disruption--priority-assets-a';
+    await page.locator('.connection-details > summary').click();
+    await page.locator('.reference-card').filter({hasText:byId.get(chainLayoutId).label}).click();
+    assert.equal(decodeURIComponent(new URL(page.url()).hash.slice(1)),chainLayoutId,`${viewport.name}: matchup to Terrain Layout navigation`);
+    await page.goBack();await page.locator('body.article-open').waitFor();
+    assert.equal(decodeURIComponent(new URL(page.url()).hash.slice(1)),matchupId,`${viewport.name}: Terrain Layout Back returns to matchup`);
     await page.goto(`${base}/glossary/index.html#${encodeURIComponent(mortarionsHammerId)}`);await page.locator('body.article-open').waitFor();
     const mortarionsHammerArticle=await page.locator('#termDetail').innerText();
     assert.match(mortarionsHammerArticle,/Miasmic Bombardment/i,`${viewport.name}: Mortarion’s Hammer rule projection`);

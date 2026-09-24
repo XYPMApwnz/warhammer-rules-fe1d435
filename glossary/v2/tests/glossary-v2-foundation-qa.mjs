@@ -6,6 +6,7 @@ import {BOOK_IDS,FACTUAL_INPUTS,buildGlossaryV2Index,createGlossaryV2Index,loadG
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../../..');
 const generated=JSON.parse(fs.readFileSync(path.join(root,'glossary/v2/generated/index.en.json'),'utf8'));
+const terrainReferences=JSON.parse(fs.readFileSync(path.join(root,'missions/sources/game-data-missions-terrain-reference-2026-09-22.json'),'utf8'));
 const inputs=await loadGlossaryV2Inputs();
 const index=createGlossaryV2Index(inputs);
 assert.deepEqual(generated,index,'generated Glossary V2 index must equal the effective-domain projection');
@@ -85,6 +86,32 @@ for(const entry of deployments){
   assert.equal(source.type,'AUTHENTICATED_RASTER_REFERENCE',`${entry.id}: authenticated raster registration`);
   assert(source.url.endsWith(entry.facts.sourceImagePath),`${entry.id}: registered visual must match accepted source path`);
   assert(Number.isInteger(source.pixelDimensions.width)&&Number.isInteger(source.pixelDimensions.height)&&Number.isInteger(source.byteSize)&&source.sha256,`${entry.id}: authenticated visual metadata`);
+}
+const terrainLayouts=index.entries.filter(entry=>entry.recordType==='TERRAIN_LAYOUT'),acceptedTerrainLayouts=terrainReferences.matchups.flatMap(matchup=>matchup.layouts);
+assert.equal(terrainLayouts.length,45,'all 45 Terrain Layout identities must be projected');
+assert.equal(new Set(terrainLayouts.map(entry=>entry.id)).size,45,'Terrain Layout identities must remain unique');
+assert.deepEqual(Object.fromEntries(['A','B','C'].map(variant=>[variant,terrainLayouts.filter(entry=>entry.facts.variant===variant).length])),{A:15,B:15,C:15},'each matchup must retain A/B/C variants');
+assert.equal(new Set(terrainLayouts.map(entry=>entry.facts.visualReferences.measurements.url)).size,45,'each Terrain Layout must retain its own measurements visual');
+assert.equal(terrainLayouts.reduce((count,entry)=>count+entry.facts.geometry.measurements.length,0),90,'all 90 battlefield dimension measurements must remain projected');
+for(const entry of terrainLayouts){
+  const facts=entry.facts,geometry=facts.geometry,registration=geometry.sourceRegistration,accepted=acceptedTerrainLayouts.find(layout=>layout.officialPdfPage===registration.page);
+  assert(accepted,`${entry.id}: independently enrolled visual reference`);
+  assert.equal(facts.variant,accepted.officialLayoutIdentity,`${entry.id}: accepted A/B/C identity`);
+  assert.deepEqual(geometry.coordinateSystem.battlefield,{width:44,height:60},`${entry.id}: battlefield dimensions`);
+  assert.equal(geometry.digitizationStatus,'SOURCE_REGISTERED_PENDING_VERIFIED_DIGITIZATION',`${entry.id}: pending digitization state`);
+  assert.deepEqual([geometry.zones,geometry.objectives,geometry.terrainAreas],[[],[],[]],`${entry.id}: unverified geometry must remain absent`);
+  assert.equal(geometry.requiredVerifiedLayers.length,4,`${entry.id}: all pending layout layers retained`);
+  assert.equal(registration.type,'OFFICIAL_PDF_VECTOR_PAGE',`${entry.id}: official PDF registration`);
+  assert.equal(registration.pdfPath,terrainReferences.officialAuthority.localPath,`${entry.id}: current official Event Companion source`);
+  assert(Object.values(registration.battlefieldBoundsPdfPoints).every(Number.isFinite),`${entry.id}: registered PDF bounds`);
+  assert.equal(facts.visualReferences.factualAuthority,false,`${entry.id}: visual reference is not factual authority`);
+  assert.equal(facts.visualReferences.authorityClass,'SECONDARY_VISUAL_REFERENCE',`${entry.id}: visual authority class`);
+  assert.equal(facts.visualReferences.plain.url,accepted.assets.plain.url,`${entry.id}: accepted plain visual`);
+  assert.equal(facts.visualReferences.plain.sha256,accepted.assets.plain.sha256,`${entry.id}: accepted plain fingerprint`);
+  assert.equal(facts.visualReferences.measurements.url,accepted.assets.measurements.url,`${entry.id}: accepted measurements visual`);
+  assert.equal(facts.visualReferences.measurements.sha256,accepted.assets.measurements.sha256,`${entry.id}: accepted measurements fingerprint`);
+  const matchup=index.entries.find(candidate=>candidate.id===`missions::${facts.matchupId}`);
+  assert(matchup?.facts.layoutIds.includes(facts.id),`${entry.id}: exact canonical matchup binding`);
 }
 assert.deepEqual(index.coverage.armyEffectiveBooks,BOOK_IDS,'all nine supported Army Books must contribute');
 for(const bookId of BOOK_IDS)assert(index.entries.some(entry=>entry.domain==='ARMY'&&entry.contexts.some(context=>context.effectiveBookId===bookId)),`${bookId} must contribute an effective Army context`);

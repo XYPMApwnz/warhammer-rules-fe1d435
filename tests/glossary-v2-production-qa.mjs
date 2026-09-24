@@ -212,6 +212,38 @@ const crossWiredDeploymentScope={window:{WH40K_GLOSSARY_V2_INDEX:crossWiredDeplo
 vm.runInNewContext(read('glossary/v2/runtime/glossary-v2-runtime.js'),crossWiredDeploymentScope);
 assert.equal(crossWiredDeploymentScope.window.WH40K_GLOSSARY.get(crossWiredDawn.id).definition.en,'','cross-wired Deployment visuals must fail closed');
 
+const terrainLayouts=index.entries.filter(entry=>entry.recordType==='TERRAIN_LAYOUT');
+assert.equal(terrainLayouts.length,45,'all 45 Terrain Layouts must remain standalone');
+assert.equal(new Set(terrainLayouts.map(entry=>entry.id)).size,45,'Terrain Layout articles must not duplicate');
+assert.deepEqual(Object.fromEntries(['A','B','C'].map(variant=>[variant,terrainLayouts.filter(entry=>entry.facts.variant===variant).length])),{A:15,B:15,C:15},'all A/B/C variants');
+assert.equal(new Set(terrainLayouts.map(entry=>entry.facts.visualReferences.measurements.url)).size,45,'Terrain Layout visuals must not cross-wire');
+for(const source of terrainLayouts){
+  const article=api.get(source.id),definition=article.definition.en,facts=source.facts,matchup=index.entries.find(entry=>entry.id===`missions::${facts.matchupId}`);
+  assert(definition.trim(),`${source.id}: useful Terrain Layout definition`);
+  assert.notEqual(definition.trim().toLocaleLowerCase(),source.label.trim().toLocaleLowerCase(),`${source.id}: definition must not echo title`);
+  assert(definition.includes(`MATCHUP\n${matchup.label}`),`${source.id}: canonical matchup label`);
+  assert(definition.includes(`LAYOUT VARIANT\n${facts.variant}`),`${source.id}: A/B/C variant`);
+  assert.match(definition,/BATTLEFIELD\n44\" × 60\"\./,`${source.id}: battlefield dimensions`);
+  assert(definition.includes(facts.provenance.contentLocator),`${source.id}: official source locator`);
+  assert.match(definition,/Accepted secondary measurements view\. The official Event Companion remains the factual authority\./,`${source.id}: visual authority disclosure`);
+  assert.match(definition,/Verified machine-readable terrain footprints, terrain positions, objective positions, measurement endpoint bindings remain pending digitization\./,`${source.id}: honest pending geometry status`);
+  assert.doesNotMatch(definition,/SOURCE_REGISTERED_PENDING_VERIFIED_DIGITIZATION|TERRAIN_FOOTPRINT_POLYGONS|MEASUREMENT_ENDPOINT_BINDINGS|event-layout-|force-disposition-matchup-/,`${source.id}: raw internal codes hidden`);
+  const reference=article.structured.terrainLayoutReference;
+  assert.equal(reference.url,facts.visualReferences.measurements.url,`${source.id}: exact accepted measurements visual`);
+  assert.equal(reference.sha256,facts.visualReferences.measurements.sha256,`${source.id}: visual fingerprint`);
+  assert.equal(reference.variant,facts.variant,`${source.id}: structured variant`);
+  assert.equal(reference.matchupId,matchup.id,`${source.id}: structured canonical matchup`);
+  assert(article.related.includes(matchup.id),`${source.id}: canonical matchup link`);
+  for(const memberId of matchup.facts.memberForceDispositionIds)assert(article.related.includes(`missions::${memberId}`),`${source.id}: canonical Force Disposition link ${memberId}`);
+  assert.deepEqual([facts.geometry.zones,facts.geometry.objectives,facts.geometry.terrainAreas],[[],[],[]],`${source.id}: no fabricated geometry`);
+  assert.equal(api.get(source.id).definition.en,definition,`${source.id}: popup/article identity parity`);
+}
+const duplicateVisualIndex=structuredClone(index),duplicateVisualA=duplicateVisualIndex.entries.find(entry=>entry.id==='missions::terrain-layout-disruption--disruption-a'),duplicateVisualB=duplicateVisualIndex.entries.find(entry=>entry.id==='missions::terrain-layout-disruption--disruption-b');
+duplicateVisualA.facts.visualReferences.measurements.url=duplicateVisualB.facts.visualReferences.measurements.url;
+const duplicateVisualScope={window:{WH40K_GLOSSARY_V2_INDEX:duplicateVisualIndex}};
+vm.runInNewContext(read('glossary/v2/runtime/glossary-v2-runtime.js'),duplicateVisualScope);
+assert.equal(duplicateVisualScope.window.WH40K_GLOSSARY.get(duplicateVisualA.id).definition.en,'','cross-wired Terrain Layout visuals must fail closed');
+
 assert.equal(index.counts.total,4630);
 assert.equal(index.counts.standalone,1738);
 assert.equal(index.counts.scopedChildren,2892);

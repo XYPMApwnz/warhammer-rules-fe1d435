@@ -318,6 +318,31 @@
     const reference=deploymentReferenceOf(entry);if(!reference)return'';
     return [`BATTLEFIELD\n${reference.battlefieldWidthInches}\" × ${reference.battlefieldHeightInches}\".`,`SOURCE REFERENCE\n${reference.sourceLocator}. Authenticated raster: ${reference.width} × ${reference.height}px.`,`GEOMETRY STATUS\nSource visual registered. Verified machine-readable ${reference.pendingLayers.join(', ')} remain pending digitization.`].join('\n\n');
   };
+  const terrainLayoutReferenceOf=entry=>{
+    const facts=entry.facts||{},geometry=facts.geometry,registration=geometry?.sourceRegistration,visuals=facts.visualReferences,battlefield=geometry?.coordinateSystem?.battlefield;
+    const expectedLayers=new Map([
+      ['TERRAIN_FOOTPRINT_POLYGONS','terrain footprints'],
+      ['TERRAIN_POSITIONS','terrain positions'],
+      ['OBJECTIVE_POSITIONS','objective positions'],
+      ['MEASUREMENT_ENDPOINT_BINDINGS','measurement endpoint bindings']
+    ]),orientationLabels=new Map([['attacker-top-defender-bottom','Attacker at top; Defender at bottom.'],['attacker-left-defender-right','Attacker at left; Defender at right.']]);
+    const matchup=byId.get(`missions::${facts.matchupId}`),members=(matchup?.facts?.memberForceDispositionIds||[]).map(id=>byId.get(`missions::${id}`));
+    if(geometry?.kind!=='TERRAIN_LAYOUT_GEOMETRY'||geometry.digitizationStatus!=='SOURCE_REGISTERED_PENDING_VERIFIED_DIGITIZATION')return null;
+    if(!['A','B','C'].includes(facts.variant)||!matchup||matchup.recordType!=='FORCE_DISPOSITION_MATCHUP'||members.length!==2||members.some(member=>!member||member.recordType!=='FORCE_DISPOSITION'))return null;
+    if(!matchup.facts.layoutIds?.includes(facts.id)||!Number.isFinite(battlefield?.width)||!Number.isFinite(battlefield?.height)||battlefield.width!==44||battlefield.height!==60)return null;
+    if(!Array.isArray(geometry.measurements)||geometry.measurements.length!==2||(geometry.zones||[]).length||(geometry.objectives||[]).length||(geometry.terrainAreas||[]).length)return null;
+    if(registration?.type!=='OFFICIAL_PDF_VECTOR_PAGE'||!text(registration.pdfPath)||!Number.isInteger(registration.page)||!registration.battlefieldBoundsPdfPoints)return null;
+    if(visuals?.factualAuthority!==false||visuals.authorityClass!=='SECONDARY_VISUAL_REFERENCE'||!orientationLabels.has(visuals.orientation))return null;
+    if(!/^https:\/\//.test(visuals.plain?.url||'')||!text(visuals.plain?.sha256)||!/^https:\/\//.test(visuals.measurements?.url||'')||!text(visuals.measurements?.sha256))return null;
+    if(entries.filter(candidate=>candidate.recordType==='TERRAIN_LAYOUT'&&candidate.facts?.visualReferences?.measurements?.url===visuals.measurements.url).length!==1)return null;
+    const pendingLayers=(geometry.requiredVerifiedLayers||[]).map(value=>expectedLayers.get(value));
+    if(pendingLayers.length!==expectedLayers.size||pendingLayers.some(value=>!value))return null;
+    return Object.freeze({url:visuals.measurements.url,sha256:visuals.measurements.sha256,alt:`${entry.label} measured terrain layout reference`,variant:facts.variant,matchupId:matchup.id,matchupLabel:matchup.label,memberIds:Object.freeze(members.map(member=>member.id)),memberLabels:Object.freeze(members.map(member=>member.label)),battlefieldWidthInches:battlefield.width,battlefieldHeightInches:battlefield.height,orientation:orientationLabels.get(visuals.orientation),officialSource:text(facts.provenance?.contentLocator),officialPdfPath:registration.pdfPath,officialPdfPage:registration.page,pendingLayers:Object.freeze(pendingLayers)});
+  };
+  const terrainLayoutDefinition=entry=>{
+    const reference=terrainLayoutReferenceOf(entry);if(!reference)return'';
+    return [`MATCHUP\n${reference.matchupLabel}`,`FORCE DISPOSITIONS\n${reference.memberLabels.join(' ↔ ')}`,`LAYOUT VARIANT\n${reference.variant}`,`BATTLEFIELD\n${reference.battlefieldWidthInches}\" × ${reference.battlefieldHeightInches}\". ${reference.orientation}`,`OFFICIAL SOURCE\n${reference.officialSource}. Registered Event Companion page ${reference.officialPdfPage}.`,`VISUAL REFERENCE\nAccepted secondary measurements view. The official Event Companion remains the factual authority.`,`GEOMETRY STATUS\nSource references registered. Verified machine-readable ${reference.pendingLayers.join(', ')} remain pending digitization.`].join('\n\n');
+  };
   function definitionOf(entry){
     const facts=entry.facts||{};
     if(entry.recordType==='DETACHMENT'){const definition=detachmentDefinition(entry);if(definition)return definition;}
@@ -327,6 +352,7 @@
     if(entry.recordType==='FORCE_DISPOSITION')return forceDispositionDefinition(entry);
     if(entry.recordType==='FORCE_DISPOSITION_MATCHUP')return forceDispositionMatchupDefinition(entry);
     if(entry.recordType==='DEPLOYMENT')return deploymentDefinition(entry);
+    if(entry.recordType==='TERRAIN_LAYOUT')return terrainLayoutDefinition(entry);
     for(const field of ['semanticContent','text','full','definition','ruleText','rulesText','answer','description']){const value=text(facts[field]);if(value)return value;}
     const structuredOptions=structuredOptionsDefinition(facts);if(structuredOptions)return structuredOptions;
     const content=collectContent(facts.content);if(content)return content;
@@ -349,6 +375,7 @@
   function structuredOf(entry){
     const facts=entry.facts||{};
     if(entry.recordType==='DEPLOYMENT'){const deploymentReference=deploymentReferenceOf(entry);if(deploymentReference)return{deploymentReference};}
+    if(entry.recordType==='TERRAIN_LAYOUT'){const terrainLayoutReference=terrainLayoutReferenceOf(entry);if(terrainLayoutReference)return{terrainLayoutReference};}
     if(entry.recordType==='WEAPON_PROFILE'){
       const ranged=(facts.mode||'').toLowerCase()==='ranged'||String(facts.range||facts.Range||'').toLowerCase()!=='melee';
       return{weapon:{Range:facts.range??facts.Range??'',A:facts.a??facts.A??'',[ranged?'BS':'WS']:facts.skill??facts.bs??facts.BS??facts.ws??facts.WS??'',S:facts.s??facts.S??'',AP:facts.ap??facts.AP??'',D:facts.d??facts.D??'',Abilities:facts.abilities??facts.Abilities??''}};
@@ -362,7 +389,14 @@
   const scopeOf=entry=>entry.domain==='CORE'?'global':entry.domain==='MISSIONS'?'missions':entry.sourceOwner?.bookId||entry.contexts?.[0]?.effectiveBookId||entry.domain.toLocaleLowerCase();
   const kindOf=entry=>entry.recordType.toLocaleLowerCase().replaceAll('_','-');
   const sourceOf=entry=>{const source=entry.provenance?.base||entry.provenance||{};return{documentId:source.sourceId||source.profileId||entry.sourceOwner?.interface||entry.domain,revision:source.sourceVersion||source.sourceDate||entry.currentness?.asOf||entry.currentness?.cutoff||'',locator:source.sourceLocator?.partition||source.contentLocator||entry.sourceOwner?.canonicalId||''};};
-  const relatedOf=entry=>[...new Set((entry.canonicalReferences||[]).map(reference=>reference.id).filter(id=>byId.has(id)))];
+  const relatedOf=entry=>{
+    const ids=(entry.canonicalReferences||[]).map(reference=>reference.id).filter(id=>byId.has(id));
+    if(entry.recordType==='TERRAIN_LAYOUT'){
+      const matchup=byId.get(`missions::${entry.facts?.matchupId}`);
+      for(const id of matchup?.facts?.memberForceDispositionIds||[]){const canonical=`missions::${id}`;if(byId.has(canonical))ids.push(canonical);}
+    }
+    return[...new Set(ids)];
+  };
   const articleCache=new Map();
   function article(entry){
     let result=articleCache.get(entry.id);if(result)return result;

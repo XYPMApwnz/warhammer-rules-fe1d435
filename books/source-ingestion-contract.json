@@ -15,7 +15,7 @@
       "authority": "bsdata-snapshot",
       "sourceType": "bsdata-snapshot",
       "acceptedRevision": "fa30730fca11fbfe87be90684d481d50e0efaf66",
-      "acceptedHash": "db61b064a9e18c8f56d995a6792091432c15a4fd995774358512630e8277a68a",
+      "acceptedHash": "c1f98f9ba0e0a8e248a729553d2a130a8593ff1827701b2279c903313e48d223",
       "lastChecked": "2026-09-14",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "UNKNOWN",
@@ -31,7 +31,7 @@
         {
           "path": "books/adeptus-mechanicus/content/adeptus-mechanicus-codex-datasheets.en.json",
           "normalization": "lf",
-          "sha256": "50dc74bdbb7ff3ee890f27006f03f88b5b4e0c8e4e704b38912a3b173331d2e7"
+          "sha256": "8745f76dfa0d2019e96ec4d22248d4c66055932cfc9cf8fab6f248a4da4ace12"
         }
       ],
       "notes": "Enrolled factual owner for datasheets, profiles, points-structure."
@@ -304,7 +304,7 @@
       "authority": "bsdata-snapshot",
       "sourceType": "bsdata-snapshot",
       "acceptedRevision": "d5af57cf1e79b0b038133e84e58de334fea852d0",
-      "acceptedHash": "226cd8d7de85d2bf97dbc03b5a5def1f6cc80ed3d1032c94ee24b33ba2d7a60a",
+      "acceptedHash": "4a4e788d72a403eaa52302848f37179e3bfeed079782075e36fc440fb287dd1d",
       "lastChecked": "2026-09-14",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "UNKNOWN",
@@ -320,7 +320,7 @@
         {
           "path": "books/blood-angels/content/blood-angels-codex-datasheets.en.json",
           "normalization": "lf",
-          "sha256": "a77614bb76e7e253a38c3181f252b8d3bc870809280801eca2468a9c5f2d556a"
+          "sha256": "fca0f0ff29a4bfbf50c682b7dac46622b1830aa32ce8b39f6b1575567ef159a2"
         }
       ],
       "notes": "Enrolled factual owner for datasheets, profiles, points-structure."
@@ -488,7 +488,7 @@
       "authority": "bsdata-snapshot",
       "sourceType": "bsdata-snapshot",
       "acceptedRevision": "b6d17952f74814528b4c70ef5016c86b922d5257",
-      "acceptedHash": "2fc1c35874c0773e70857c5e31145cca645efbdc28e102e0b28018c21031cc5b",
+      "acceptedHash": "6a48c725c25445761afaa0e846cfe217525e901f8f001a4a0173b8489b325e0d",
       "lastChecked": "2026-08-12",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "UNKNOWN",
@@ -504,7 +504,7 @@
         {
           "path": "books/chaos-space-marines/content/chaos-space-marines-codex-datasheets.en.json",
           "normalization": "lf",
-          "sha256": "8b56e34fcfd702e2e7091a44c894596b92ca67e22c3a2c323ca921de3fd97e6c"
+          "sha256": "780b7f9bcb34c804df70acb405eaa5d9dc74840ea81a95bb5741fc9326b4e56f"
         }
       ],
       "notes": "Enrolled factual owner for datasheets, profiles, points-structure."
@@ -586,7 +586,7 @@
       "authority": "bsdata-snapshot",
       "sourceType": "bsdata-snapshot",
       "acceptedRevision": "fa30730fca11fbfe87be90684d481d50e0efaf66",
-      "acceptedHash": "d0da2e7e13b265635ae61e2233f5ac65bb1fe66d469653430d248a65046ea063",
+      "acceptedHash": "303b8228988f8e2c01604faf07591687ddf65ee6ef496fbd1e1c487d777d48f8",
       "lastChecked": "2026-09-14",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "UNKNOWN",
@@ -602,7 +602,7 @@
         {
           "path": "books/dark-angels/content/dark-angels-codex-datasheets.en.json",
           "normalization": "lf",
-          "sha256": "0347a3e52af5a2fb976e4691e2a0b027ad436bd2243fceceb227fc0fabfa2c6e"
+          "sha256": "26612072bf8cc5f0dc65b86b434cb065a46ae643a3fd348c73225d638c27e60c"
         }
       ],
       "notes": "Enrolled factual owner for datasheets, profiles, points-structure."
@@ -946,7 +946,7 @@
       "authority": "bsdata-snapshot",
       "sourceType": "bsdata-snapshot",
       "acceptedRevision": "fa30730fca11fbfe87be90684d481d50e0efaf66",
-      "acceptedHash": "8023a884ea59de08545dc5546c2ffc02e0c66b03c67065be41eca33c8b3145b0",
+      "acceptedHash": "c88799d7c54dc7d8c3e6bed6c78b6791547a6cd0cda9b70b467c175ae0ef8ce7",
       "lastChecked": "2026-08-08",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "UNKNOWN",
@@ -962,7 +962,7 @@
         {
           "path": "books/emperors-children/content/emperors-children-codex-datasheets.en.json",
           "normalization": "lf",
-          "sha256": "40e6df0628327379c15ba10026a5dab115a490d37100f4c84d40efca6cbb3966"
+          "sha256": "d6279131a5071c7f78a6598e193ef4d178e0361da497d6b0000fa76462ef3102"
         }
       ],
       "notes": "Enrolled factual owner for datasheets, profiles, points-structure."
@@ -1280,7 +1280,7 @@
       "authority": "bsdata-snapshot",
       "sourceType": "bsdata-snapshot",
       "acceptedRevision": "fa30730fca11fbfe87be90684d481d50e0efaf66",
-      "acceptedHash": "a52a95f6b200b724a35699810fe7654e8a93a2d2c36e6f5c44a00266d0a4778f",
+      "acceptedHash": "493a6267d9bb7aac5ca5f97c6e92ba0e6dc2a5d28e136552e57af7fca4d95888",
       "lastChecked": "2026-09-14",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "UNKNOWN",
@@ -1296,7 +1296,7 @@
         {
           "path": "books/space-marines/content/space-marines-codex-datasheets.en.json",
           "normalization": "lf",
-          "sha256": "c20e891f16fab1d4af43c96444169433a3b70631f454151499be1271050386a8"
+          "sha256": "241af606542d43a3d98bed636b42a84783140f7887037c14acd759bab52649ca"
         }
       ],
       "notes": "Enrolled factual owner for datasheets, profiles, points-structure."
@@ -1449,7 +1449,7 @@
       "authority": "bsdata-snapshot",
       "sourceType": "bsdata-snapshot",
       "acceptedRevision": "fa30730fca11fbfe87be90684d481d50e0efaf66",
-      "acceptedHash": "e383ae1870012498e7103543401c884e6fceb096d2555835437119f123c868a6",
+      "acceptedHash": "d187b505a0dca43ddf250430cedb51bcc9569f699b2cdd59bd9d5e5865a6ae5b",
       "lastChecked": "2026-07-30",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "UNKNOWN",
@@ -1465,7 +1465,7 @@
         {
           "path": "books/tau-empire/content/tau-empire-codex-datasheets.en.json",
           "normalization": "lf",
-          "sha256": "e4ae1563ebdba4c9583cd0e8196195e0b439c5ead0621b808b9d9ce44b92f80a"
+          "sha256": "2d57c17af6b082ca5cf3e98e220ec0f34f8c55ce8fcfb51f54c024b2049e192e"
         }
       ],
       "notes": "Enrolled factual owner for datasheets, profiles, points-structure."
@@ -1728,7 +1728,7 @@
       "authority": "bsdata-snapshot",
       "sourceType": "bsdata-snapshot",
       "acceptedRevision": "fa30730fca11fbfe87be90684d481d50e0efaf66",
-      "acceptedHash": "4de60d380702626e7acd96a69b55f6424d9ce849eb7bff4eae7b36ef55d565b9",
+      "acceptedHash": "5fb4e247674aaff1bce65a4fcbd53b5d34e7d2774e236ac2a61c6271a828cf2e",
       "lastChecked": "2026-09-14",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "UNKNOWN",
@@ -1744,7 +1744,7 @@
         {
           "path": "books/tyranids/content/tyranids-codex-datasheets.en.json",
           "normalization": "lf",
-          "sha256": "b3c64fb1d625a663f3efc05aa0c2ea6e15b770838c1fa8449623cf23cf868ad7"
+          "sha256": "edc243a8773f5e4ecd3fbd5ac3bcdf8f911e260710b3ff9271eab0e92bb96ca2"
         }
       ],
       "notes": "Enrolled factual owner for datasheets, profiles, points-structure."

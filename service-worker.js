@@ -68,7 +68,7 @@ const APP_SHELL = [
   "./glossary/viewer-popup.css?v=1",
   "./glossary/v2/generated/index.en.js?v=1",
   "./glossary/v2/runtime/glossary-v2-runtime.js?v=1",
-  "./glossary/viewer.js?v=14",
+  "./glossary/viewer.js?v=15",
   "./books/death-guard/",
   DEATH_GUARD_FALLBACK,
   "./books/death-guard/reader.html",

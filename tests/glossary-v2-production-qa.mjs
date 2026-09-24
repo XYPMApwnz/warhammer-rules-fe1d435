@@ -66,6 +66,34 @@ for(const bookId of ['space-marines','dark-angels','blood-angels']){
   assert.equal(api.forBook(bookId)[oathId]?.id,oathId,`${bookId}: Oath must expose the same popup/viewer identity`);
 }
 assert.equal(index.entries.filter(entry=>entry.sourceOwner?.canonicalId==='army-rule-oath-of-moment').length,1,'Oath must remain one factual V2 article');
+
+const structuredAmControls=[
+  {
+    id:'army::adeptus-mechanicus::army_rule::army-rule-doctrina',
+    compatibilityId:'army-rule-doctrina'
+  },
+  {
+    id:'army::adeptus-mechanicus::ability::datasheet-canticles-of-the-omnissiah',
+    compatibilityId:'datasheet-canticles-of-the-omnissiah'
+  }
+];
+for(const {id,compatibilityId} of structuredAmControls){
+  const source=index.entries.find(entry=>entry.id===id),article=api.get(id),popup=api.forBook('adeptus-mechanicus')[compatibilityId];
+  assert(source,`${id}: accepted V2 source projection`);
+  assert(article?.definition.en.trim(),`${id}: full article definition`);
+  assert.equal(popup?.id,id,`${id}: popup identity parity`);
+  assert.equal(popup.definition,article.definition.en,`${id}: popup/article definition parity`);
+  if(source.facts.openingText)assert(article.definition.en.includes(source.facts.openingText),`${id}: opening text preserved`);
+  for(const option of source.facts.options){
+    assert(article.definition.en.includes(option.label||option.title),`${id}: option heading ${option.id}`);
+    if(option.subtitle)assert(article.definition.en.includes(option.subtitle),`${id}: option subtitle ${option.id}`);
+    if(option.text)assert(article.definition.en.includes(option.text),`${id}: option text ${option.id}`);
+    for(const effect of option.effects||[])assert(article.definition.en.includes(effect),`${id}: option effect ${option.id}`);
+  }
+}
+const ordinaryAm=api.get('army::adeptus-mechanicus::ability::datasheet-aerial-deployment');
+assert.equal(ordinaryAm.definition.en,index.entries.find(entry=>entry.id===ordinaryAm.id).facts.text,'ordinary AM definitions remain unchanged');
+assert.equal(deepStrike.definition.en,index.entries.find(entry=>entry.id===deepStrike.id).facts.semanticContent,'non-AM definitions remain unchanged');
 for(const [termId,bookId] of [
   ['datasheet-broad-spectrum-data-tether','adeptus-mechanicus'],
   ['tau-empire-ability-battlesuit-support-system','tau-empire'],

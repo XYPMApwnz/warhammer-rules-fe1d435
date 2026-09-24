@@ -34,6 +34,20 @@
       return[];
     }).filter(Boolean).join('\n');
   };
+  const structuredOptionsDefinition=facts=>{
+    if(!Array.isArray(facts.options)||!facts.options.length)return'';
+    const lines=[];
+    if(text(facts.openingText))lines.push(text(facts.openingText));
+    for(const option of facts.options){
+      if(!option||typeof option!=='object')continue;
+      const heading=[text(option.label)||text(option.title),text(option.subtitle)].filter(Boolean).join(' — ');
+      const optionLines=[];
+      if(text(option.text))optionLines.push(text(option.text));
+      if(Array.isArray(option.effects))optionLines.push(...option.effects.map(text).filter(Boolean).map(effect=>`• ${effect}`));
+      if(heading&&optionLines.length)lines.push(heading,...optionLines);
+    }
+    return lines.join('\n');
+  };
   const detachmentDefinition=entry=>{
     const facts=entry.facts||{},lines=[];
     const forceDisposition=entry.canonicalReferences?.find(reference=>reference.relationType==='FORCE_DISPOSITION'),forceDispositionLabel=forceDisposition&&byId.get(forceDisposition.id)?.label;
@@ -62,6 +76,7 @@
     const facts=entry.facts||{};
     if(entry.recordType==='DETACHMENT'){const definition=detachmentDefinition(entry);if(definition)return definition;}
     for(const field of ['semanticContent','text','full','definition','ruleText','rulesText','answer','description']){const value=text(facts[field]);if(value)return value;}
+    const structuredOptions=structuredOptionsDefinition(facts);if(structuredOptions)return structuredOptions;
     const content=collectContent(facts.content);if(content)return content;
     const blocks=collectContent(facts.blocks);if(blocks)return blocks;
     if(facts.ruleBody){

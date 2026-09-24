@@ -14,6 +14,8 @@ const scopedWeapon='army::adeptus-mechanicus::weapon_profile::unit-cybernetica-d
 const oathCompatibilityId='space-marines-army-rule-oath-of-moment';
 const oathId='army::space-marines::army_rule::army-rule-oath-of-moment';
 const mortarionsHammerId='army::death-guard::detachment::detachment-mortarions-hammer';
+const structuredAmIds=['army::adeptus-mechanicus::army_rule::army-rule-doctrina','army::adeptus-mechanicus::ability::datasheet-canticles-of-the-omnissiah'];
+const compact=value=>String(value).replace(/\s+/g,' ').trim();
 const mime={'.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp'};
 const server=createServer((request,response)=>{try{
   if(request.url==='/favicon.ico'){response.writeHead(204).end();return;}
@@ -55,11 +57,16 @@ try{
     const mortarionsHammerArticle=await page.locator('#termDetail').innerText();
     assert.match(mortarionsHammerArticle,/Miasmic Bombardment/i,`${viewport.name}: Mortarion’s Hammer rule projection`);
     assert.match(mortarionsHammerArticle,/Incursion \| 1[\s\S]*Strike Force \| 2[\s\S]*Onslaught \| 3/,`${viewport.name}: Mortarion’s Hammer battle-size table`);
+    for(const id of structuredAmIds){
+      await page.goto(`${base}/glossary/index.html#${encodeURIComponent(id)}`);await page.locator('body.article-open').waitFor();
+      const article=compact(await page.locator('#termDetail .definition').last().innerText()),facts=byId.get(id).facts;
+      if(facts.openingText)assert(article.includes(compact(facts.openingText)),`${viewport.name}: ${id} article opening text`);
+      for(const option of facts.options)for(const rule of [option.text,...(option.effects||[])].filter(Boolean))assert(article.includes(compact(rule)),`${viewport.name}: ${id} complete article option ${option.id}`);
+    }
 
     await page.goto(`${base}/books/core-rules/reader/monsters-vehicles.html`);
     const coreTrigger=page.locator('[data-term="core-blast"]').first();await coreTrigger.click();await page.locator('#termDialog[open]').waitFor();
     assert.equal(await page.locator('#termDialog').getAttribute('data-open-term'),'core::core-blast',`${viewport.name}: Core click identity`);
-    const compact=value=>String(value).replace(/\s+/g,' ').trim();
     assert.equal(compact(await page.locator('#termSummary').innerText()),compact(byId.get('core::core-blast').facts.semanticContent),`${viewport.name}: Core popup facts`);
     await page.locator('#termClose').click();await page.locator('#searchButton').click();await page.locator('#searchInput').fill('deep strike');
     const coreSearch=page.locator('#searchResults a').filter({hasText:'DEEP STRIKE'}).first();await coreSearch.waitFor();
@@ -72,6 +79,17 @@ try{
       const resolved=await trigger.getAttribute('data-term');assert.equal(resolved,`army::death-guard::army_rule_component::army-rule-nurgles-gift::${id}`,`${viewport.name}: ${id} scoped identity`);
       await trigger.click();await page.locator(`.term-popup[data-popup-term="${resolved}"]`).waitFor();
       assert.match(await page.locator(`.term-popup[data-popup-term="${resolved}"]`).innerText(),new RegExp(byId.get(resolved).label,'i'),`${viewport.name}: ${id} popup`);
+      await page.keyboard.press('Escape');
+    }
+
+    await page.goto(`${base}/books/adeptus-mechanicus/reader.html?view=${viewport.name==='phone'?'mobile':'full'}#army-rule-doctrina`);
+    await page.waitForFunction(()=>Boolean(window.DG_APP?.popups));
+    for(const id of structuredAmIds){
+      await page.evaluate(termId=>window.DG_APP.popups.open(termId,document.querySelector('.document')),id);
+      const popup=page.locator(`.term-popup[data-popup-term="${id}"]`);await popup.waitFor();
+      const popupText=compact(await popup.innerText()),facts=byId.get(id).facts;
+      if(facts.openingText)assert(popupText.includes(compact(facts.openingText)),`${viewport.name}: ${id} popup opening text`);
+      for(const option of facts.options)for(const rule of [option.text,...(option.effects||[])].filter(Boolean))assert(popupText.includes(compact(rule)),`${viewport.name}: ${id} complete popup option ${option.id}`);
       await page.keyboard.press('Escape');
     }
 

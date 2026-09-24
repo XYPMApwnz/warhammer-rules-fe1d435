@@ -119,9 +119,10 @@
     const uniqueGroups=groups.map(([label,ids])=>[label,ids.filter(id=>{const linked=api.get(id);if(!linked||seenConnections.has(linked.id))return false;seenConnections.add(linked.id);return true;})]);
     const connectionCount=seenConnections.size;
     if(connectionCount){const connections=detailsBlock(`Explore connections · ${connectionCount} related rules and terms`,'connection-details');for(const [label,ids] of uniqueGroups){const section=renderReferences(label,ids,label==='Faction terms'?16:24);if(section)connections.content.append(section);}detail.append(connections.node);}
-    const registry=detailsBlock('Registry details','registry-details'),source=term.canonicalSource||{};
+    const registry=detailsBlock('Registry details','registry-details'),source=term.canonicalSource||{},sourceDocument=String(source.documentId||'').trim(),readableSource=sourceDocument&&!/[(){}]|=>|\bbuildCanonicalBook\b/i.test(sourceDocument)&&!['CORE','ARMY','MFM','MISSIONS'].includes(sourceDocument);
     const meta=document.createElement('div');meta.className='meta-grid';
-    const registryRows=[['Internal ID',term.id],['Kind',term.kind],['Scope',term.scope],['Presentation',term.presentation],['Status',term.status],['Canonical source',source.documentId||'unknown'],['Aliases',(term.aliases||[]).join(', ')||'None'],['Edition',term.edition]];
+    const registryRows=[['Internal ID',term.id],['Kind',term.kind],['Scope',term.scope],['Presentation',term.presentation],['Aliases',(term.aliases||[]).join(', ')||'None'],['Edition',term.edition]];
+    if(readableSource)registryRows.push(['Canonical source',sourceDocument]);
     if(source.revision)registryRows.push(['Source revision',source.revision]);
     if(source.locator)registryRows.push(['Source locator',source.locator]);
     if(term.sourceRefs?.length)registryRows.push(['Contributing sources',term.sourceRefs.join(', ')]);

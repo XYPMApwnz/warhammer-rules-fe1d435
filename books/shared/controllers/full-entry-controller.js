@@ -170,7 +170,9 @@
         ['Related entries',term.related,16]
       ]){const section=this.referenceSection(label,ids,limit);if(section)nodes.push(section);}
       const meta=document.createElement('div');meta.className='full-entry-meta';
-      for(const [label,value] of [['Scope',term.scope],['Status',term.status],['Canonical source',source.documentId||'unknown']]){
+      const sourceDocument=String(source.documentId||'').trim(),readableSource=sourceDocument&&!/[(){}]|=>|\bbuildCanonicalBook\b/i.test(sourceDocument)&&!['CORE','ARMY','MFM','MISSIONS'].includes(sourceDocument),rows=[['Scope',term.scope]];
+      if(readableSource)rows.push(['Canonical source',sourceDocument]);
+      for(const [label,value] of rows){
         const cell=document.createElement('div'),key=document.createElement('small'),data=document.createElement('b');key.textContent=label;data.textContent=value;cell.append(key,data);meta.append(cell);
       }
       nodes.push(meta);this.content.replaceChildren(...nodes);

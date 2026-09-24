@@ -484,8 +484,9 @@
     for(const node of container.querySelectorAll('[data-term]')){
       const original=node.dataset.term;if(byId.has(original))continue;
       const unitId=node.closest('.unit-card')?.id||'',detachmentId=node.closest('.detachment,[data-detachment-id]')?.id||node.closest('[data-detachment-id]')?.dataset.detachmentId||'',profileId=node.closest('[data-roster-profile-id]')?.dataset.rosterProfileId||'',wargearId=node.closest('[data-roster-wargear-ability-id]')?.dataset.rosterWargearAbilityId||'',ruleId=node.closest('[data-rule-id]')?.dataset.ruleId||'';
-      const attempts=[profileId&&{id:profileId,options:{bookId,parentId:unitId,recordType:'WEAPON_PROFILE'}},wargearId&&{id:wargearId,options:{bookId,parentId:unitId,recordType:'WARGEAR_ABILITY'}},ruleId&&{id:ruleId,options:{bookId,parentId:detachmentId}},{id:original,options:{bookId,parentId:unitId||detachmentId}},{id:original,options:{bookId}}].filter(Boolean);
-      let entry=null;for(const attempt of attempts){entry=resolveEntry(attempt.id,attempt.options);if(entry)break;}
+      const explicitCore=resolveEntry(original,{bookId}),attempts=[profileId&&{id:profileId,options:{bookId,parentId:unitId,recordType:'WEAPON_PROFILE'}},wargearId&&{id:wargearId,options:{bookId,parentId:unitId,recordType:'WARGEAR_ABILITY'}},ruleId&&{id:ruleId,options:{bookId,parentId:detachmentId}},{id:original,options:{bookId,parentId:unitId||detachmentId}},{id:original,options:{bookId}}].filter(Boolean);
+      let entry=explicitCore?.domain==='CORE'?explicitCore:null;
+      if(!entry)for(const attempt of attempts){entry=resolveEntry(attempt.id,attempt.options);if(entry)break;}
       if(entry){node.dataset.term=entry.id;node.dataset.glossaryV2Source=original;bound++;continue;}
       const possible=candidates(original,{bookId});(possible.length>1?ambiguous:unresolved).push({termId:original,parentId:unitId||detachmentId||null,candidates:possible.map(item=>item.id)});
     }

@@ -75,8 +75,13 @@ for(const [id,min,max] of [['unit-hormagaunts',11,20],['unit-termagants',11,20],
   assert(tiers.some(tier=>tier.minModels===min&&tier.maxModels===max),`Tyranids: ${id} Army schedule overlay is absent`);
 }
 
-const sm=projections.get('space-marines'),judiciar=sm.units.find(unit=>unit.id==='unit-judiciar'),judiciarSupports=new Set((judiciar?.ruleProfile?.relations?.canSupport||[]).map(item=>item.unitId));
-assert.deepEqual(judiciarSupports,new Set(['unit-assault-intercessor-squad','unit-bladeguard-veteran-squad','unit-infernus-squad','unit-intercessor-squad','unit-sternguard-veteran-squad']),'Space Marines Judiciar Support targets diverge from current MFM');
+const judiciarSupportTargets=new Set(['unit-assault-intercessor-squad','unit-bladeguard-veteran-squad','unit-infernus-squad','unit-intercessor-squad','unit-sternguard-veteran-squad']);
+for(const bookId of ['space-marines','dark-angels','blood-angels']){
+  const judiciar=projections.get(bookId).units.find(unit=>unit.id==='unit-judiciar'),relations=judiciar?.ruleProfile?.relations;
+  assert.deepEqual(new Set((relations?.canSupport||[]).map(item=>item.unitId)),judiciarSupportTargets,`${bookId}: Judiciar Support targets diverge from current MFM`);
+  assert.deepEqual(new Set((relations?.canLead||[]).map(item=>item.unitId).filter(id=>judiciarSupportTargets.has(id))),new Set(),`${bookId}: stale Judiciar Leader influence survived current Support classification`);
+  assert((relations?.canLead||[]).some(item=>item.unitId==='unit-tactical-squad'),`${bookId}: non-overlapping current Judiciar Leader relation was removed`);
+}
 
 const ecUpgrades=[
   ['enhancement-eager-patrons','Eager Patrons'],

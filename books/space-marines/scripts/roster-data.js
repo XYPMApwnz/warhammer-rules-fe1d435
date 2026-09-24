@@ -47,10 +47,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
-            "unitId": "unit-judiciar",
-            "maxCharacters": 2
-          },
-          {
             "unitId": "unit-korsarro-khan",
             "maxCharacters": 2
           },
@@ -121,10 +117,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-chief-librarian-tigurius",
-              "maxCharacters": 2
-            },
-            {
-              "unitId": "unit-judiciar",
               "maxCharacters": 2
             },
             {
@@ -768,10 +760,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
-            "unitId": "unit-judiciar",
-            "maxCharacters": 2
-          },
-          {
             "unitId": "unit-korsarro-khan",
             "maxCharacters": 2
           },
@@ -838,10 +826,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-chief-librarian-tigurius",
-              "maxCharacters": 2
-            },
-            {
-              "unitId": "unit-judiciar",
               "maxCharacters": 2
             },
             {
@@ -6518,26 +6502,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-assault-intercessor-squad",
-            "maxCharacters": 2
-          },
-          {
-            "unitId": "unit-bladeguard-veteran-squad",
-            "maxCharacters": 2
-          },
-          {
-            "unitId": "unit-infernus-squad",
-            "maxCharacters": 2
-          },
-          {
-            "unitId": "unit-intercessor-squad",
-            "maxCharacters": 2
-          },
-          {
-            "unitId": "unit-sternguard-veteran-squad",
-            "maxCharacters": 2
-          },
-          {
             "unitId": "unit-tactical-squad",
             "maxCharacters": 2
           }
@@ -6570,26 +6534,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleFacts": {
         "relations": {
           "canLead": [
-            {
-              "unitId": "unit-assault-intercessor-squad",
-              "maxCharacters": 2
-            },
-            {
-              "unitId": "unit-bladeguard-veteran-squad",
-              "maxCharacters": 2
-            },
-            {
-              "unitId": "unit-infernus-squad",
-              "maxCharacters": 2
-            },
-            {
-              "unitId": "unit-intercessor-squad",
-              "maxCharacters": 2
-            },
-            {
-              "unitId": "unit-sternguard-veteran-squad",
-              "maxCharacters": 2
-            },
             {
               "unitId": "unit-tactical-squad",
               "maxCharacters": 2
@@ -14973,10 +14917,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
-            "unitId": "unit-judiciar",
-            "maxCharacters": 2
-          },
-          {
             "unitId": "unit-korsarro-khan",
             "maxCharacters": 2
           },
@@ -15039,10 +14979,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-chief-librarian-tigurius",
-              "maxCharacters": 2
-            },
-            {
-              "unitId": "unit-judiciar",
               "maxCharacters": 2
             },
             {
@@ -18742,10 +18678,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
-            "unitId": "unit-judiciar",
-            "maxCharacters": 2
-          },
-          {
             "unitId": "unit-librarian",
             "maxCharacters": 2
           },
@@ -18796,10 +18728,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-chaplain",
-              "maxCharacters": 2
-            },
-            {
-              "unitId": "unit-judiciar",
               "maxCharacters": 2
             },
             {
@@ -19994,10 +19922,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
-            "unitId": "unit-judiciar",
-            "maxCharacters": 2
-          },
-          {
             "unitId": "unit-korsarro-khan",
             "maxCharacters": 2
           },
@@ -20064,10 +19988,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-chief-librarian-tigurius",
-              "maxCharacters": 2
-            },
-            {
-              "unitId": "unit-judiciar",
               "maxCharacters": 2
             },
             {

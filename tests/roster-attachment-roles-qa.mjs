@@ -17,6 +17,7 @@ const sm=catalogs['space-marines'],dg=catalogs['death-guard'],am=catalogs['adept
 const smUnits=[
   physical(sm,'unit-intercessor-squad','body-1'),physical(sm,'unit-intercessor-squad','body-2'),
   physical(sm,'unit-captain','captain-1'),physical(sm,'unit-captain','captain-2'),
+  physical(sm,'unit-judiciar','judiciar-1'),physical(sm,'unit-judiciar','judiciar-2'),
   physical(sm,'unit-ancient','ancient-1'),physical(sm,'unit-ancient','ancient-2'),
   physical(sm,'unit-apothecary','apothecary-1'),physical(sm,'unit-apothecary','apothecary-2'),
   physical(sm,'unit-chaplain','chaplain-1')
@@ -63,6 +64,9 @@ function checks(text=source){
   for(const ids of positiveDG)groupCheck(api,dg,dgUnits,ids,2,ids.includes('plaguecaster')?'DG dual-role + Leader '+ids.join('+'):'DG two dual-role '+ids.join('+'));
   for(const pair of [['ancient-1','apothecary-1'],['apothecary-1','ancient-1']])groupCheck(api,sm,smUnits,pair,1,'two-Support negative '+pair.join('+'));
   for(const pair of [['captain-1','chaplain-1'],['chaplain-1','captain-1']])groupCheck(api,sm,smUnits,pair,1,'two-Leader negative '+pair.join('+'));
+  for(const ids of [['captain-1','judiciar-1'],['judiciar-1','captain-1']])groupCheck(api,sm,smUnits,ids,2,'Judiciar current Support + Leader '+ids.join('+'));
+  for(const ids of [['judiciar-1','ancient-1'],['ancient-1','judiciar-1']])groupCheck(api,sm,smUnits,ids,1,'Judiciar cannot occupy stale Leader role '+ids.join('+'));
+  groupCheck(api,sm,smUnits,['judiciar-1','judiciar-2'],1,'Judiciar physical copies remain Support cardinality');
   groupCheck(api,sm,smUnits,['captain-1','ancient-1','apothecary-1'],2,'capacity two');
   groupCheck(api,sm,smUnits,['captain-1','captain-2'],1,'duplicate canonical character');
   groupCheck(api,sm,smUnits,['body-1'],0,'self attachment');

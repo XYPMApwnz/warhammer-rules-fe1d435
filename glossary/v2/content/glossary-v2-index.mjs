@@ -186,6 +186,27 @@ function addDeathGuardArmyRuleComponents(entries,model,lookups){
   });
 }
 
+function deathGuardUnitArticleFacts(unit){
+  const statline=(unit.blocks||[]).find(block=>block.type==='statline');
+  const composition=(unit.subsections||[]).find(section=>section.title==='Unit Composition');
+  if(!statline?.values||!composition)throw new Error(`death-guard/${unit.id}: structured Unit article facts are incomplete`);
+  const paragraphText=blocks=>(blocks||[]).filter(block=>block.type==='p'&&String(block.text||'').trim()).map(block=>block.text.trim());
+  const notes=paragraphText(unit.blocks);
+  const referenceSections=(unit.subsections||[])
+    .filter(section=>!['Abilities','Keywords','Unit Composition','Wargear Abilities'].includes(section.title))
+    .map(section=>({title:section.title,lines:paragraphText(section.blocks)}))
+    .filter(section=>section.lines.length);
+  return {
+    id:unit.id,title:unit.title,publicationState:unit.publicationState,category:unit.category,
+    profiles:[{name:unit.title,stats:clone(statline.values)}],
+    composition:paragraphText(composition.blocks).join('\n'),
+    keywords:clone(unit.intrinsicKeywords||unit.ruleFacts?.intrinsicKeywords||[]),
+    ruleFacts:unit.ruleFacts||null,
+    notes,
+    referenceSections
+  };
+}
+
 function detachmentArticleFacts(model,detachment){
   const article={id:detachment.id,title:detachment.title,tagline:detachment.tagline,restrictions:detachment.restrictions,tags:detachment.tags,sourcePages:detachment.sourcePages,provenance:detachment.provenance};
   const canonicalRules=(model.detachmentRules||[]).filter(rule=>rule.detachmentId===detachment.id).map(factsWithoutPresentation);
@@ -205,7 +226,8 @@ function addArmyEntries(entries,models){
   const lookups={unit:new Map(),detachment:new Map(),enhancement:new Map(),armyRule:new Map()};
   for(const model of models){
     for(const unit of model.units){
-      const entry=addArmyEntry(entries,model,'UNIT',unit,{facts:{id:unit.id,title:unit.title,publicationState:unit.publicationState,category:unit.category,profiles:unit.profiles||unit.stats||[],composition:unit.composition||unit.compositionText||null,keywords:unit.keywords||unit.intrinsicKeywords||[],ruleFacts:unit.ruleFacts||null}});
+      const facts=model.book.id==='death-guard'?deathGuardUnitArticleFacts(unit):{id:unit.id,title:unit.title,publicationState:unit.publicationState,category:unit.category,profiles:unit.profiles||unit.stats||[],composition:unit.composition||unit.compositionText||null,keywords:unit.keywords||unit.intrinsicKeywords||[],ruleFacts:unit.ruleFacts||null};
+      const entry=addArmyEntry(entries,model,'UNIT',unit,{facts});
       lookups.unit.set(`${model.book.id}::${unit.id}`,entry);
     }
     for(const detachment of model.detachments){

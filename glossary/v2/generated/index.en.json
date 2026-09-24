@@ -124755,7 +124755,7 @@
       "recordType": "UNIT",
       "label": "Beasts of Nurgle",
       "aliases": [],
-      "searchableContent": "ability-grotesque-regeneration-60c7e2a\nBEAST\nBeasts of Nurgle\nBEASTS OF NURGLE\nbeasts-of-nurgle\nCHAOS\nCurrent\nDAEMON\nDEADLY DEMISE\nDeep Strike\nGrotesque Regeneration\nkeyword-beast\nkeyword-beasts-of-nurgle\nkeyword-chaos\nkeyword-daemon\nkeyword-nurgle\nkeyword-plague-legions\nkeyword-summoned\nNURGLE\nPact of Decay\nPLAGUE LEGIONS\nScouts 6\"\nSUMMONED\nunit-beasts-of-nurgle\nweapon-putrid-appendages-7640acd",
+      "searchableContent": "1-2 Beasts of Nurgle. Every model is equipped with: putrid appendages.\n3\n5+\n6\"\n6+\n7\n7+\n9\nability-grotesque-regeneration-60c7e2a\nBase: (⌀60mm).\nBEAST\nBeasts of Nurgle\nBEASTS OF NURGLE\nbeasts-of-nurgle\nCHAOS\nCurrent\nDAEMON\nDEADLY DEMISE\nDeep Strike\nGrotesque Regeneration\nkeyword-beast\nkeyword-beasts-of-nurgle\nkeyword-chaos\nkeyword-daemon\nkeyword-nurgle\nkeyword-plague-legions\nkeyword-summoned\nNURGLE\nPact of Decay\nPact of Decay datasheet. This is not a native DEATH GUARD datasheet; it is available to the Tallyband Summoners Detachment through its Pact of Decay rule.\nPLAGUE LEGIONS\nScouts 6\"\nSUMMONED\nunit-beasts-of-nurgle\nweapon-putrid-appendages-7640acd",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -124772,8 +124772,21 @@
         "id": "unit-beasts-of-nurgle",
         "title": "Beasts of Nurgle",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Beasts of Nurgle",
+            "stats": {
+              "M": "6\"",
+              "T": "9",
+              "Sv": "6+",
+              "W": "7",
+              "Ld": "7+",
+              "OC": "3",
+              "Inv": "5+"
+            }
+          }
+        ],
+        "composition": "1-2 Beasts of Nurgle. Every model is equipped with: putrid appendages.",
         "keywords": [
           "BEAST",
           "CHAOS",
@@ -124836,7 +124849,12 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Pact of Decay datasheet. This is not a native DEATH GUARD datasheet; it is available to the Tallyband Summoners Detachment through its Pact of Decay rule.",
+          "Base: (⌀60mm)."
+        ],
+        "referenceSections": []
       },
       "contexts": [
         {
@@ -124905,7 +124923,7 @@
       "recordType": "UNIT",
       "label": "Biologus Putrifier",
       "aliases": [],
-      "searchableContent": "ability-extraction-of-fresh-disease-b14e246\nability-foul-infusion-490467e\nBATTLELINE\nBiologus Putrifier\nBIOLOGUS PUTRIFIER\nbiologus-putrifier\nCHAOS\nCHARACTER\nCurrent\nDEADLY DEMISE\nDEATH GUARD\nExtraction of Fresh Disease\nFoul Infusion\nGRENADES\nINFANTRY\nkeyword-biologus-putrifier\nkeyword-chaos\nkeyword-character\nkeyword-death-guard\nkeyword-grenades\nkeyword-infantry\nkeyword-nurgle\nLeader\nNURGLE\nNurgle’s Gift (Aura)\nPLAGUE MARINES\nunit-biologus-putrifier\nunit-plague-marines\nweapon-hyper-blight-grenades-0322c28\nweapon-injector-pistol-25d0119\nweapon-plague-knives-1a37c6a",
+      "searchableContent": "1\n1 Biologus Putrifier. This model is equipped with: hyper blight grenades; injector pistol; plague knives.\n3+\n4\n5\"\n6\n6+\nability-extraction-of-fresh-disease-b14e246\nability-foul-infusion-490467e\nBase: (⌀40mm).\nBATTLELINE\nBiologus Putrifier\nBIOLOGUS PUTRIFIER\nbiologus-putrifier\nCHAOS\nCHARACTER\nCurrent\nDEADLY DEMISE\nDEATH GUARD\nExtraction of Fresh Disease\nFoul Infusion\nGRENADES\nINFANTRY\nkeyword-biologus-putrifier\nkeyword-chaos\nkeyword-character\nkeyword-death-guard\nkeyword-grenades\nkeyword-infantry\nkeyword-nurgle\nLeader\nNURGLE\nNurgle’s Gift (Aura)\nPLAGUE MARINES\nThis model can be attached to the following units: Plague Marines.\nunit-biologus-putrifier\nunit-plague-marines\nweapon-hyper-blight-grenades-0322c28\nweapon-injector-pistol-25d0119\nweapon-plague-knives-1a37c6a\nYou can attach this model to a PLAGUE MARINES unit, even if one other Leader unit has already been attached to it (you cannot attach more than one of the same leader to the same unit). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -124922,8 +124940,20 @@
         "id": "unit-biologus-putrifier",
         "title": "Biologus Putrifier",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Biologus Putrifier",
+            "stats": {
+              "M": "5\"",
+              "T": "6",
+              "Sv": "3+",
+              "W": "4",
+              "Ld": "6+",
+              "OC": "1"
+            }
+          }
+        ],
+        "composition": "1 Biologus Putrifier. This model is equipped with: hyper blight grenades; injector pistol; plague knives.",
         "keywords": [
           "INFANTRY",
           "CHARACTER",
@@ -125019,7 +125049,19 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀40mm)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Leader",
+            "lines": [
+              "This model can be attached to the following units: Plague Marines.",
+              "You can attach this model to a PLAGUE MARINES unit, even if one other Leader unit has already been attached to it (you cannot attach more than one of the same leader to the same unit). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -125122,7 +125164,7 @@
       "recordType": "UNIT",
       "label": "Blightlord Terminators",
       "aliases": [],
-      "searchableContent": "ability-blistering-fusillade-01dcc5c\nBlightlord Terminators\nBLIGHTLORD TERMINATORS\nblightlord-terminators\nBlistering Fusillade\nCHAOS\nCHARACTER\nCurrent\nDEATH GUARD\nDeep Strike\nEPIC HERO\nGRENADES\nINFANTRY\nkeyword-blightlord-terminators\nkeyword-chaos\nkeyword-death-guard\nkeyword-infantry\nkeyword-nurgle\nkeyword-terminator\nLORD OF CONTAGION\nLORD OF VIRULENCE\nNURGLE\nNurgle’s Gift (Aura)\nPSYKER\nTERMINATOR\nTYPHUS\nunit-blightlord-terminators\nunit-lord-of-contagion\nunit-lord-of-virulence\nunit-typhus\nweapon-blight-launcher-6d713e8\nweapon-bubotic-blade-4f09d5f\nweapon-close-combat-weapon-55bc2e9\nweapon-combi-bolter-5d7d99e\nweapon-combi-weapon-b2eeb14\nweapon-flail-of-corruption-f6b2430\nweapon-plague-spewer-3ffad7c\nweapon-reaper-autocannon-1a3732e",
+      "searchableContent": "1\n1 Blightlord Champion; 2-9 Blightlord Terminators. Every model is equipped with: combi-bolter; bubotic blade.\n2+\n3\n4+\n5\"\n6+\n7\nability-blistering-fusillade-01dcc5c\nBase: (⌀40mm).\nBlightlord Terminators\nBLIGHTLORD TERMINATORS\nblightlord-terminators\nBlistering Fusillade\nCHAOS\nCHARACTER\nCurrent\nDEATH GUARD\nDeep Strike\nEPIC HERO\nFor every 5 models in this unit, 1 Blightlord Terminator’s combi-bolter and bubotic blade can be replaced with 1 flail of corruption.\nFor every 5 models in this unit, 1 Blightlord Terminator’s combi-bolter can be replaced with 1 blight launcher.\nFor every 5 models in this unit, 1 Blightlord Terminator's combi-bolter can be replaced with 1 plague spewer.\nFor every 5 models in this unit, 1 Blightlord Terminator's combi-bolter can be replaced with 1 reaper autocannon.\nFor every 5 models in this unit, up to 3 models' combi-bolters can each be replaced with 1 combi-weapon.\nGRENADES\nIf this unit contains only 3 models, 1 Blightlord Terminator’s combi-bolter and bubotic blade can be replaced with 1 plague spewer and 1 close combat weapon.\nINFANTRY\nkeyword-blightlord-terminators\nkeyword-chaos\nkeyword-death-guard\nkeyword-infantry\nkeyword-nurgle\nkeyword-terminator\nLORD OF CONTAGION\nLORD OF VIRULENCE\nNURGLE\nNurgle’s Gift (Aura)\nPSYKER\nTERMINATOR\nTYPHUS\nunit-blightlord-terminators\nunit-lord-of-contagion\nunit-lord-of-virulence\nunit-typhus\nWargear Options\nweapon-blight-launcher-6d713e8\nweapon-bubotic-blade-4f09d5f\nweapon-close-combat-weapon-55bc2e9\nweapon-combi-bolter-5d7d99e\nweapon-combi-weapon-b2eeb14\nweapon-flail-of-corruption-f6b2430\nweapon-plague-spewer-3ffad7c\nweapon-reaper-autocannon-1a3732e",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -125139,8 +125181,21 @@
         "id": "unit-blightlord-terminators",
         "title": "Blightlord Terminators",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Blightlord Terminators",
+            "stats": {
+              "M": "5\"",
+              "T": "7",
+              "Sv": "2+",
+              "W": "3",
+              "Ld": "6+",
+              "OC": "1",
+              "Inv": "4+"
+            }
+          }
+        ],
+        "composition": "1 Blightlord Champion; 2-9 Blightlord Terminators. Every model is equipped with: combi-bolter; bubotic blade.",
         "keywords": [
           "INFANTRY",
           "CHAOS",
@@ -125250,7 +125305,23 @@
             ],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀40mm)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Wargear Options",
+            "lines": [
+              "For every 5 models in this unit, up to 3 models' combi-bolters can each be replaced with 1 combi-weapon.",
+              "For every 5 models in this unit, 1 Blightlord Terminator’s combi-bolter and bubotic blade can be replaced with 1 flail of corruption.",
+              "For every 5 models in this unit, 1 Blightlord Terminator’s combi-bolter can be replaced with 1 blight launcher.",
+              "For every 5 models in this unit, 1 Blightlord Terminator's combi-bolter can be replaced with 1 reaper autocannon.",
+              "For every 5 models in this unit, 1 Blightlord Terminator's combi-bolter can be replaced with 1 plague spewer.",
+              "If this unit contains only 3 models, 1 Blightlord Terminator’s combi-bolter and bubotic blade can be replaced with 1 plague spewer and 1 close combat weapon."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -125325,7 +125396,7 @@
       "recordType": "UNIT",
       "label": "Chaos Land Raider",
       "aliases": [],
-      "searchableContent": "ability-assault-ramp-e5223e4\nAssault Ramp\nCHAOS\nChaos Land Raider\nchaos-land-raider\nCurrent\nDEADLY DEMISE\nDEATH GUARD\nFRAME\nkeyword-chaos\nkeyword-death-guard\nkeyword-frame\nkeyword-land-raider\nkeyword-nurgle\nkeyword-smoke\nkeyword-transport\nkeyword-vehicle\nLAND RAIDER\nNURGLE\nNurgle’s Gift (Aura)\nSMOKE\nTRANSPORT\nunit-chaos-land-raider\nVEHICLE\nweapon-armoured-tracks-ddf575f\nweapon-combi-bolter-5d7d99e\nweapon-combi-weapon-b2eeb14\nweapon-havoc-launcher-cf26557\nweapon-soulshatter-lascannon-e64b490\nweapon-twin-heavy-bolter-b1e2633",
+      "searchableContent": "1 Chaos Land Raider. This model is equipped with: 2 soulshatter lascannons; twin heavy bolter; armoured tracks.\n10\"\n12\n16\n2+\n5\n6+\nability-assault-ramp-e5223e4\nAssault Ramp\nBase: (⌀Use model).\nCHAOS\nChaos Land Raider\nchaos-land-raider\nCurrent\nDamaged\nDEADLY DEMISE\nDEATH GUARD\nFRAME\nkeyword-chaos\nkeyword-death-guard\nkeyword-frame\nkeyword-land-raider\nkeyword-nurgle\nkeyword-smoke\nkeyword-transport\nkeyword-vehicle\nLAND RAIDER\nNURGLE\nNurgle’s Gift (Aura)\nSMOKE\nThis model can be equipped with 1 havoc launcher.\nThis model can be equipped with one of the following: 1 combi-bolter; 1 combi-weapon.\nThis model has a transport capacity of 14 DEATH GUARD INFANTRY models. Each TERMINATOR model takes up the space of 2 models.\nTransport\nTRANSPORT\nunit-chaos-land-raider\nVEHICLE\nWargear Options\nweapon-armoured-tracks-ddf575f\nweapon-combi-bolter-5d7d99e\nweapon-combi-weapon-b2eeb14\nweapon-havoc-launcher-cf26557\nweapon-soulshatter-lascannon-e64b490\nweapon-twin-heavy-bolter-b1e2633\nWhile this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -125342,8 +125413,20 @@
         "id": "unit-chaos-land-raider",
         "title": "Chaos Land Raider",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Chaos Land Raider",
+            "stats": {
+              "M": "10\"",
+              "T": "12",
+              "Sv": "2+",
+              "W": "16",
+              "Ld": "6+",
+              "OC": "5"
+            }
+          }
+        ],
+        "composition": "1 Chaos Land Raider. This model is equipped with: 2 soulshatter lascannons; twin heavy bolter; armoured tracks.",
         "keywords": [
           "VEHICLE",
           "TRANSPORT",
@@ -125413,7 +125496,31 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀Use model)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Transport",
+            "lines": [
+              "This model has a transport capacity of 14 DEATH GUARD INFANTRY models. Each TERMINATOR model takes up the space of 2 models."
+            ]
+          },
+          {
+            "title": "Damaged",
+            "lines": [
+              "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+            ]
+          },
+          {
+            "title": "Wargear Options",
+            "lines": [
+              "This model can be equipped with one of the following: 1 combi-bolter; 1 combi-weapon.",
+              "This model can be equipped with 1 havoc launcher."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -125490,7 +125597,7 @@
       "recordType": "UNIT",
       "label": "Chaos Predator Annihilator",
       "aliases": [],
-      "searchableContent": "ability-metalophagic-infection-7a47e75\nCHAOS\nChaos Predator Annihilator\nchaos-predator-annihilator\nCurrent\nDEADLY DEMISE\nDEATH GUARD\nFRAME\nkeyword-chaos\nkeyword-death-guard\nkeyword-frame\nkeyword-nurgle\nkeyword-predator-annihilator\nkeyword-smoke\nkeyword-vehicle\nMetalophagic Infection\nNURGLE\nNurgle’s Gift (Aura)\nPREDATOR ANNIHILATOR\nSMOKE\nunit-chaos-predator-annihilator\nVEHICLE\nweapon-armoured-tracks-a6a4ba9\nweapon-combi-bolter-5d7d99e\nweapon-combi-weapon-b2eeb14\nweapon-havoc-launcher-cf26557\nweapon-heavy-bolter-f39583a\nweapon-lascannon-bfd40c1\nweapon-predator-twin-lascannon-92dd066",
+      "searchableContent": "1 Chaos Predator Annihilator. This model is equipped with: Predator twin lascannon; armoured tracks.\n10\n10\"\n11\n3\n3+\n6+\nability-metalophagic-infection-7a47e75\nBase: (⌀Use model).\nCHAOS\nChaos Predator Annihilator\nchaos-predator-annihilator\nCurrent\nDamaged\nDEADLY DEMISE\nDEATH GUARD\nFRAME\nkeyword-chaos\nkeyword-death-guard\nkeyword-frame\nkeyword-nurgle\nkeyword-predator-annihilator\nkeyword-smoke\nkeyword-vehicle\nMetalophagic Infection\nNURGLE\nNurgle’s Gift (Aura)\nPREDATOR ANNIHILATOR\nSMOKE\nThis model can be equipped with 1 havoc launcher.\nThis model can be equipped with one of the following: 1 combi-weapon; 1 combi-bolter.\nThis model can be equipped with one of the following: 2 lascannons; 2 heavy bolters.\nunit-chaos-predator-annihilator\nVEHICLE\nWargear Options\nweapon-armoured-tracks-a6a4ba9\nweapon-combi-bolter-5d7d99e\nweapon-combi-weapon-b2eeb14\nweapon-havoc-launcher-cf26557\nweapon-heavy-bolter-f39583a\nweapon-lascannon-bfd40c1\nweapon-predator-twin-lascannon-92dd066\nWhile this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -125507,8 +125614,20 @@
         "id": "unit-chaos-predator-annihilator",
         "title": "Chaos Predator Annihilator",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Chaos Predator Annihilator",
+            "stats": {
+              "M": "10\"",
+              "T": "10",
+              "Sv": "3+",
+              "W": "11",
+              "Ld": "6+",
+              "OC": "3"
+            }
+          }
+        ],
+        "composition": "1 Chaos Predator Annihilator. This model is equipped with: Predator twin lascannon; armoured tracks.",
         "keywords": [
           "VEHICLE",
           "SMOKE",
@@ -125575,7 +125694,26 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀Use model)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Damaged",
+            "lines": [
+              "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+            ]
+          },
+          {
+            "title": "Wargear Options",
+            "lines": [
+              "This model can be equipped with one of the following: 2 lascannons; 2 heavy bolters.",
+              "This model can be equipped with one of the following: 1 combi-weapon; 1 combi-bolter.",
+              "This model can be equipped with 1 havoc launcher."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -125652,7 +125790,7 @@
       "recordType": "UNIT",
       "label": "Chaos Predator Destructor",
       "aliases": [],
-      "searchableContent": "ability-hail-of-corrosive-disease-0f6451f\nCHAOS\nChaos Predator Destructor\nchaos-predator-destructor\nCurrent\nDEADLY DEMISE\nDEATH GUARD\nFRAME\nHail of Corrosive Disease\nkeyword-chaos\nkeyword-death-guard\nkeyword-frame\nkeyword-nurgle\nkeyword-predator-destructor\nkeyword-smoke\nkeyword-vehicle\nNURGLE\nNurgle’s Gift (Aura)\nPREDATOR DESTRUCTOR\nSMOKE\nunit-chaos-predator-destructor\nVEHICLE\nweapon-armoured-tracks-a6a4ba9\nweapon-combi-bolter-5d7d99e\nweapon-combi-weapon-b2eeb14\nweapon-havoc-launcher-cf26557\nweapon-heavy-bolter-f39583a\nweapon-lascannon-bfd40c1\nweapon-predator-autocannon-c571572",
+      "searchableContent": "1 Chaos Predator Destructor. This model is equipped with: predator autocannon; armoured tracks.\n10\n10\"\n11\n3\n3+\n6+\nability-hail-of-corrosive-disease-0f6451f\nBase: (⌀Use model).\nCHAOS\nChaos Predator Destructor\nchaos-predator-destructor\nCurrent\nDamaged\nDEADLY DEMISE\nDEATH GUARD\nFRAME\nHail of Corrosive Disease\nkeyword-chaos\nkeyword-death-guard\nkeyword-frame\nkeyword-nurgle\nkeyword-predator-destructor\nkeyword-smoke\nkeyword-vehicle\nNURGLE\nNurgle’s Gift (Aura)\nPREDATOR DESTRUCTOR\nSMOKE\nThis model can be equipped with 1 havoc launcher.\nThis model can be equipped with one of the following: 1 combi-bolter; 1 combi-weapon.\nThis model can be equipped with one of the following: 2 heavy bolters; 2 lascannons.\nunit-chaos-predator-destructor\nVEHICLE\nWargear Options\nweapon-armoured-tracks-a6a4ba9\nweapon-combi-bolter-5d7d99e\nweapon-combi-weapon-b2eeb14\nweapon-havoc-launcher-cf26557\nweapon-heavy-bolter-f39583a\nweapon-lascannon-bfd40c1\nweapon-predator-autocannon-c571572\nWhile this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -125669,8 +125807,20 @@
         "id": "unit-chaos-predator-destructor",
         "title": "Chaos Predator Destructor",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Chaos Predator Destructor",
+            "stats": {
+              "M": "10\"",
+              "T": "10",
+              "Sv": "3+",
+              "W": "11",
+              "Ld": "6+",
+              "OC": "3"
+            }
+          }
+        ],
+        "composition": "1 Chaos Predator Destructor. This model is equipped with: predator autocannon; armoured tracks.",
         "keywords": [
           "VEHICLE",
           "SMOKE",
@@ -125737,7 +125887,26 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀Use model)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Damaged",
+            "lines": [
+              "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+            ]
+          },
+          {
+            "title": "Wargear Options",
+            "lines": [
+              "This model can be equipped with one of the following: 2 heavy bolters; 2 lascannons.",
+              "This model can be equipped with one of the following: 1 combi-bolter; 1 combi-weapon.",
+              "This model can be equipped with 1 havoc launcher."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -125814,7 +125983,7 @@
       "recordType": "UNIT",
       "label": "Chaos Rhino",
       "aliases": [],
-      "searchableContent": "ability-fire-support-b0918db\nCHAOS\nChaos Rhino\nchaos-rhino\nCurrent\nDEADLY DEMISE\nDEATH GUARD\nDEDICATED TRANSPORT\nFire Support\nFiring Deck 2\nFRAME\nkeyword-chaos\nkeyword-death-guard\nkeyword-dedicated-transport\nkeyword-frame\nkeyword-nurgle\nkeyword-rhino\nkeyword-smoke\nkeyword-transport\nkeyword-vehicle\nNURGLE\nNurgle’s Gift (Aura)\nRHINO\nSMOKE\nTRANSPORT\nunit-chaos-rhino\nVEHICLE\nweapon-armoured-tracks-a6a4ba9\nweapon-combi-bolter-5d7d99e\nweapon-combi-weapon-b2eeb14\nweapon-havoc-launcher-cf26557",
+      "searchableContent": "1 Chaos Rhino. This model is equipped with: combi-bolter; armoured tracks.\n10\n12\"\n2\n3+\n6+\n9\nability-fire-support-b0918db\nBase: (⌀Use model).\nCHAOS\nChaos Rhino\nchaos-rhino\nCurrent\nDEADLY DEMISE\nDEATH GUARD\nDEDICATED TRANSPORT\nFire Support\nFiring Deck 2\nFRAME\nkeyword-chaos\nkeyword-death-guard\nkeyword-dedicated-transport\nkeyword-frame\nkeyword-nurgle\nkeyword-rhino\nkeyword-smoke\nkeyword-transport\nkeyword-vehicle\nNURGLE\nNurgle’s Gift (Aura)\nRHINO\nSMOKE\nThis model can be equipped with 1 havoc launcher or can replace 1 combi-bolter with 1 havoc launcher.\nThis model can be equipped with one of the following: 1 additional combi-bolter; 1 combi-weapon.\nThis model has a transport capacity of 12 DEATH GUARD INFANTRY models. It cannot transport TERMINATOR models.\nTransport\nTRANSPORT\nunit-chaos-rhino\nVEHICLE\nWargear Options\nweapon-armoured-tracks-a6a4ba9\nweapon-combi-bolter-5d7d99e\nweapon-combi-weapon-b2eeb14\nweapon-havoc-launcher-cf26557",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -125831,8 +126000,20 @@
         "id": "unit-chaos-rhino",
         "title": "Chaos Rhino",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Chaos Rhino",
+            "stats": {
+              "M": "12\"",
+              "T": "9",
+              "Sv": "3+",
+              "W": "10",
+              "Ld": "6+",
+              "OC": "2"
+            }
+          }
+        ],
+        "composition": "1 Chaos Rhino. This model is equipped with: combi-bolter; armoured tracks.",
         "keywords": [
           "VEHICLE",
           "SMOKE",
@@ -125905,7 +126086,25 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀Use model)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Transport",
+            "lines": [
+              "This model has a transport capacity of 12 DEATH GUARD INFANTRY models. It cannot transport TERMINATOR models."
+            ]
+          },
+          {
+            "title": "Wargear Options",
+            "lines": [
+              "This model can be equipped with one of the following: 1 additional combi-bolter; 1 combi-weapon.",
+              "This model can be equipped with 1 havoc launcher or can replace 1 combi-bolter with 1 havoc launcher."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -125982,7 +126181,7 @@
       "recordType": "UNIT",
       "label": "Chaos Spawn",
       "aliases": [],
-      "searchableContent": "ability-lethal-ichor-6824af1\nBEAST\nCHAOS\nChaos Spawn\nCHAOS SPAWN\nchaos-spawn\nCurrent\nDEADLY DEMISE\nDEATH GUARD\nFeel No Pain 5+\nkeyword-beast\nkeyword-chaos\nkeyword-chaos-spawn\nkeyword-death-guard\nkeyword-nurgle\nLethal Ichor\nNURGLE\nNurgle’s Gift (Aura)\nScouts 6\"\nunit-chaos-spawn\nweapon-hideous-mutations-5a8e226",
+      "searchableContent": "1\n2 Chaos Spawn. Every model is equipped with: hideous mutations.\n4\n4+\n7\n7+\n8\"\nability-lethal-ichor-6824af1\nBase: (⌀50mm).\nBEAST\nCHAOS\nChaos Spawn\nCHAOS SPAWN\nchaos-spawn\nCurrent\nDEADLY DEMISE\nDEATH GUARD\nFeel No Pain 5+\nkeyword-beast\nkeyword-chaos\nkeyword-chaos-spawn\nkeyword-death-guard\nkeyword-nurgle\nLethal Ichor\nNURGLE\nNurgle’s Gift (Aura)\nScouts 6\"\nunit-chaos-spawn\nweapon-hideous-mutations-5a8e226",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -125999,8 +126198,20 @@
         "id": "unit-chaos-spawn",
         "title": "Chaos Spawn",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Chaos Spawn",
+            "stats": {
+              "M": "8\"",
+              "T": "7",
+              "Sv": "4+",
+              "W": "4",
+              "Ld": "7+",
+              "OC": "1"
+            }
+          }
+        ],
+        "composition": "2 Chaos Spawn. Every model is equipped with: hideous mutations.",
         "keywords": [
           "BEAST",
           "CHAOS",
@@ -126055,7 +126266,11 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀50mm)."
+        ],
+        "referenceSections": []
       },
       "contexts": [
         {
@@ -126118,7 +126333,7 @@
       "recordType": "UNIT",
       "label": "Daemon Prince of Nurgle",
       "aliases": [],
-      "searchableContent": "ability-death-guard-defenders-c306937\nability-fevered-strategist-9a8ed87\nability-miasma-of-pestilence-aura-92fd75f\nCHAOS\nCHARACTER\nCurrent\nDAEMON\nDAEMON PRINCE\nDaemon Prince of Nurgle\ndaemon-prince-of-nurgle\nDEADLY DEMISE\nDEATH GUARD\nDeath Guard Defenders\nFevered Strategist\nkeyword-chaos\nkeyword-character\nkeyword-daemon\nkeyword-daemon-prince\nkeyword-death-guard\nkeyword-monster\nkeyword-nurgle\nMiasma of Pestilence (Aura)\nMONSTER\nNURGLE\nNurgle’s Gift (Aura)\nunit-daemon-prince-of-nurgle\nweapon-hellforged-weapons-strike-edc19f1\nweapon-hellforged-weapons-sweep-5c45030\nweapon-infernal-cannon-1e13e5b",
+      "searchableContent": "1 Daemon Prince of Nurgle. This model is equipped with: infernal cannon; hellforged weapons.\n10\n12\n2+\n3\n4+\n6+\n8\"\nability-death-guard-defenders-c306937\nability-fevered-strategist-9a8ed87\nability-miasma-of-pestilence-aura-92fd75f\nBase: (⌀60mm).\nCHAOS\nCHARACTER\nCurrent\nDAEMON\nDAEMON PRINCE\nDaemon Prince of Nurgle\ndaemon-prince-of-nurgle\nDEADLY DEMISE\nDEATH GUARD\nDeath Guard Defenders\nFevered Strategist\nkeyword-chaos\nkeyword-character\nkeyword-daemon\nkeyword-daemon-prince\nkeyword-death-guard\nkeyword-monster\nkeyword-nurgle\nMiasma of Pestilence (Aura)\nMONSTER\nNURGLE\nNurgle’s Gift (Aura)\nunit-daemon-prince-of-nurgle\nweapon-hellforged-weapons-strike-edc19f1\nweapon-hellforged-weapons-sweep-5c45030\nweapon-infernal-cannon-1e13e5b",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -126135,8 +126350,21 @@
         "id": "unit-daemon-prince-of-nurgle",
         "title": "Daemon Prince of Nurgle",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Daemon Prince of Nurgle",
+            "stats": {
+              "M": "8\"",
+              "T": "12",
+              "Sv": "2+",
+              "W": "10",
+              "Ld": "6+",
+              "OC": "3",
+              "Inv": "4+"
+            }
+          }
+        ],
+        "composition": "1 Daemon Prince of Nurgle. This model is equipped with: infernal cannon; hellforged weapons.",
         "keywords": [
           "MONSTER",
           "CHARACTER",
@@ -126203,7 +126431,11 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀60mm)."
+        ],
+        "referenceSections": []
       },
       "contexts": [
         {
@@ -126266,7 +126498,7 @@
       "recordType": "UNIT",
       "label": "Daemon Prince of Nurgle with Wings",
       "aliases": [],
-      "searchableContent": "ability-enfeebling-miasma-aura-dba0eef\nability-horrifying-visage-bfdb06a\nCHAOS\nCHARACTER\nCurrent\nDAEMON\nDaemon Prince of Nurgle with Wings\nDAEMON PRINCE WITH WINGS\ndaemon-prince-of-nurgle-with-wings\nDEADLY DEMISE\nDEATH GUARD\nDeep Strike\nEnfeebling Miasma (Aura)\nFLY\nHorrifying Visage\nkeyword-chaos\nkeyword-character\nkeyword-daemon\nkeyword-daemon-prince-with-wings\nkeyword-death-guard\nkeyword-fly\nkeyword-monster\nkeyword-nurgle\nMONSTER\nNURGLE\nNurgle’s Gift (Aura)\nunit-daemon-prince-of-nurgle-with-wings\nweapon-hellforged-weapons-strike-edc19f1\nweapon-hellforged-weapons-sweep-5c45030\nweapon-infernal-cannon-09a5d9c",
+      "searchableContent": "1 Daemon Prince of Nurgle with Wings. This model is equipped with: infernal cannon; hellforged weapons.\n10\n11\n12\"\n2+\n3\n4+\n6+\nability-enfeebling-miasma-aura-dba0eef\nability-horrifying-visage-bfdb06a\nBase: (⌀60mm).\nCHAOS\nCHARACTER\nCurrent\nDAEMON\nDaemon Prince of Nurgle with Wings\nDAEMON PRINCE WITH WINGS\ndaemon-prince-of-nurgle-with-wings\nDEADLY DEMISE\nDEATH GUARD\nDeep Strike\nEnfeebling Miasma (Aura)\nFLY\nHorrifying Visage\nkeyword-chaos\nkeyword-character\nkeyword-daemon\nkeyword-daemon-prince-with-wings\nkeyword-death-guard\nkeyword-fly\nkeyword-monster\nkeyword-nurgle\nMONSTER\nNURGLE\nNurgle’s Gift (Aura)\nunit-daemon-prince-of-nurgle-with-wings\nweapon-hellforged-weapons-strike-edc19f1\nweapon-hellforged-weapons-sweep-5c45030\nweapon-infernal-cannon-09a5d9c",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -126283,8 +126515,21 @@
         "id": "unit-daemon-prince-of-nurgle-with-wings",
         "title": "Daemon Prince of Nurgle with Wings",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Daemon Prince of Nurgle with Wings",
+            "stats": {
+              "M": "12\"",
+              "T": "11",
+              "Sv": "2+",
+              "W": "10",
+              "Ld": "6+",
+              "OC": "3",
+              "Inv": "4+"
+            }
+          }
+        ],
+        "composition": "1 Daemon Prince of Nurgle with Wings. This model is equipped with: infernal cannon; hellforged weapons.",
         "keywords": [
           "MONSTER",
           "CHARACTER",
@@ -126354,7 +126599,11 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀60mm)."
+        ],
+        "referenceSections": []
       },
       "contexts": [
         {
@@ -126417,7 +126666,7 @@
       "recordType": "UNIT",
       "label": "Deathshroud Terminators",
       "aliases": [],
-      "searchableContent": "ability-death-approaches-3347016\nability-silent-bodyguard-03a0a1b\nCHAOS\nCHARACTER\nCurrent\nDeath Approaches\nDEATH GUARD\nDeathshroud Terminators\nDEATHSHROUD TERMINATORS\ndeathshroud-terminators\nDeep Strike\nEPIC HERO\nGRENADES\nINFANTRY\nkeyword-chaos\nkeyword-death-guard\nkeyword-deathshroud-terminators\nkeyword-infantry\nkeyword-nurgle\nkeyword-terminator\nLORD OF CONTAGION\nLORD OF VIRULENCE\nNURGLE\nNurgle’s Gift (Aura)\nPSYKER\nSilent Bodyguard\nTERMINATOR\nTYPHUS\nunit-deathshroud-terminators\nunit-lord-of-contagion\nunit-lord-of-virulence\nunit-typhus\nweapon-manreaper-strike-6cc8ecd\nweapon-manreaper-sweep-22f036f\nweapon-plaguespurt-gauntlet-5d2f8e8",
+      "searchableContent": "1\n1 Deathshroud Champion; 2-5 Deathshroud Terminators. Every model is equipped with: plaguespurt gauntlet; manreaper.\n2+\n4\n4+\n5\"\n6+\n7\nability-death-approaches-3347016\nability-silent-bodyguard-03a0a1b\nBase: (⌀40mm).\nCHAOS\nCHARACTER\nCurrent\nDeath Approaches\nDEATH GUARD\nDeathshroud Terminators\nDEATHSHROUD TERMINATORS\ndeathshroud-terminators\nDeep Strike\nEPIC HERO\nGRENADES\nINFANTRY\nkeyword-chaos\nkeyword-death-guard\nkeyword-deathshroud-terminators\nkeyword-infantry\nkeyword-nurgle\nkeyword-terminator\nLORD OF CONTAGION\nLORD OF VIRULENCE\nNURGLE\nNurgle’s Gift (Aura)\nPSYKER\nSilent Bodyguard\nTERMINATOR\nThe Deathshroud Champion can be equipped with 1 additional plaguespurt gauntlet.\nThe Deathshroud Champion can be equipped with 1 icon of despair.\nTYPHUS\nunit-deathshroud-terminators\nunit-lord-of-contagion\nunit-lord-of-virulence\nunit-typhus\nWargear Options\nweapon-manreaper-strike-6cc8ecd\nweapon-manreaper-sweep-22f036f\nweapon-plaguespurt-gauntlet-5d2f8e8",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -126434,8 +126683,21 @@
         "id": "unit-deathshroud-terminators",
         "title": "Deathshroud Terminators",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Deathshroud Terminators",
+            "stats": {
+              "M": "5\"",
+              "T": "7",
+              "Sv": "2+",
+              "W": "4",
+              "Ld": "6+",
+              "OC": "1",
+              "Inv": "4+"
+            }
+          }
+        ],
+        "composition": "1 Deathshroud Champion; 2-5 Deathshroud Terminators. Every model is equipped with: plaguespurt gauntlet; manreaper.",
         "keywords": [
           "INFANTRY",
           "CHAOS",
@@ -126542,7 +126804,19 @@
             ],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀40mm)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Wargear Options",
+            "lines": [
+              "The Deathshroud Champion can be equipped with 1 additional plaguespurt gauntlet.",
+              "The Deathshroud Champion can be equipped with 1 icon of despair."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -126631,7 +126905,7 @@
       "recordType": "UNIT",
       "label": "Defiler",
       "aliases": [],
-      "searchableContent": "ability-barrage-of-filth-f33e996\nability-scuttling-walker-cb4a0c4\nBarrage of Filth\nCHAOS\nCurrent\nDAEMON\nDEADLY DEMISE\nDEATH GUARD\ndefiler\nDefiler\nDEFILER\nkeyword-chaos\nkeyword-daemon\nkeyword-death-guard\nkeyword-defiler\nkeyword-nurgle\nkeyword-vehicle\nkeyword-walker\nNURGLE\nNurgle’s Gift (Aura)\nScuttling Walker\nunit-defiler\nVEHICLE\nWALKER\nweapon-ectoplasma-destructor-e0da30e\nweapon-electroscourge-e76631b\nweapon-excruciator-cannon-f11eadc\nweapon-hades-battle-cannon-1f93c08\nweapon-hades-lascannon-19b7d63\nweapon-heavy-baleflamer-2c0f38e\nweapon-heavy-missile-launcher-frag-2d0854e\nweapon-heavy-missile-launcher-krak-d745166\nweapon-heavy-reaper-autocannon-ca7d571\nweapon-magma-cutters-4ae88f3\nweapon-shearing-claws-strike-f6ebe2b\nweapon-shearing-claws-sweep-8074872",
+      "searchableContent": "1 Defiler. This model is equipped with: 1 Hades battle cannon; 2 excruciator cannons; 1 heavy missile launcher; 1 heavy baleflamer; 1 shearing claws.\n11\n12\"\n18\n3+\n5\n5+\n6+\nability-barrage-of-filth-f33e996\nability-scuttling-walker-cb4a0c4\nBarrage of Filth\nBase: (⌀160mm).\nCHAOS\nCurrent\nDAEMON\nDamaged\nDAMAGED: 1-6 WOUNDS REMAINING. While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.\nDEADLY DEMISE\nDEATH GUARD\ndefiler\nDefiler\nDEFILER\nkeyword-chaos\nkeyword-daemon\nkeyword-death-guard\nkeyword-defiler\nkeyword-nurgle\nkeyword-vehicle\nkeyword-walker\nNURGLE\nNurgle’s Gift (Aura)\nScuttling Walker\nThis model’s excruciator cannons can be replaced with 2 magma cutters.\nThis model’s Hades battle cannon can be replaced with 1 ectoplasma destructor.\nThis model’s heavy baleflamer can be replaced with one of the following: 1 Hades lascannon; 1 heavy reaper autocannon; 1 electroscourge (a model cannot be equipped with more than one electroscourge).\nThis model’s heavy missile launcher can be replaced with one of the following: 1 Hades lascannon; 1 heavy reaper autocannon; 1 electroscourge (a model cannot be equipped with more than one electroscourge).\nunit-defiler\nVEHICLE\nWALKER\nWargear Options\nweapon-ectoplasma-destructor-e0da30e\nweapon-electroscourge-e76631b\nweapon-excruciator-cannon-f11eadc\nweapon-hades-battle-cannon-1f93c08\nweapon-hades-lascannon-19b7d63\nweapon-heavy-baleflamer-2c0f38e\nweapon-heavy-missile-launcher-frag-2d0854e\nweapon-heavy-missile-launcher-krak-d745166\nweapon-heavy-reaper-autocannon-ca7d571\nweapon-magma-cutters-4ae88f3\nweapon-shearing-claws-strike-f6ebe2b\nweapon-shearing-claws-sweep-8074872",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -126648,8 +126922,21 @@
         "id": "unit-defiler",
         "title": "Defiler",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Defiler",
+            "stats": {
+              "M": "12\"",
+              "T": "11",
+              "Sv": "3+",
+              "W": "18",
+              "Ld": "6+",
+              "OC": "5",
+              "Inv": "5+"
+            }
+          }
+        ],
+        "composition": "1 Defiler. This model is equipped with: 1 Hades battle cannon; 2 excruciator cannons; 1 heavy missile launcher; 1 heavy baleflamer; 1 shearing claws.",
         "keywords": [
           "VEHICLE",
           "WALKER",
@@ -126723,7 +127010,27 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀160mm)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Wargear Options",
+            "lines": [
+              "This model’s Hades battle cannon can be replaced with 1 ectoplasma destructor.",
+              "This model’s excruciator cannons can be replaced with 2 magma cutters.",
+              "This model’s heavy baleflamer can be replaced with one of the following: 1 Hades lascannon; 1 heavy reaper autocannon; 1 electroscourge (a model cannot be equipped with more than one electroscourge).",
+              "This model’s heavy missile launcher can be replaced with one of the following: 1 Hades lascannon; 1 heavy reaper autocannon; 1 electroscourge (a model cannot be equipped with more than one electroscourge)."
+            ]
+          },
+          {
+            "title": "Damaged",
+            "lines": [
+              "DAMAGED: 1-6 WOUNDS REMAINING. While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -126866,7 +127173,7 @@
       "recordType": "UNIT",
       "label": "Foetid Bloat-drone",
       "aliases": [],
-      "searchableContent": "ability-hovering-death-805d057\nCHAOS\nCurrent\nDAEMON\nDEADLY DEMISE\nDEATH GUARD\nFLY\nFoetid Bloat-drone\nFOETID BLOAT-DRONE\nfoetid-bloat-drone\nHovering Death\nkeyword-chaos\nkeyword-daemon\nkeyword-death-guard\nkeyword-fly\nkeyword-foetid-bloat-drone\nkeyword-nurgle\nkeyword-vehicle\nNURGLE\nNurgle’s Gift (Aura)\nunit-foetid-bloat-drone\nVEHICLE\nweapon-fleshmower-0333b70\nweapon-plague-probe-994d32e\nweapon-plaguespitter-e03b003",
+      "searchableContent": "1 Foetid Bloat-drone. This model is equipped with: fleshmower; plague probe.\n10\n10\"\n3\n3+\n5+\n6+\n9\nability-hovering-death-805d057\nBase: (⌀60mm).\nCHAOS\nCurrent\nDAEMON\nDEADLY DEMISE\nDEATH GUARD\nFLY\nFoetid Bloat-drone\nFOETID BLOAT-DRONE\nfoetid-bloat-drone\nHovering Death\nkeyword-chaos\nkeyword-daemon\nkeyword-death-guard\nkeyword-fly\nkeyword-foetid-bloat-drone\nkeyword-nurgle\nkeyword-vehicle\nNURGLE\nNurgle’s Gift (Aura)\nThis model’s fleshmower can be replaced with 2 plaguespitters.\nunit-foetid-bloat-drone\nVEHICLE\nWargear Options\nweapon-fleshmower-0333b70\nweapon-plague-probe-994d32e\nweapon-plaguespitter-e03b003",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -126883,8 +127190,21 @@
         "id": "unit-foetid-bloat-drone",
         "title": "Foetid Bloat-drone",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Foetid Bloat-drone",
+            "stats": {
+              "M": "10\"",
+              "T": "9",
+              "Sv": "3+",
+              "W": "10",
+              "Ld": "6+",
+              "OC": "3",
+              "Inv": "5+"
+            }
+          }
+        ],
+        "composition": "1 Foetid Bloat-drone. This model is equipped with: fleshmower; plague probe.",
         "keywords": [
           "VEHICLE",
           "FLY",
@@ -126947,7 +127267,18 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀60mm)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Wargear Options",
+            "lines": [
+              "This model’s fleshmower can be replaced with 2 plaguespitters."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -127024,7 +127355,7 @@
       "recordType": "UNIT",
       "label": "Foetid Bloat-drone with Heavy Blight Launcher",
       "aliases": [],
-      "searchableContent": "ability-explosive-blight-4fe2f2d\nCHAOS\nCurrent\nDAEMON\nDEADLY DEMISE\nDEATH GUARD\nExplosive Blight\nFLY\nFoetid Bloat-drone with Heavy Blight Launcher\nFOETID BLOAT-DRONE WITH HEAVY BLIGHT LAUNCHER\nfoetid-bloat-drone-with-heavy-blight-launcher\nkeyword-chaos\nkeyword-daemon\nkeyword-death-guard\nkeyword-fly\nkeyword-foetid-bloat-drone-with-heavy-blight-launcher\nkeyword-nurgle\nkeyword-vehicle\nNURGLE\nNurgle’s Gift (Aura)\nunit-foetid-bloat-drone-with-heavy-blight-launcher\nVEHICLE\nweapon-heavy-blight-launcher-989ddb7\nweapon-plague-probe-994d32e",
+      "searchableContent": "1 Foetid Bloat-drone. This model is equipped with: heavy blight launcher; plague probe.\n10\n10\"\n3\n3+\n5+\n6+\n9\nability-explosive-blight-4fe2f2d\nBase: (⌀60mm).\nCHAOS\nCurrent\nDAEMON\nDEADLY DEMISE\nDEATH GUARD\nExplosive Blight\nFLY\nFoetid Bloat-drone with Heavy Blight Launcher\nFOETID BLOAT-DRONE WITH HEAVY BLIGHT LAUNCHER\nfoetid-bloat-drone-with-heavy-blight-launcher\nkeyword-chaos\nkeyword-daemon\nkeyword-death-guard\nkeyword-fly\nkeyword-foetid-bloat-drone-with-heavy-blight-launcher\nkeyword-nurgle\nkeyword-vehicle\nNURGLE\nNurgle’s Gift (Aura)\nunit-foetid-bloat-drone-with-heavy-blight-launcher\nVEHICLE\nweapon-heavy-blight-launcher-989ddb7\nweapon-plague-probe-994d32e",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -127041,8 +127372,21 @@
         "id": "unit-foetid-bloat-drone-with-heavy-blight-launcher",
         "title": "Foetid Bloat-drone with Heavy Blight Launcher",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Foetid Bloat-drone with Heavy Blight Launcher",
+            "stats": {
+              "M": "10\"",
+              "T": "9",
+              "Sv": "3+",
+              "W": "10",
+              "Ld": "6+",
+              "OC": "3",
+              "Inv": "5+"
+            }
+          }
+        ],
+        "composition": "1 Foetid Bloat-drone. This model is equipped with: heavy blight launcher; plague probe.",
         "keywords": [
           "VEHICLE",
           "FLY",
@@ -127104,7 +127448,11 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀60mm)."
+        ],
+        "referenceSections": []
       },
       "contexts": [
         {
@@ -127181,7 +127529,7 @@
       "recordType": "UNIT",
       "label": "Foul Blightspawn",
       "aliases": [],
-      "searchableContent": "ability-blinding-spray-7d189f5\nability-putrefying-stink-4f5145b\nBATTLELINE\nBlinding Spray\nCHAOS\nCHARACTER\nCurrent\nDEATH GUARD\nFoul Blightspawn\nFOUL BLIGHTSPAWN\nfoul-blightspawn\nGRENADES\nINFANTRY\nkeyword-chaos\nkeyword-character\nkeyword-death-guard\nkeyword-foul-blightspawn\nkeyword-grenades\nkeyword-infantry\nkeyword-nurgle\nLeader\nNURGLE\nNurgle’s Gift (Aura)\nPLAGUE MARINES\nPutrefying Stink\nunit-foul-blightspawn\nunit-plague-marines\nweapon-close-combat-weapon-bc414e3\nweapon-plague-sprayer-01c1e61",
+      "searchableContent": "1\n1 Foul Blightspawn. This model is equipped with: plague sprayer; close combat weapon.\n3+\n4\n5\"\n6\n6+\nability-blinding-spray-7d189f5\nability-putrefying-stink-4f5145b\nBase: (⌀40mm).\nBATTLELINE\nBlinding Spray\nCHAOS\nCHARACTER\nCurrent\nDEATH GUARD\nFoul Blightspawn\nFOUL BLIGHTSPAWN\nfoul-blightspawn\nGRENADES\nINFANTRY\nkeyword-chaos\nkeyword-character\nkeyword-death-guard\nkeyword-foul-blightspawn\nkeyword-grenades\nkeyword-infantry\nkeyword-nurgle\nLeader\nNURGLE\nNurgle’s Gift (Aura)\nPLAGUE MARINES\nPutrefying Stink\nThis model can be attached to the following units: Plague Marines.\nunit-foul-blightspawn\nunit-plague-marines\nweapon-close-combat-weapon-bc414e3\nweapon-plague-sprayer-01c1e61\nYou can attach this model to a PLAGUE MARINES unit, even if one other Leader unit has already been attached to it (you cannot attach more than one of the same leader to the same unit). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -127198,8 +127546,20 @@
         "id": "unit-foul-blightspawn",
         "title": "Foul Blightspawn",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Foul Blightspawn",
+            "stats": {
+              "M": "5\"",
+              "T": "6",
+              "Sv": "3+",
+              "W": "4",
+              "Ld": "6+",
+              "OC": "1"
+            }
+          }
+        ],
+        "composition": "1 Foul Blightspawn. This model is equipped with: plague sprayer; close combat weapon.",
         "keywords": [
           "INFANTRY",
           "CHARACTER",
@@ -127293,7 +127653,19 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀40mm)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Leader",
+            "lines": [
+              "This model can be attached to the following units: Plague Marines.",
+              "You can attach this model to a PLAGUE MARINES unit, even if one other Leader unit has already been attached to it (you cannot attach more than one of the same leader to the same unit). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -127396,7 +127768,7 @@
       "recordType": "UNIT",
       "label": "Great Unclean One",
       "aliases": [],
-      "searchableContent": "ability-daemon-lord-of-nurgle-aura-d613df7\nability-nurgles-rot-psychic-80d4e3f\nCHAOS\nCHARACTER\nCurrent\nDAEMON\nDaemon Lord of Nurgle (Aura)\nDEADLY DEMISE\nDeep Strike\nFeel No Pain 6+\nGreat Unclean One\nGREAT UNCLEAN ONE\ngreat-unclean-one\nkeyword-chaos\nkeyword-character\nkeyword-daemon\nkeyword-great-unclean-one\nkeyword-monster\nkeyword-nurgle\nkeyword-plague-legions\nkeyword-psyker\nkeyword-summoned\nMONSTER\nNURGLE\nNurgle’s Rot (Psychic)\nPact of Decay\nPLAGUE LEGIONS\nPSYKER\nReverberating Summons\nSUMMONED\nunit-great-unclean-one\nweapon-bileblade-3708417\nweapon-bilesword-strike-de60c8c\nweapon-bilesword-sweep-d4bee74\nweapon-doomsday-bell-bf3de2c\nweapon-plague-flail-719d81e\nweapon-putrid-vomit-e5055fe",
+      "searchableContent": "1 Great Unclean One. This model is equipped with: plague flail; putrid vomit; bilesword.\n12\n20\n4+\n5\n5+\n6+\n7\"\nability-daemon-lord-of-nurgle-aura-d613df7\nability-nurgles-rot-psychic-80d4e3f\nBase: (⌀130mm).\nCHAOS\nCHARACTER\nCurrent\nDAEMON\nDaemon Lord of Nurgle (Aura)\nDamaged\nDEADLY DEMISE\nDeep Strike\nFeel No Pain 6+\nGreat Unclean One\nGREAT UNCLEAN ONE\ngreat-unclean-one\nkeyword-chaos\nkeyword-character\nkeyword-daemon\nkeyword-great-unclean-one\nkeyword-monster\nkeyword-nurgle\nkeyword-plague-legions\nkeyword-psyker\nkeyword-summoned\nMONSTER\nNURGLE\nNurgle’s Rot (Psychic)\nPact of Decay\nPact of Decay datasheet. This is not a native DEATH GUARD datasheet; it is available to the Tallyband Summoners Detachment through its Pact of Decay rule.\nPLAGUE LEGIONS\nPSYKER\nReverberating Summons\nSUMMONED\nThis model’s bilesword can be replaced with 1 doomsday bell.\nThis model’s plague flail can be replaced with 1 bileblade.\nunit-great-unclean-one\nWargear Options\nweapon-bileblade-3708417\nweapon-bilesword-strike-de60c8c\nweapon-bilesword-sweep-d4bee74\nweapon-doomsday-bell-bf3de2c\nweapon-plague-flail-719d81e\nweapon-putrid-vomit-e5055fe\nWhile this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -127413,8 +127785,21 @@
         "id": "unit-great-unclean-one",
         "title": "Great Unclean One",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Great Unclean One",
+            "stats": {
+              "M": "7\"",
+              "T": "12",
+              "Sv": "5+",
+              "W": "20",
+              "Ld": "6+",
+              "OC": "5",
+              "Inv": "4+"
+            }
+          }
+        ],
+        "composition": "1 Great Unclean One. This model is equipped with: plague flail; putrid vomit; bilesword.",
         "keywords": [
           "MONSTER",
           "CHARACTER",
@@ -127493,7 +127878,26 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Pact of Decay datasheet. This is not a native DEATH GUARD datasheet; it is available to the Tallyband Summoners Detachment through its Pact of Decay rule.",
+          "Base: (⌀130mm)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Damaged",
+            "lines": [
+              "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+            ]
+          },
+          {
+            "title": "Wargear Options",
+            "lines": [
+              "This model’s plague flail can be replaced with 1 bileblade.",
+              "This model’s bilesword can be replaced with 1 doomsday bell."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -127570,7 +127974,7 @@
       "recordType": "UNIT",
       "label": "Helbrute",
       "aliases": [],
-      "searchableContent": "ability-diseased-malice-caa33aa\nability-froth-spattered-frenzy-9a139e5\nCHAOS\nCurrent\nDEADLY DEMISE\nDEATH GUARD\nDiseased Malice\nFroth-spattered Frenzy\nhelbrute\nHelbrute\nHELBRUTE\nkeyword-chaos\nkeyword-death-guard\nkeyword-helbrute\nkeyword-nurgle\nkeyword-vehicle\nkeyword-walker\nNURGLE\nNurgle’s Gift (Aura)\nunit-helbrute\nVEHICLE\nWALKER\nweapon-close-combat-weapon-f69dc30\nweapon-combi-bolter-5d7d99e\nweapon-heavy-flamer-8e6845a\nweapon-helbrute-fist-02e7ba7\nweapon-helbrute-hammer-97d2de3\nweapon-missile-launcher-frag-929c5f9\nweapon-missile-launcher-krak-3cfbee3\nweapon-multi-melta-6f250da\nweapon-plasma-cannon-c68bff5\nweapon-power-scourge-92cea25\nweapon-twin-autocannon-76385f7\nweapon-twin-heavy-bolter-b1e2633\nweapon-twin-lascannon-8f8b5f4",
+      "searchableContent": "1 Helbrute. This model is equipped with: multi-melta; Helbrute fist; close combat weapon.\n1 of this model’s Helbrute fists can be replaced with 1 missile launcher.\n1 of this model’s Helbrute fists can be replaced with one of the following: 1 Helbrute hammer; 1 power scourge.\n2+\n3\n6+\n7\"\n8\n9\nability-diseased-malice-caa33aa\nability-froth-spattered-frenzy-9a139e5\nBase: (⌀60mm).\nCHAOS\nCurrent\nDEADLY DEMISE\nDEATH GUARD\nDiseased Malice\nFor each Helbrute fist this model is equipped with, it can be equipped with one of the following: 1 combi-bolter; 1 heavy flamer. That Helbrute fist cannot then be replaced.\nFroth-spattered Frenzy\nhelbrute\nHelbrute\nHELBRUTE\nkeyword-chaos\nkeyword-death-guard\nkeyword-helbrute\nkeyword-nurgle\nkeyword-vehicle\nkeyword-walker\nNURGLE\nNurgle’s Gift (Aura)\nThis model’s multi-melta can be replaced with one of the following: 1 plasma cannon; 1 twin autocannon; 1 twin lascannon; 1 twin heavy bolter; 1 additional Helbrute fist.\nunit-helbrute\nVEHICLE\nWALKER\nWargear Options\nweapon-close-combat-weapon-f69dc30\nweapon-combi-bolter-5d7d99e\nweapon-heavy-flamer-8e6845a\nweapon-helbrute-fist-02e7ba7\nweapon-helbrute-hammer-97d2de3\nweapon-missile-launcher-frag-929c5f9\nweapon-missile-launcher-krak-3cfbee3\nweapon-multi-melta-6f250da\nweapon-plasma-cannon-c68bff5\nweapon-power-scourge-92cea25\nweapon-twin-autocannon-76385f7\nweapon-twin-heavy-bolter-b1e2633\nweapon-twin-lascannon-8f8b5f4",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -127587,8 +127991,20 @@
         "id": "unit-helbrute",
         "title": "Helbrute",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Helbrute",
+            "stats": {
+              "M": "7\"",
+              "T": "9",
+              "Sv": "2+",
+              "W": "8",
+              "Ld": "6+",
+              "OC": "3"
+            }
+          }
+        ],
+        "composition": "1 Helbrute. This model is equipped with: multi-melta; Helbrute fist; close combat weapon.",
         "keywords": [
           "VEHICLE",
           "WALKER",
@@ -127659,7 +128075,21 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀60mm)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Wargear Options",
+            "lines": [
+              "This model’s multi-melta can be replaced with one of the following: 1 plasma cannon; 1 twin autocannon; 1 twin lascannon; 1 twin heavy bolter; 1 additional Helbrute fist.",
+              "1 of this model’s Helbrute fists can be replaced with 1 missile launcher.",
+              "1 of this model’s Helbrute fists can be replaced with one of the following: 1 Helbrute hammer; 1 power scourge.",
+              "For each Helbrute fist this model is equipped with, it can be equipped with one of the following: 1 combi-bolter; 1 heavy flamer. That Helbrute fist cannot then be replaced."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -127722,7 +128152,7 @@
       "recordType": "UNIT",
       "label": "Icon Bearer",
       "aliases": [],
-      "searchableContent": "ability-blessed-icon-of-disease-e331a6c\nability-unclean-icon-5dadb9e\nBATTLELINE\nBlessed Icon of Disease\nCHAOS\nCHARACTER\nCurrent\nDEATH GUARD\nGRENADES\nIcon Bearer\nICON BEARER\nicon-bearer\nINFANTRY\nkeyword-chaos\nkeyword-character\nkeyword-death-guard\nkeyword-grenades\nkeyword-icon-bearer\nkeyword-infantry\nkeyword-nurgle\nLeader\nNURGLE\nNurgle’s Gift (Aura)\nPLAGUE MARINES\nUnclean Icon\nunit-icon-bearer\nunit-plague-marines\nweapon-boltgun-ac624b6\nweapon-plague-knife-e275d62",
+      "searchableContent": "1\n1 Icon Bearer. This model is equipped with: boltgun; plague knife.\n3+\n4\n5\"\n5+\n6\nability-blessed-icon-of-disease-e331a6c\nability-unclean-icon-5dadb9e\nBase: (⌀32mm).\nBATTLELINE\nBlessed Icon of Disease\nCHAOS\nCHARACTER\nCurrent\nDEATH GUARD\nGRENADES\nIcon Bearer\nICON BEARER\nicon-bearer\nINFANTRY\nkeyword-chaos\nkeyword-character\nkeyword-death-guard\nkeyword-grenades\nkeyword-icon-bearer\nkeyword-infantry\nkeyword-nurgle\nLeader\nNURGLE\nNurgle’s Gift (Aura)\nPLAGUE MARINES\nThis model can be attached to the following units: Plague Marines.\nUnclean Icon\nunit-icon-bearer\nunit-plague-marines\nweapon-boltgun-ac624b6\nweapon-plague-knife-e275d62\nYou can attach this model to a PLAGUE MARINES unit, even if one other Leader unit has already been attached to it (you cannot attach more than one of the same Leader to the same unit). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -127739,8 +128169,20 @@
         "id": "unit-icon-bearer",
         "title": "Icon Bearer",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Icon Bearer",
+            "stats": {
+              "M": "5\"",
+              "T": "6",
+              "Sv": "3+",
+              "W": "4",
+              "Ld": "5+",
+              "OC": "1"
+            }
+          }
+        ],
+        "composition": "1 Icon Bearer. This model is equipped with: boltgun; plague knife.",
         "keywords": [
           "INFANTRY",
           "CHARACTER",
@@ -127834,7 +128276,19 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀32mm)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Leader",
+            "lines": [
+              "This model can be attached to the following units: Plague Marines.",
+              "You can attach this model to a PLAGUE MARINES unit, even if one other Leader unit has already been attached to it (you cannot attach more than one of the same Leader to the same unit). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -127937,7 +128391,7 @@
       "recordType": "UNIT",
       "label": "Lord of Contagion",
       "aliases": [],
-      "searchableContent": "ability-unholy-resilience-745069e\nability-vector-of-disease-2498580\nBLIGHTLORD TERMINATORS\nCHAOS\nCHARACTER\nCurrent\nDEATH GUARD\nDEATHSHROUD TERMINATORS\nDeep Strike\nGRENADES\nINFANTRY\nkeyword-chaos\nkeyword-character\nkeyword-death-guard\nkeyword-grenades\nkeyword-infantry\nkeyword-lord-of-contagion\nkeyword-nurgle\nkeyword-terminator\nLeader\nLord of Contagion\nLORD OF CONTAGION\nlord-of-contagion\nNURGLE\nNurgle’s Gift (Aura)\nTERMINATOR\nUnholy Resilience\nunit-blightlord-terminators\nunit-deathshroud-terminators\nunit-lord-of-contagion\nVector of Disease\nweapon-manreaper-strike-cbe183b\nweapon-manreaper-sweep-b4c76ef",
+      "searchableContent": "1\n1 Lord of Contagion. This model is equipped with: manreaper.\n2+\n4+\n5\"\n6\n6+\n7\nability-unholy-resilience-745069e\nability-vector-of-disease-2498580\nBase: (⌀40mm).\nBLIGHTLORD TERMINATORS\nCHAOS\nCHARACTER\nCurrent\nDEATH GUARD\nDEATHSHROUD TERMINATORS\nDeep Strike\nGRENADES\nINFANTRY\nkeyword-chaos\nkeyword-character\nkeyword-death-guard\nkeyword-grenades\nkeyword-infantry\nkeyword-lord-of-contagion\nkeyword-nurgle\nkeyword-terminator\nLeader\nLord of Contagion\nLORD OF CONTAGION\nlord-of-contagion\nNURGLE\nNurgle’s Gift (Aura)\nTERMINATOR\nThis model can be attached to the following units: Blightlord Terminators; Deathshroud Terminators.\nUnholy Resilience\nunit-blightlord-terminators\nunit-deathshroud-terminators\nunit-lord-of-contagion\nVector of Disease\nweapon-manreaper-strike-cbe183b\nweapon-manreaper-sweep-b4c76ef",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -127954,8 +128408,21 @@
         "id": "unit-lord-of-contagion",
         "title": "Lord of Contagion",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Lord of Contagion",
+            "stats": {
+              "M": "5\"",
+              "T": "7",
+              "Sv": "2+",
+              "W": "6",
+              "Ld": "6+",
+              "OC": "1",
+              "Inv": "4+"
+            }
+          }
+        ],
+        "composition": "1 Lord of Contagion. This model is equipped with: manreaper.",
         "keywords": [
           "INFANTRY",
           "CHARACTER",
@@ -128051,7 +128518,18 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀40mm)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Leader",
+            "lines": [
+              "This model can be attached to the following units: Blightlord Terminators; Deathshroud Terminators."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -128158,7 +128636,7 @@
       "recordType": "UNIT",
       "label": "Lord of Poxes",
       "aliases": [],
-      "searchableContent": "ability-gift-of-poxes-29d6059\nability-shroud-of-disease-90475da\nBATTLELINE\nCHAOS\nCHARACTER\nCurrent\nDEATH GUARD\nGift of Poxes\nGRENADES\nINFANTRY\nkeyword-chaos\nkeyword-character\nkeyword-death-guard\nkeyword-grenades\nkeyword-infantry\nkeyword-lord-of-poxes\nkeyword-nurgle\nLeader\nLord of Poxes\nLORD OF POXES\nlord-of-poxes\nNURGLE\nNurgle’s Gift (Aura)\nPLAGUE MARINES\nShroud of Disease\nunit-lord-of-poxes\nunit-plague-marines\nweapon-great-plague-blade-7db21af\nweapon-plasma-pistol-standard-95a88d7\nweapon-plasma-pistol-supercharge-f0893d1",
+      "searchableContent": "1\n1 Lord of Poxes. This model is equipped with: plasma pistol; great plague blade.\n3+\n4+\n5\n5\"\n6\n6+\nability-gift-of-poxes-29d6059\nability-shroud-of-disease-90475da\nBase: (⌀40mm).\nBATTLELINE\nCHAOS\nCHARACTER\nCurrent\nDEATH GUARD\nGift of Poxes\nGRENADES\nINFANTRY\nkeyword-chaos\nkeyword-character\nkeyword-death-guard\nkeyword-grenades\nkeyword-infantry\nkeyword-lord-of-poxes\nkeyword-nurgle\nLeader\nLord of Poxes\nLORD OF POXES\nlord-of-poxes\nNURGLE\nNurgle’s Gift (Aura)\nPLAGUE MARINES\nShroud of Disease\nThis model can be attached to the following units: Plague Marines.\nunit-lord-of-poxes\nunit-plague-marines\nweapon-great-plague-blade-7db21af\nweapon-plasma-pistol-standard-95a88d7\nweapon-plasma-pistol-supercharge-f0893d1",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -128175,8 +128653,21 @@
         "id": "unit-lord-of-poxes",
         "title": "Lord of Poxes",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Lord of Poxes",
+            "stats": {
+              "M": "5\"",
+              "T": "6",
+              "Sv": "3+",
+              "W": "5",
+              "Ld": "6+",
+              "OC": "1",
+              "Inv": "4+"
+            }
+          }
+        ],
+        "composition": "1 Lord of Poxes. This model is equipped with: plasma pistol; great plague blade.",
         "keywords": [
           "INFANTRY",
           "CHARACTER",
@@ -128256,7 +128747,18 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀40mm)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Leader",
+            "lines": [
+              "This model can be attached to the following units: Plague Marines."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -128359,7 +128861,7 @@
       "recordType": "UNIT",
       "label": "Lord of Virulence",
       "aliases": [],
-      "searchableContent": "ability-blight-bombardment-74bfb5b\nability-virulent-aura-c28aa51\nBlight Bombardment\nBLIGHTLORD TERMINATORS\nCHAOS\nCHARACTER\nCurrent\nDEATH GUARD\nDEATHSHROUD TERMINATORS\nDeep Strike\nINFANTRY\nkeyword-chaos\nkeyword-character\nkeyword-death-guard\nkeyword-infantry\nkeyword-lord-of-virulence\nkeyword-nurgle\nkeyword-terminator\nLeader\nLord of Virulence\nLORD OF VIRULENCE\nlord-of-virulence\nNURGLE\nNurgle’s Gift (Aura)\nTERMINATOR\nunit-blightlord-terminators\nunit-deathshroud-terminators\nunit-lord-of-virulence\nVirulent Aura\nweapon-power-fist-5e121c4\nweapon-twin-plague-spewer-4c289ca",
+      "searchableContent": "1\n1 Lord of Virulence. This model is equipped with: twin plague spewer; power fist.\n2+\n4+\n5\"\n6\n6+\n7\nability-blight-bombardment-74bfb5b\nability-virulent-aura-c28aa51\nBase: (⌀50mm).\nBlight Bombardment\nBLIGHTLORD TERMINATORS\nCHAOS\nCHARACTER\nCurrent\nDEATH GUARD\nDEATHSHROUD TERMINATORS\nDeep Strike\nINFANTRY\nkeyword-chaos\nkeyword-character\nkeyword-death-guard\nkeyword-infantry\nkeyword-lord-of-virulence\nkeyword-nurgle\nkeyword-terminator\nLeader\nLord of Virulence\nLORD OF VIRULENCE\nlord-of-virulence\nNURGLE\nNurgle’s Gift (Aura)\nTERMINATOR\nThis model can be attached to the following units: Blightlord Terminators; Deathshroud Terminators.\nunit-blightlord-terminators\nunit-deathshroud-terminators\nunit-lord-of-virulence\nVirulent Aura\nweapon-power-fist-5e121c4\nweapon-twin-plague-spewer-4c289ca",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -128376,8 +128878,21 @@
         "id": "unit-lord-of-virulence",
         "title": "Lord of Virulence",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Lord of Virulence",
+            "stats": {
+              "M": "5\"",
+              "T": "7",
+              "Sv": "2+",
+              "W": "6",
+              "Ld": "6+",
+              "OC": "1",
+              "Inv": "4+"
+            }
+          }
+        ],
+        "composition": "1 Lord of Virulence. This model is equipped with: twin plague spewer; power fist.",
         "keywords": [
           "INFANTRY",
           "CHARACTER",
@@ -128469,7 +128984,18 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀50mm)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Leader",
+            "lines": [
+              "This model can be attached to the following units: Blightlord Terminators; Deathshroud Terminators."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -128576,7 +129102,7 @@
       "recordType": "UNIT",
       "label": "Malignant Plaguecaster",
       "aliases": [],
-      "searchableContent": "ability-gift-of-contagion-psychic-4fea300\nability-pestilent-fallout-psychic-399986c\nBATTLELINE\nCHAOS\nCHARACTER\nCurrent\nDEATH GUARD\nGift of Contagion (Psychic)\nGRENADES\nINFANTRY\nkeyword-chaos\nkeyword-character\nkeyword-death-guard\nkeyword-infantry\nkeyword-malignant-plaguecaster\nkeyword-nurgle\nkeyword-psyker\nLeader\nMalignant Plaguecaster\nMALIGNANT PLAGUECASTER\nmalignant-plaguecaster\nNURGLE\nNurgle’s Gift (Aura)\nPestilent Fallout (Psychic)\nPLAGUE MARINES\nPOXWALKERS\nPSYKER\nunit-malignant-plaguecaster\nunit-plague-marines\nunit-poxwalkers\nweapon-bolt-pistol-4457cbc\nweapon-corrupted-staff-4829d29\nweapon-plague-wind-focused-witchfire-6ca78d4\nweapon-plague-wind-witchfire-9c986c4",
+      "searchableContent": "1\n1 Malignant Plaguecaster. This model is equipped with: bolt pistol; Plague Wind; corrupted staff.\n3+\n4\n5\"\n6\n6+\nability-gift-of-contagion-psychic-4fea300\nability-pestilent-fallout-psychic-399986c\nBase: (⌀32mm).\nBATTLELINE\nCHAOS\nCHARACTER\nCurrent\nDEATH GUARD\nGift of Contagion (Psychic)\nGRENADES\nINFANTRY\nkeyword-chaos\nkeyword-character\nkeyword-death-guard\nkeyword-infantry\nkeyword-malignant-plaguecaster\nkeyword-nurgle\nkeyword-psyker\nLeader\nMalignant Plaguecaster\nMALIGNANT PLAGUECASTER\nmalignant-plaguecaster\nNURGLE\nNurgle’s Gift (Aura)\nPestilent Fallout (Psychic)\nPLAGUE MARINES\nPOXWALKERS\nPSYKER\nThis model can be attached to the following units: Plague Marines; Poxwalkers.\nunit-malignant-plaguecaster\nunit-plague-marines\nunit-poxwalkers\nweapon-bolt-pistol-4457cbc\nweapon-corrupted-staff-4829d29\nweapon-plague-wind-focused-witchfire-6ca78d4\nweapon-plague-wind-witchfire-9c986c4",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -128593,8 +129119,20 @@
         "id": "unit-malignant-plaguecaster",
         "title": "Malignant Plaguecaster",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Malignant Plaguecaster",
+            "stats": {
+              "M": "5\"",
+              "T": "6",
+              "Sv": "3+",
+              "W": "4",
+              "Ld": "6+",
+              "OC": "1"
+            }
+          }
+        ],
+        "composition": "1 Malignant Plaguecaster. This model is equipped with: bolt pistol; Plague Wind; corrupted staff.",
         "keywords": [
           "INFANTRY",
           "CHARACTER",
@@ -128687,7 +129225,18 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀32mm)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Leader",
+            "lines": [
+              "This model can be attached to the following units: Plague Marines; Poxwalkers."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -128794,7 +129343,7 @@
       "recordType": "UNIT",
       "label": "Miasmic Malignifier",
       "aliases": [],
-      "searchableContent": "ability-diseased-cover-8d71e30\nability-fortification-e581151\nability-putrescent-fog-aura-afeaa21\nCHAOS\nCurrent\nDEADLY DEMISE\nDEATH GUARD\nDeployment\nDiseased Cover\nFortification\nFORTIFICATION\nFRAME\nkeyword-chaos\nkeyword-death-guard\nkeyword-fortification\nkeyword-frame\nkeyword-miasmic-malignifier\nkeyword-nurgle\nMiasmic Malignifier\nMIASMIC MALIGNIFIER\nmiasmic-malignifier\nNURGLE\nNurgle’s Gift (Aura)\nPutrescent Fog (Aura)\nunit-miasmic-malignifier\nweapon-miasmic-gouts-7cba9ce",
+      "searchableContent": "-\n0\n1 Miasmic Malignifier. This model is equipped with: miasmic gouts.\n10\n12\n3+\n6+\nability-diseased-cover-8d71e30\nability-fortification-e581151\nability-putrescent-fog-aura-afeaa21\nBase: (⌀Use model).\nCHAOS\nCurrent\nDEADLY DEMISE\nDEATH GUARD\nDeployment\nDiseased Cover\nFortification\nFORTIFICATION\nFRAME\nkeyword-chaos\nkeyword-death-guard\nkeyword-fortification\nkeyword-frame\nkeyword-miasmic-malignifier\nkeyword-nurgle\nMiasmic Malignifier\nMIASMIC MALIGNIFIER\nmiasmic-malignifier\nNURGLE\nNurgle’s Gift (Aura)\nPutrescent Fog (Aura)\nunit-miasmic-malignifier\nweapon-miasmic-gouts-7cba9ce",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -128811,8 +129360,20 @@
         "id": "unit-miasmic-malignifier",
         "title": "Miasmic Malignifier",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Miasmic Malignifier",
+            "stats": {
+              "M": "-",
+              "T": "10",
+              "Sv": "3+",
+              "W": "12",
+              "Ld": "6+",
+              "OC": "0"
+            }
+          }
+        ],
+        "composition": "1 Miasmic Malignifier. This model is equipped with: miasmic gouts.",
         "keywords": [
           "FORTIFICATION",
           "CHAOS",
@@ -128874,7 +129435,11 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀Use model)."
+        ],
+        "referenceSections": []
       },
       "contexts": [
         {
@@ -128937,7 +129502,7 @@
       "recordType": "UNIT",
       "label": "Mortarion",
       "aliases": [],
-      "searchableContent": "ability-host-of-plagues-2f9d0aa\nability-lord-of-the-death-guard-90db1c4\nCHAOS\nCHARACTER\nCurrent\nDAEMON\nDEADLY DEMISE\nDEATH GUARD\nDeep Strike\nEPIC HERO\nFeel No Pain 5+\nFLY\nGRENADES\nHost of Plagues\nkeyword-chaos\nkeyword-character\nkeyword-daemon\nkeyword-death-guard\nkeyword-epic-hero\nkeyword-fly\nkeyword-grenades\nkeyword-monster\nkeyword-mortarion\nkeyword-nurgle\nkeyword-primarch\nkeyword-psyker\nLord of the Death Guard\nMONSTER\nmortarion\nMortarion\nMORTARION\nNURGLE\nNurgle’s Gift (Aura)\nPRIMARCH\nPSYKER\nSupreme Commander\nunit-mortarion\nweapon-lantern-c3a2ca6\nweapon-rotwind-6399c60\nweapon-silence-strike-11078ae\nweapon-silence-sweep-280acf3",
+      "searchableContent": "1 Mortarion – EPIC HERO. This model is equipped with: Lantern; Rotwind; Silence.\n10\"\n12\n16\n2+\n4+\n5+\n6\nability-host-of-plagues-2f9d0aa\nability-lord-of-the-death-guard-90db1c4\nBase: (⌀100mm).\nCHAOS\nCHARACTER\nCurrent\nDAEMON\nDamaged\nDEADLY DEMISE\nDEATH GUARD\nDeep Strike\nEPIC HERO\nFeel No Pain 5+\nFLY\nGRENADES\nHost of Plagues\nkeyword-chaos\nkeyword-character\nkeyword-daemon\nkeyword-death-guard\nkeyword-epic-hero\nkeyword-fly\nkeyword-grenades\nkeyword-monster\nkeyword-mortarion\nkeyword-nurgle\nkeyword-primarch\nkeyword-psyker\nLord of the Death Guard\nMONSTER\nmortarion\nMortarion\nMORTARION\nNURGLE\nNurgle’s Gift (Aura)\nPRIMARCH\nPSYKER\nSupreme Commander\nunit-mortarion\nweapon-lantern-c3a2ca6\nweapon-rotwind-6399c60\nweapon-silence-strike-11078ae\nweapon-silence-sweep-280acf3\nWhile this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -128954,8 +129519,21 @@
         "id": "unit-mortarion",
         "title": "Mortarion",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Mortarion",
+            "stats": {
+              "M": "10\"",
+              "T": "12",
+              "Sv": "2+",
+              "W": "16",
+              "Ld": "5+",
+              "OC": "6",
+              "Inv": "4+"
+            }
+          }
+        ],
+        "composition": "1 Mortarion – EPIC HERO. This model is equipped with: Lantern; Rotwind; Silence.",
         "keywords": [
           "MONSTER",
           "CHARACTER",
@@ -129044,7 +129622,18 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀100mm)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Damaged",
+            "lines": [
+              "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -129107,7 +129696,7 @@
       "recordType": "UNIT",
       "label": "Myphitic Blight-hauler",
       "aliases": [],
-      "searchableContent": "ability-tank-hunters-8831aae\nCHAOS\nCurrent\nDAEMON\nDEADLY DEMISE\nDEATH GUARD\nkeyword-chaos\nkeyword-daemon\nkeyword-death-guard\nkeyword-myphitic-blight-hauler\nkeyword-nurgle\nkeyword-smoke\nkeyword-vehicle\nMyphitic Blight-hauler\nMYPHITIC BLIGHT-HAULER\nmyphitic-blight-hauler\nNURGLE\nNurgle’s Gift (Aura)\nSMOKE\nTank Hunters\nunit-myphitic-blight-hauler\nVEHICLE\nweapon-bile-spurt-507565f\nweapon-gnashing-maw-f34ed82\nweapon-missile-launcher-frag-929c5f9\nweapon-missile-launcher-krak-3cfbee3\nweapon-multi-melta-6f250da",
+      "searchableContent": "1-2 Myphitic Blight-haulers. Every model is equipped with: bile spurt; missile launcher; multi-melta; gnashing maw.\n10\n10\"\n3\n3+\n5+\n6+\n9\nability-tank-hunters-8831aae\nBase: (⌀80mm).\nCHAOS\nCurrent\nDAEMON\nDEADLY DEMISE\nDEATH GUARD\nkeyword-chaos\nkeyword-daemon\nkeyword-death-guard\nkeyword-myphitic-blight-hauler\nkeyword-nurgle\nkeyword-smoke\nkeyword-vehicle\nMyphitic Blight-hauler\nMYPHITIC BLIGHT-HAULER\nmyphitic-blight-hauler\nNURGLE\nNurgle’s Gift (Aura)\nSMOKE\nTank Hunters\nunit-myphitic-blight-hauler\nVEHICLE\nweapon-bile-spurt-507565f\nweapon-gnashing-maw-f34ed82\nweapon-missile-launcher-frag-929c5f9\nweapon-missile-launcher-krak-3cfbee3\nweapon-multi-melta-6f250da",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -129124,8 +129713,21 @@
         "id": "unit-myphitic-blight-hauler",
         "title": "Myphitic Blight-hauler",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Myphitic Blight-hauler",
+            "stats": {
+              "M": "10\"",
+              "T": "9",
+              "Sv": "3+",
+              "W": "10",
+              "Ld": "6+",
+              "OC": "3",
+              "Inv": "5+"
+            }
+          }
+        ],
+        "composition": "1-2 Myphitic Blight-haulers. Every model is equipped with: bile spurt; missile launcher; multi-melta; gnashing maw.",
         "keywords": [
           "VEHICLE",
           "SMOKE",
@@ -129190,7 +129792,11 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀80mm)."
+        ],
+        "referenceSections": []
       },
       "contexts": [
         {
@@ -129259,7 +129865,7 @@
       "recordType": "UNIT",
       "label": "Noxious Blightbringer",
       "aliases": [],
-      "searchableContent": "ability-sickening-vitality-89bb5ff\nability-tocsin-of-misery-aura-7f2edfb\nBATTLELINE\nCHAOS\nCHARACTER\nCurrent\nDEATH GUARD\nGRENADES\nINFANTRY\nkeyword-chaos\nkeyword-character\nkeyword-death-guard\nkeyword-infantry\nkeyword-noxious-blightbringer\nkeyword-nurgle\nLeader\nNoxious Blightbringer\nNOXIOUS BLIGHTBRINGER\nnoxious-blightbringer\nNURGLE\nNurgle’s Gift (Aura)\nPLAGUE MARINES\nPOXWALKERS\nSickening Vitality\nTocsin of Misery (Aura)\nunit-noxious-blightbringer\nunit-plague-marines\nunit-poxwalkers\nweapon-cursed-plague-bell-f7341e3\nweapon-plasma-pistol-standard-4eac6a8\nweapon-plasma-pistol-supercharge-16a6bac",
+      "searchableContent": "1\n1 Noxious Blightbringer. This model is equipped with: plasma pistol; cursed plague bell.\n3+\n4\n5\"\n6\n6+\nability-sickening-vitality-89bb5ff\nability-tocsin-of-misery-aura-7f2edfb\nBase: (⌀40mm).\nBATTLELINE\nCHAOS\nCHARACTER\nCurrent\nDEATH GUARD\nGRENADES\nINFANTRY\nkeyword-chaos\nkeyword-character\nkeyword-death-guard\nkeyword-infantry\nkeyword-noxious-blightbringer\nkeyword-nurgle\nLeader\nNoxious Blightbringer\nNOXIOUS BLIGHTBRINGER\nnoxious-blightbringer\nNURGLE\nNurgle’s Gift (Aura)\nPLAGUE MARINES\nPOXWALKERS\nSickening Vitality\nThis model can be attached to the following units: Plague Marines; Poxwalkers.\nTocsin of Misery (Aura)\nunit-noxious-blightbringer\nunit-plague-marines\nunit-poxwalkers\nweapon-cursed-plague-bell-f7341e3\nweapon-plasma-pistol-standard-4eac6a8\nweapon-plasma-pistol-supercharge-16a6bac\nYou can attach this model to a PLAGUE MARINES or POXWALKERS unit, even if one other Leader unit has already been attached to it (you cannot attach more than one of the same Leader to the same unit). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -129276,8 +129882,20 @@
         "id": "unit-noxious-blightbringer",
         "title": "Noxious Blightbringer",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Noxious Blightbringer",
+            "stats": {
+              "M": "5\"",
+              "T": "6",
+              "Sv": "3+",
+              "W": "4",
+              "Ld": "6+",
+              "OC": "1"
+            }
+          }
+        ],
+        "composition": "1 Noxious Blightbringer. This model is equipped with: plasma pistol; cursed plague bell.",
         "keywords": [
           "INFANTRY",
           "CHARACTER",
@@ -129392,7 +130010,19 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀40mm)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Leader",
+            "lines": [
+              "This model can be attached to the following units: Plague Marines; Poxwalkers.",
+              "You can attach this model to a PLAGUE MARINES or POXWALKERS unit, even if one other Leader unit has already been attached to it (you cannot attach more than one of the same Leader to the same unit). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -129499,7 +130129,7 @@
       "recordType": "UNIT",
       "label": "Nurglings",
       "aliases": [],
-      "searchableContent": "ability-mischief-makers-6a686e9\nCHAOS\nCurrent\nDAEMON\nDeep Strike\nInfiltrators\nkeyword-chaos\nkeyword-daemon\nkeyword-nurgle\nkeyword-nurglings\nkeyword-plague-legions\nkeyword-summoned\nkeyword-swarm\nMischief Makers\nNURGLE\nnurglings\nNurglings\nNURGLINGS\nPact of Decay\nPLAGUE LEGIONS\nSUMMONED\nSWARM\nunit-nurglings\nweapon-diseased-claws-and-teeth-0b6d472",
+      "searchableContent": "0\n3\n3-6 Nurgling Swarms. Every model is equipped with: diseased claws and teeth.\n4\n5\"\n5+\n7+\n8+\nability-mischief-makers-6a686e9\nBase: (⌀40mm).\nCHAOS\nCurrent\nDAEMON\nDeep Strike\nInfiltrators\nkeyword-chaos\nkeyword-daemon\nkeyword-nurgle\nkeyword-nurglings\nkeyword-plague-legions\nkeyword-summoned\nkeyword-swarm\nMischief Makers\nNURGLE\nnurglings\nNurglings\nNURGLINGS\nPact of Decay\nPact of Decay datasheet. This is not a native DEATH GUARD datasheet; it is available to the Tallyband Summoners Detachment through its Pact of Decay rule.\nPLAGUE LEGIONS\nSUMMONED\nSWARM\nunit-nurglings\nweapon-diseased-claws-and-teeth-0b6d472",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -129516,8 +130146,21 @@
         "id": "unit-nurglings",
         "title": "Nurglings",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Nurglings",
+            "stats": {
+              "M": "5\"",
+              "T": "3",
+              "Sv": "7+",
+              "W": "4",
+              "Ld": "8+",
+              "OC": "0",
+              "Inv": "5+"
+            }
+          }
+        ],
+        "composition": "3-6 Nurgling Swarms. Every model is equipped with: diseased claws and teeth.",
         "keywords": [
           "SWARM",
           "CHAOS",
@@ -129579,7 +130222,12 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Pact of Decay datasheet. This is not a native DEATH GUARD datasheet; it is available to the Tallyband Summoners Detachment through its Pact of Decay rule.",
+          "Base: (⌀40mm)."
+        ],
+        "referenceSections": []
       },
       "contexts": [
         {
@@ -129648,7 +130296,7 @@
       "recordType": "UNIT",
       "label": "Plague Drones",
       "aliases": [],
-      "searchableContent": "ability-deaths-heads-546f077\nCHAOS\nCurrent\nDAEMON\nDeath’s Heads\nDeep Strike\nFLY\nkeyword-chaos\nkeyword-daemon\nkeyword-fly\nkeyword-mounted\nkeyword-nurgle\nkeyword-plague-drones\nkeyword-plague-legions\nkeyword-summoned\nMOUNTED\nNURGLE\nPact of Decay\nPlague Drones\nPLAGUE DRONES\nPLAGUE LEGIONS\nplague-drones\nSUMMONED\nunit-plague-drones\nweapon-deaths-heads-3415dda\nweapon-foul-mouthparts-8025b79\nweapon-plaguesword-ff1305d",
+      "searchableContent": "1 Plague Drone that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos.\n1 Plague Drone that is not equipped with an instrument of Chaos can be equipped with 1 daemonic icon.\n1 Plaguebringer; 2-5 Plague Drones. Every model is equipped with: death’s heads; foul mouthparts; plaguesword.\n10\"\n2\n5\n5+\n6+\n7+\n8\nability-deaths-heads-546f077\nBase: (⌀60mm).\nCHAOS\nCurrent\nDAEMON\nDeath’s Heads\nDeep Strike\nFLY\nkeyword-chaos\nkeyword-daemon\nkeyword-fly\nkeyword-mounted\nkeyword-nurgle\nkeyword-plague-drones\nkeyword-plague-legions\nkeyword-summoned\nMOUNTED\nNURGLE\nPact of Decay\nPact of Decay datasheet. This is not a native DEATH GUARD datasheet; it is available to the Tallyband Summoners Detachment through its Pact of Decay rule.\nPlague Drones\nPLAGUE DRONES\nPLAGUE LEGIONS\nplague-drones\nSUMMONED\nunit-plague-drones\nWargear Options\nweapon-deaths-heads-3415dda\nweapon-foul-mouthparts-8025b79\nweapon-plaguesword-ff1305d",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -129665,8 +130313,21 @@
         "id": "unit-plague-drones",
         "title": "Plague Drones",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Plague Drones",
+            "stats": {
+              "M": "10\"",
+              "T": "8",
+              "Sv": "6+",
+              "W": "5",
+              "Ld": "7+",
+              "OC": "2",
+              "Inv": "5+"
+            }
+          }
+        ],
+        "composition": "1 Plaguebringer; 2-5 Plague Drones. Every model is equipped with: death’s heads; foul mouthparts; plaguesword.",
         "keywords": [
           "MOUNTED",
           "FLY",
@@ -129733,7 +130394,20 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Pact of Decay datasheet. This is not a native DEATH GUARD datasheet; it is available to the Tallyband Summoners Detachment through its Pact of Decay rule.",
+          "Base: (⌀60mm)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Wargear Options",
+            "lines": [
+              "1 Plague Drone that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos.",
+              "1 Plague Drone that is not equipped with an instrument of Chaos can be equipped with 1 daemonic icon."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -129802,7 +130476,7 @@
       "recordType": "UNIT",
       "label": "Plague Marines",
       "aliases": [],
-      "searchableContent": "ability-infused-with-the-blessings-of-nurgle-577c42e\nBATTLELINE\nBIOLOGUS PUTRIFIER\nCHAOS\nCHARACTER\nCurrent\nDEATH GUARD\nFOUL BLIGHTSPAWN\nGRENADES\nICON BEARER\nINFANTRY\nInfused with the Blessings of Nurgle\nkeyword-battleline\nkeyword-chaos\nkeyword-death-guard\nkeyword-grenades\nkeyword-infantry\nkeyword-nurgle\nkeyword-plague-marines\nLORD OF POXES\nMALIGNANT PLAGUECASTER\nNOXIOUS BLIGHTBRINGER\nNURGLE\nNurgle’s Gift (Aura)\nPlague Marines\nPLAGUE MARINES\nPLAGUE SURGEON\nplague-marines\nPSYKER\nTALLYMAN\nunit-biologus-putrifier\nunit-foul-blightspawn\nunit-icon-bearer\nunit-lord-of-poxes\nunit-malignant-plaguecaster\nunit-noxious-blightbringer\nunit-plague-marines\nunit-plague-surgeon\nunit-tallyman\nweapon-blight-launcher-6d713e8\nweapon-bolt-pistol-4457cbc\nweapon-boltgun-ac624b6\nweapon-bubotic-weapons-479658b\nweapon-heavy-plague-weapon-b16b375\nweapon-meltagun-e6c3ed9\nweapon-plague-belcher-2667b3d\nweapon-plague-knives-d66e964\nweapon-plague-spewer-3ffad7c\nweapon-plasma-gun-standard-991cca1\nweapon-plasma-gun-supercharge-e705c11\nweapon-plasma-pistol-standard-4eac6a8\nweapon-plasma-pistol-supercharge-950c822\nweapon-power-fist-d333c11",
+      "searchableContent": "1 Plague Champion; 4-9 Plague Marines. Every model is equipped with: boltgun; plague knives.\n2\n3+\n5\"\n6\n6+\nability-infused-with-the-blessings-of-nurgle-577c42e\nBase: (⌀32mm).\nBATTLELINE\nBIOLOGUS PUTRIFIER\nCHAOS\nCHARACTER\nCurrent\nDEATH GUARD\nFor every 5 models in this unit, 1 Plague Marine’s boltgun can be replaced with 1 blight launcher.\nFor every 5 models in this unit, 1 Plague Marine’s boltgun can be replaced with 1 plague spewer.\nFor every 5 models in this unit, 1 Plague Marine’s boltgun can be replaced with one of the following: 1 meltagun; 1 plague belcher; 1 plasma gun.\nFor every 5 models in this unit, up to 2 Plague Marines can each have their boltgun replaced with 1 bubotic weapons.\nFor every 5 models in this unit, up to 2 Plague Marines can each have their boltgun replaced with 1 heavy plague weapon.\nFOUL BLIGHTSPAWN\nGRENADES\nICON BEARER\nINFANTRY\nInfused with the Blessings of Nurgle\nkeyword-battleline\nkeyword-chaos\nkeyword-death-guard\nkeyword-grenades\nkeyword-infantry\nkeyword-nurgle\nkeyword-plague-marines\nLORD OF POXES\nMALIGNANT PLAGUECASTER\nNOXIOUS BLIGHTBRINGER\nNURGLE\nNurgle’s Gift (Aura)\nOne Plague Marine equipped with a boltgun can be equipped with 1 icon of despair. This model’s boltgun cannot be replaced.\nPlague Marines\nPLAGUE MARINES\nPLAGUE SURGEON\nplague-marines\nPSYKER\nTALLYMAN\nThe Plague Champion’s boltgun can be replaced with one of the following: 1 bolt pistol; 1 plasma gun; 1 plasma pistol.\nThe Plague Champion’s plague knives can be replaced with one of the following: 1 bubotic weapons; 1 power fist.\nunit-biologus-putrifier\nunit-foul-blightspawn\nunit-icon-bearer\nunit-lord-of-poxes\nunit-malignant-plaguecaster\nunit-noxious-blightbringer\nunit-plague-marines\nunit-plague-surgeon\nunit-tallyman\nWargear Options\nweapon-blight-launcher-6d713e8\nweapon-bolt-pistol-4457cbc\nweapon-boltgun-ac624b6\nweapon-bubotic-weapons-479658b\nweapon-heavy-plague-weapon-b16b375\nweapon-meltagun-e6c3ed9\nweapon-plague-belcher-2667b3d\nweapon-plague-knives-d66e964\nweapon-plague-spewer-3ffad7c\nweapon-plasma-gun-standard-991cca1\nweapon-plasma-gun-supercharge-e705c11\nweapon-plasma-pistol-standard-4eac6a8\nweapon-plasma-pistol-supercharge-950c822\nweapon-power-fist-d333c11",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -129819,8 +130493,20 @@
         "id": "unit-plague-marines",
         "title": "Plague Marines",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Plague Marines",
+            "stats": {
+              "M": "5\"",
+              "T": "6",
+              "Sv": "3+",
+              "W": "2",
+              "Ld": "6+",
+              "OC": "2"
+            }
+          }
+        ],
+        "composition": "1 Plague Champion; 4-9 Plague Marines. Every model is equipped with: boltgun; plague knives.",
         "keywords": [
           "INFANTRY",
           "BATTLELINE",
@@ -130085,7 +130771,25 @@
               }
             ]
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀32mm)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Wargear Options",
+            "lines": [
+              "The Plague Champion’s boltgun can be replaced with one of the following: 1 bolt pistol; 1 plasma gun; 1 plasma pistol.",
+              "The Plague Champion’s plague knives can be replaced with one of the following: 1 bubotic weapons; 1 power fist.",
+              "For every 5 models in this unit, 1 Plague Marine’s boltgun can be replaced with 1 blight launcher.",
+              "For every 5 models in this unit, 1 Plague Marine’s boltgun can be replaced with 1 plague spewer.",
+              "For every 5 models in this unit, 1 Plague Marine’s boltgun can be replaced with one of the following: 1 meltagun; 1 plague belcher; 1 plasma gun.",
+              "For every 5 models in this unit, up to 2 Plague Marines can each have their boltgun replaced with 1 bubotic weapons.",
+              "For every 5 models in this unit, up to 2 Plague Marines can each have their boltgun replaced with 1 heavy plague weapon.",
+              "One Plague Marine equipped with a boltgun can be equipped with 1 icon of despair. This model’s boltgun cannot be replaced."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -130160,7 +130864,7 @@
       "recordType": "UNIT",
       "label": "Plague Surgeon",
       "aliases": [],
-      "searchableContent": "ability-inflamed-infections-ca01e1a\nability-tainted-narthecium-01ba1bd\nBATTLELINE\nCHAOS\nCHARACTER\nCurrent\nDEATH GUARD\nGRENADES\nINFANTRY\nInflamed Infections\nkeyword-chaos\nkeyword-character\nkeyword-death-guard\nkeyword-infantry\nkeyword-nurgle\nkeyword-plague-surgeon\nLeader\nNURGLE\nNurgle’s Gift (Aura)\nPLAGUE MARINES\nPlague Surgeon\nPLAGUE SURGEON\nplague-surgeon\nTainted Narthecium\nunit-plague-marines\nunit-plague-surgeon\nweapon-balesword-682b3cf\nweapon-bolt-pistol-4457cbc",
+      "searchableContent": "1\n1 Plague Surgeon. This model is equipped with: bolt pistol; balesword.\n3+\n4\n5\"\n6\n6+\nability-inflamed-infections-ca01e1a\nability-tainted-narthecium-01ba1bd\nBase: (⌀40mm).\nBATTLELINE\nCHAOS\nCHARACTER\nCurrent\nDEATH GUARD\nGRENADES\nINFANTRY\nInflamed Infections\nkeyword-chaos\nkeyword-character\nkeyword-death-guard\nkeyword-infantry\nkeyword-nurgle\nkeyword-plague-surgeon\nLeader\nNURGLE\nNurgle’s Gift (Aura)\nPLAGUE MARINES\nPlague Surgeon\nPLAGUE SURGEON\nplague-surgeon\nTainted Narthecium\nThis model can be attached to the following units: Plague Marines.\nunit-plague-marines\nunit-plague-surgeon\nweapon-balesword-682b3cf\nweapon-bolt-pistol-4457cbc\nYou can attach this model to a PLAGUE MARINES unit, even if one other Leader unit has already been attached to it (you cannot attach more than one of the same Leader to the same unit). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -130177,8 +130881,20 @@
         "id": "unit-plague-surgeon",
         "title": "Plague Surgeon",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Plague Surgeon",
+            "stats": {
+              "M": "5\"",
+              "T": "6",
+              "Sv": "3+",
+              "W": "4",
+              "Ld": "6+",
+              "OC": "1"
+            }
+          }
+        ],
+        "composition": "1 Plague Surgeon. This model is equipped with: bolt pistol; balesword.",
         "keywords": [
           "INFANTRY",
           "CHARACTER",
@@ -130268,7 +130984,19 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀40mm)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Leader",
+            "lines": [
+              "This model can be attached to the following units: Plague Marines.",
+              "You can attach this model to a PLAGUE MARINES unit, even if one other Leader unit has already been attached to it (you cannot attach more than one of the same Leader to the same unit). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -130371,7 +131099,7 @@
       "recordType": "UNIT",
       "label": "Plaguebearers",
       "aliases": [],
-      "searchableContent": "ability-infected-outbreak-faaf2d1\nBATTLELINE\nCHAOS\nCurrent\nDAEMON\nDeep Strike\nINFANTRY\nInfected Outbreak\nkeyword-battleline\nkeyword-chaos\nkeyword-daemon\nkeyword-infantry\nkeyword-nurgle\nkeyword-plague-legions\nkeyword-plaguebearers\nkeyword-summoned\nNURGLE\nPact of Decay\nPLAGUE LEGIONS\nplaguebearers\nPlaguebearers\nPLAGUEBEARERS\nSUMMONED\nunit-plaguebearers\nweapon-plaguesword-ff1305d",
+      "searchableContent": "1 Plaguebearer that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos.\n1 Plaguebearer that is not equipped with an instrument of Chaos can be equipped with 1 daemonic icon.\n1 Plagueridden; 9 Plaguebearers. Every model is equipped with: plaguesword.\n2\n5\n5\"\n5+\n7+\nability-infected-outbreak-faaf2d1\nBase: (⌀32mm).\nBATTLELINE\nCHAOS\nCurrent\nDAEMON\nDeep Strike\nINFANTRY\nInfected Outbreak\nkeyword-battleline\nkeyword-chaos\nkeyword-daemon\nkeyword-infantry\nkeyword-nurgle\nkeyword-plague-legions\nkeyword-plaguebearers\nkeyword-summoned\nNURGLE\nPact of Decay\nPact of Decay datasheet. This is not a native DEATH GUARD datasheet; it is available to the Tallyband Summoners Detachment through its Pact of Decay rule.\nPLAGUE LEGIONS\nplaguebearers\nPlaguebearers\nPLAGUEBEARERS\nSUMMONED\nunit-plaguebearers\nWargear Options\nweapon-plaguesword-ff1305d",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -130388,8 +131116,21 @@
         "id": "unit-plaguebearers",
         "title": "Plaguebearers",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Plaguebearers",
+            "stats": {
+              "M": "5\"",
+              "T": "5",
+              "Sv": "7+",
+              "W": "2",
+              "Ld": "7+",
+              "OC": "2",
+              "Inv": "5+"
+            }
+          }
+        ],
+        "composition": "1 Plagueridden; 9 Plaguebearers. Every model is equipped with: plaguesword.",
         "keywords": [
           "INFANTRY",
           "BATTLELINE",
@@ -130454,7 +131195,20 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Pact of Decay datasheet. This is not a native DEATH GUARD datasheet; it is available to the Tallyband Summoners Detachment through its Pact of Decay rule.",
+          "Base: (⌀32mm)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Wargear Options",
+            "lines": [
+              "1 Plaguebearer that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos.",
+              "1 Plaguebearer that is not equipped with an instrument of Chaos can be equipped with 1 daemonic icon."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -130517,7 +131271,7 @@
       "recordType": "UNIT",
       "label": "Plagueburst Crawler",
       "aliases": [],
-      "searchableContent": "ability-spore-laced-shock-waves-bc0251b\nCHAOS\nCurrent\nDAEMON\nDEADLY DEMISE\nDEATH GUARD\nFRAME\nkeyword-chaos\nkeyword-daemon\nkeyword-death-guard\nkeyword-frame\nkeyword-nurgle\nkeyword-plagueburst-crawler\nkeyword-vehicle\nNURGLE\nNurgle’s Gift (Aura)\nPlagueburst Crawler\nPLAGUEBURST CRAWLER\nplagueburst-crawler\nSpore-laced Shock Waves\nunit-plagueburst-crawler\nVEHICLE\nweapon-armoured-tracks-a6a4ba9\nweapon-entropy-cannon-2ed707e\nweapon-heavy-slugger-f2c1c85\nweapon-plagueburst-mortar-fef92be\nweapon-plaguespitter-e03b003\nweapon-rothail-volley-gun-e8d55b7",
+      "searchableContent": "1 Plagueburst Crawler. This model is equipped with: 2 entropy cannons; heavy slugger; Plagueburst mortar; armoured tracks.\n10\n10\"\n12\n2+\n3\n5+\n6+\nability-spore-laced-shock-waves-bc0251b\nBase: (⌀Use model).\nCHAOS\nCurrent\nDAEMON\nDamaged\nDEADLY DEMISE\nDEATH GUARD\nFRAME\nkeyword-chaos\nkeyword-daemon\nkeyword-death-guard\nkeyword-frame\nkeyword-nurgle\nkeyword-plagueburst-crawler\nkeyword-vehicle\nNURGLE\nNurgle’s Gift (Aura)\nPlagueburst Crawler\nPLAGUEBURST CRAWLER\nplagueburst-crawler\nSpore-laced Shock Waves\nThis model’s 2 entropy cannons can be replaced with 2 plaguespitters.\nThis model’s heavy slugger can be replaced with 1 rothail volley gun.\nunit-plagueburst-crawler\nVEHICLE\nWargear Options\nweapon-armoured-tracks-a6a4ba9\nweapon-entropy-cannon-2ed707e\nweapon-heavy-slugger-f2c1c85\nweapon-plagueburst-mortar-fef92be\nweapon-plaguespitter-e03b003\nweapon-rothail-volley-gun-e8d55b7\nWhile this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -130534,8 +131288,21 @@
         "id": "unit-plagueburst-crawler",
         "title": "Plagueburst Crawler",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Plagueburst Crawler",
+            "stats": {
+              "M": "10\"",
+              "T": "10",
+              "Sv": "2+",
+              "W": "12",
+              "Ld": "6+",
+              "OC": "3",
+              "Inv": "5+"
+            }
+          }
+        ],
+        "composition": "1 Plagueburst Crawler. This model is equipped with: 2 entropy cannons; heavy slugger; Plagueburst mortar; armoured tracks.",
         "keywords": [
           "VEHICLE",
           "CHAOS",
@@ -130601,7 +131368,25 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀Use model)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Damaged",
+            "lines": [
+              "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+            ]
+          },
+          {
+            "title": "Wargear Options",
+            "lines": [
+              "This model’s 2 entropy cannons can be replaced with 2 plaguespitters.",
+              "This model’s heavy slugger can be replaced with 1 rothail volley gun."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -130678,7 +131463,7 @@
       "recordType": "UNIT",
       "label": "Poxwalkers",
       "aliases": [],
-      "searchableContent": "ability-curse-of-the-walking-pox-6a9093e\nCHAOS\nCHARACTER\nCurrent\nCurse of the Walking Pox\nDEATH GUARD\nEPIC HERO\nFeel No Pain 5+\nINFANTRY\nInfiltrators\nkeyword-chaos\nkeyword-death-guard\nkeyword-infantry\nkeyword-nurgle\nkeyword-poxwalkers\nMALIGNANT PLAGUECASTER\nNOXIOUS BLIGHTBRINGER\nNURGLE\nNurgle’s Gift (Aura)\npoxwalkers\nPoxwalkers\nPOXWALKERS\nPSYKER\nTERMINATOR\nTYPHUS\nunit-malignant-plaguecaster\nunit-noxious-blightbringer\nunit-poxwalkers\nunit-typhus\nweapon-improvised-weapon-46cfc5f",
+      "searchableContent": "1\n10-20 Poxwalkers. Every model is equipped with: improvised weapon.\n4\n5\"\n7+\n8+\nability-curse-of-the-walking-pox-6a9093e\nBase: (⌀25mm).\nCHAOS\nCHARACTER\nCurrent\nCurse of the Walking Pox\nDEATH GUARD\nEPIC HERO\nFeel No Pain 5+\nINFANTRY\nInfiltrators\nkeyword-chaos\nkeyword-death-guard\nkeyword-infantry\nkeyword-nurgle\nkeyword-poxwalkers\nMALIGNANT PLAGUECASTER\nNOXIOUS BLIGHTBRINGER\nNURGLE\nNurgle’s Gift (Aura)\npoxwalkers\nPoxwalkers\nPOXWALKERS\nPSYKER\nTERMINATOR\nTYPHUS\nunit-malignant-plaguecaster\nunit-noxious-blightbringer\nunit-poxwalkers\nunit-typhus\nweapon-improvised-weapon-46cfc5f",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -130695,8 +131480,20 @@
         "id": "unit-poxwalkers",
         "title": "Poxwalkers",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Poxwalkers",
+            "stats": {
+              "M": "5\"",
+              "T": "4",
+              "Sv": "7+",
+              "W": "1",
+              "Ld": "8+",
+              "OC": "1"
+            }
+          }
+        ],
+        "composition": "10-20 Poxwalkers. Every model is equipped with: improvised weapon.",
         "keywords": [
           "INFANTRY",
           "CHAOS",
@@ -130808,7 +131605,11 @@
               }
             ]
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀25mm)."
+        ],
+        "referenceSections": []
       },
       "contexts": [
         {
@@ -130877,7 +131678,7 @@
       "recordType": "UNIT",
       "label": "Rotigus",
       "aliases": [],
-      "searchableContent": "ability-deluge-of-nurgle-aura-49f7690\nability-virulent-blessing-psychic-62e7cae\nCHAOS\nCHARACTER\nCurrent\nDAEMON\nDEADLY DEMISE\nDeep Strike\nDeluge of Nurgle (Aura)\nEPIC HERO\nFeel No Pain 6+\nkeyword-chaos\nkeyword-character\nkeyword-daemon\nkeyword-epic-hero\nkeyword-monster\nkeyword-nurgle\nkeyword-plague-legions\nkeyword-psyker\nkeyword-rotigus\nkeyword-summoned\nMONSTER\nNURGLE\nPact of Decay\nPLAGUE LEGIONS\nPSYKER\nrotigus\nRotigus\nROTIGUS\nSUMMONED\nunit-rotigus\nVirulent Blessing (Psychic)\nweapon-gnarlrod-strike-1acf103\nweapon-gnarlrod-sweep-e6644f6\nweapon-streams-of-brackish-filth-de31740",
+      "searchableContent": "1 Rotigus – EPIC HERO. This model is equipped with: streams of brackish filth; gnarlrod.\n12\n22\n4+\n5\n5+\n6+\n7\"\nability-deluge-of-nurgle-aura-49f7690\nability-virulent-blessing-psychic-62e7cae\nBase: (⌀130mm).\nCHAOS\nCHARACTER\nCurrent\nDAEMON\nDamaged\nDEADLY DEMISE\nDeep Strike\nDeluge of Nurgle (Aura)\nEPIC HERO\nFeel No Pain 6+\nkeyword-chaos\nkeyword-character\nkeyword-daemon\nkeyword-epic-hero\nkeyword-monster\nkeyword-nurgle\nkeyword-plague-legions\nkeyword-psyker\nkeyword-rotigus\nkeyword-summoned\nMONSTER\nNURGLE\nPact of Decay\nPact of Decay datasheet. This is not a native DEATH GUARD datasheet; it is available to the Tallyband Summoners Detachment through its Pact of Decay rule.\nPLAGUE LEGIONS\nPSYKER\nrotigus\nRotigus\nROTIGUS\nSUMMONED\nunit-rotigus\nVirulent Blessing (Psychic)\nweapon-gnarlrod-strike-1acf103\nweapon-gnarlrod-sweep-e6644f6\nweapon-streams-of-brackish-filth-de31740\nWhile this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -130894,8 +131695,21 @@
         "id": "unit-rotigus",
         "title": "Rotigus",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Rotigus",
+            "stats": {
+              "M": "7\"",
+              "T": "12",
+              "Sv": "5+",
+              "W": "22",
+              "Ld": "6+",
+              "OC": "5",
+              "Inv": "4+"
+            }
+          }
+        ],
+        "composition": "1 Rotigus – EPIC HERO. This model is equipped with: streams of brackish filth; gnarlrod.",
         "keywords": [
           "MONSTER",
           "CHARACTER",
@@ -130974,7 +131788,19 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Pact of Decay datasheet. This is not a native DEATH GUARD datasheet; it is available to the Tallyband Summoners Detachment through its Pact of Decay rule.",
+          "Base: (⌀130mm)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Damaged",
+            "lines": [
+              "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -131037,7 +131863,7 @@
       "recordType": "UNIT",
       "label": "Tallyman",
       "aliases": [],
-      "searchableContent": "ability-malicious-calculations-8505f03\nability-sevenfold-chant-15ec601\nBATTLELINE\nCHAOS\nCHARACTER\nCurrent\nDEATH GUARD\nGRENADES\nINFANTRY\nkeyword-chaos\nkeyword-character\nkeyword-death-guard\nkeyword-infantry\nkeyword-nurgle\nkeyword-tallyman\nLeader\nMalicious Calculations\nNURGLE\nNurgle’s Gift (Aura)\nPLAGUE MARINES\nSevenfold Chant\ntallyman\nTallyman\nTALLYMAN\nunit-plague-marines\nunit-tallyman\nweapon-close-combat-weapon-bc414e3\nweapon-plasma-pistol-standard-4eac6a8\nweapon-plasma-pistol-supercharge-950c822",
+      "searchableContent": "1\n1 Tallyman. This model is equipped with: plasma pistol; close combat weapon.\n3+\n4\n5\"\n6\n6+\nability-malicious-calculations-8505f03\nability-sevenfold-chant-15ec601\nBase: (⌀40mm).\nBATTLELINE\nCHAOS\nCHARACTER\nCurrent\nDEATH GUARD\nGRENADES\nINFANTRY\nkeyword-chaos\nkeyword-character\nkeyword-death-guard\nkeyword-infantry\nkeyword-nurgle\nkeyword-tallyman\nLeader\nMalicious Calculations\nNURGLE\nNurgle’s Gift (Aura)\nPLAGUE MARINES\nSevenfold Chant\ntallyman\nTallyman\nTALLYMAN\nThis model can be attached to the following units: Plague Marines.\nunit-plague-marines\nunit-tallyman\nweapon-close-combat-weapon-bc414e3\nweapon-plasma-pistol-standard-4eac6a8\nweapon-plasma-pistol-supercharge-950c822\nYou can attach this model to a PLAGUE MARINES unit, even if one other Leader unit has already been attached to it (you cannot attach more than one of the same leader to the same unit). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -131054,8 +131880,20 @@
         "id": "unit-tallyman",
         "title": "Tallyman",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Tallyman",
+            "stats": {
+              "M": "5\"",
+              "T": "6",
+              "Sv": "3+",
+              "W": "4",
+              "Ld": "6+",
+              "OC": "1"
+            }
+          }
+        ],
+        "composition": "1 Tallyman. This model is equipped with: plasma pistol; close combat weapon.",
         "keywords": [
           "INFANTRY",
           "CHARACTER",
@@ -131146,7 +131984,19 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀40mm)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Leader",
+            "lines": [
+              "This model can be attached to the following units: Plague Marines.",
+              "You can attach this model to a PLAGUE MARINES unit, even if one other Leader unit has already been attached to it (you cannot attach more than one of the same leader to the same unit). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -131249,7 +132099,7 @@
       "recordType": "UNIT",
       "label": "Typhus",
       "aliases": [],
-      "searchableContent": "ability-eater-plague-psychic-2c7cc41\nability-the-destroyer-hive-70f0cc1\nBLIGHTLORD TERMINATORS\nCHAOS\nCHARACTER\nCurrent\nDEATH GUARD\nDEATHSHROUD TERMINATORS\nDeep Strike\nEater Plague (Psychic)\nEPIC HERO\nINFANTRY\nkeyword-chaos\nkeyword-character\nkeyword-death-guard\nkeyword-epic-hero\nkeyword-infantry\nkeyword-nurgle\nkeyword-psyker\nkeyword-terminator\nkeyword-typhus\nLeader\nNURGLE\nNurgle’s Gift (Aura)\nPOXWALKERS\nPSYKER\nTERMINATOR\nThe Destroyer Hive\ntyphus\nTyphus\nTYPHUS\nunit-blightlord-terminators\nunit-deathshroud-terminators\nunit-poxwalkers\nunit-typhus\nweapon-lakrimae-strike-99d1d4f\nweapon-lakrimae-sweep-b7827b0",
+      "searchableContent": "1\n1 Typhus – EPIC HERO. This model is equipped with: Lakrimae.\n2+\n4+\n5\"\n6\n6+\n7\nability-eater-plague-psychic-2c7cc41\nability-the-destroyer-hive-70f0cc1\nBase: (⌀50mm).\nBLIGHTLORD TERMINATORS\nCHAOS\nCHARACTER\nCurrent\nDEATH GUARD\nDEATHSHROUD TERMINATORS\nDeep Strike\nEater Plague (Psychic)\nEPIC HERO\nINFANTRY\nkeyword-chaos\nkeyword-character\nkeyword-death-guard\nkeyword-epic-hero\nkeyword-infantry\nkeyword-nurgle\nkeyword-psyker\nkeyword-terminator\nkeyword-typhus\nLeader\nNURGLE\nNurgle’s Gift (Aura)\nPOXWALKERS\nPSYKER\nTERMINATOR\nThe Destroyer Hive\nThis model can be attached to the following units: Blightlord Terminators; Deathshroud Terminators; Poxwalkers.\ntyphus\nTyphus\nTYPHUS\nunit-blightlord-terminators\nunit-deathshroud-terminators\nunit-poxwalkers\nunit-typhus\nweapon-lakrimae-strike-99d1d4f\nweapon-lakrimae-sweep-b7827b0",
       "parent": null,
       "canonicalReferences": [],
       "currentness": {
@@ -131266,8 +132116,21 @@
         "id": "unit-typhus",
         "title": "Typhus",
         "publicationState": "Current",
-        "profiles": [],
-        "composition": null,
+        "profiles": [
+          {
+            "name": "Typhus",
+            "stats": {
+              "M": "5\"",
+              "T": "7",
+              "Sv": "2+",
+              "W": "6",
+              "Ld": "6+",
+              "OC": "1",
+              "Inv": "4+"
+            }
+          }
+        ],
+        "composition": "1 Typhus – EPIC HERO. This model is equipped with: Lakrimae.",
         "keywords": [
           "INFANTRY",
           "CHARACTER",
@@ -131379,7 +132242,18 @@
             "canBeLedBy": [],
             "canBeSupportedBy": []
           }
-        }
+        },
+        "notes": [
+          "Base: (⌀50mm)."
+        ],
+        "referenceSections": [
+          {
+            "title": "Leader",
+            "lines": [
+              "This model can be attached to the following units: Blightlord Terminators; Deathshroud Terminators; Poxwalkers."
+            ]
+          }
+        ]
       },
       "contexts": [
         {

@@ -14,7 +14,13 @@ const units=[
   'army::emperors-children::unit::unit-chaos-land-raider',
   'army::space-marines::unit::unit-adrax-agatone',
   'army::tau-empire::unit::unit-breacher-team',
-  'army::tyranids::unit::unit-barbgaunts'
+  'army::tyranids::unit::unit-barbgaunts',
+  'army::death-guard::unit::unit-mortarion',
+  'army::death-guard::unit::unit-plague-marines',
+  'army::death-guard::unit::unit-deathshroud-terminators',
+  'army::death-guard::unit::unit-plagueburst-crawler',
+  'army::death-guard::unit::unit-malignant-plaguecaster',
+  'army::death-guard::unit::unit-nurglings'
 ];
 const mime={'.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp'};
 const server=createServer((request,response)=>{try{
@@ -52,4 +58,4 @@ try{
   }
 }finally{await browser.close();await new Promise(resolve=>server.close(resolve));}
 
-console.log('Glossary V2 Unit rendering browser smoke PASS (390x844 + 1440x900; eight books; popup parity; scoped duplicate profiles).');
+console.log('Glossary V2 Unit rendering browser smoke PASS (390x844 + 1440x900; all Unit producers; popup parity; scoped duplicate profiles).');

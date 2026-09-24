@@ -39,9 +39,15 @@ for(const entry of existingMeaningful){
   assert.equal(entry.definition.en,expected,`${entry.id}: existing meaningful Unit rendering remains unchanged`);
 }
 for(const entry of dg){
-  const facts=entry.facts||{},expected=[facts.composition,(facts.keywords||[]).length?`Keywords: ${facts.keywords.join(', ')}`:''].filter(Boolean).join('\n');
-  assert.equal(entry.definition.en,expected,`${entry.id}: DG Unit rendering remains untouched`);
+  assert.doesNotMatch(entry.definition.en,/\[object Object\]/,`${entry.id}: no raw object serialization`);
+  for(const section of ['UNIT COMPOSITION','MODEL PROFILES','WEAPON PROFILES','ABILITIES','KEYWORDS'])assert(entry.definition.en.includes(section),`${entry.id}: ${section} section`);
+  assert.equal(api.get(entry.id).definition.en,entry.definition.en,`${entry.id}: popup/article parity`);
 }
+
+const dgControls=['unit-mortarion','unit-plague-marines','unit-deathshroud-terminators','unit-plagueburst-crawler','unit-malignant-plaguecaster','unit-nurglings'];
+for(const unitId of dgControls){const entry=api.get(`army::death-guard::unit::${unitId}`);assert(entry,`${unitId}: representative DG Unit article`);assert.match(entry.definition.en,/UNIT COMPOSITION[\s\S]+MODEL PROFILES[\s\S]+WEAPON PROFILES[\s\S]+ABILITIES[\s\S]+KEYWORDS/,`${unitId}: useful DG Unit presentation`);}
+assert.match(api.get('army::death-guard::unit::unit-malignant-plaguecaster').definition.en,/LEADER[\s\S]+Plague Marines; Poxwalkers/i,'DG Leader references remain player-facing');
+assert.match(api.get('army::death-guard::unit::unit-plague-marines').definition.en,/WARGEAR OPTIONS/i,'DG wargear/loadout information remains player-facing');
 
 const controls={
   'adeptus-mechanicus':'unit-servitor-battleclade',
@@ -78,4 +84,4 @@ assert(sameName.every(entry=>entry.parent.canonicalId==='unit-abaddon-the-despoi
 const abaddon=api.get('army::chaos-space-marines::unit::unit-abaddon-the-despoiler');
 assert.equal((abaddon.definition.en.match(/• Talon of Horus:/g)||[]).length,2,'Unit article preserves both same-name profile occurrences');
 
-console.log('Glossary V2 Unit rendering QA PASS (336 non-DG meaningful; 36 DG unchanged; stable parent-scoped weapon identities).');
+console.log('Glossary V2 Unit rendering QA PASS (372 meaningful; 36 DG structured projections; stable parent-scoped weapon identities).');

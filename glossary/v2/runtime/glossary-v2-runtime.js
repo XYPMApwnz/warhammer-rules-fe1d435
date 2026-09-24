@@ -72,7 +72,20 @@
   };
   const unitDefinition=entry=>{
     const facts=entry.facts||{};
-    if(entry.sourceOwner?.bookId==='death-guard'||typeof facts.composition==='string')return [facts.composition,(facts.keywords||[]).length?`Keywords: ${facts.keywords.join(', ')}`:''].filter(Boolean).join('\n');
+    if(entry.sourceOwner?.bookId==='death-guard'){
+      const sections=[],composition=unitCompositionDefinition(facts.composition),profiles=(facts.profiles||[]).map(unitProfileDefinition).filter(Boolean);
+      if((facts.notes||[]).length)sections.push(`UNIT NOTES\n${facts.notes.join('\n')}`);
+      if(composition)sections.push(`UNIT COMPOSITION\n${composition}`);
+      if(profiles.length)sections.push(`MODEL PROFILES\n${profiles.join('\n\n')}`);
+      const weapons=entries.filter(candidate=>candidate.domain==='ARMY'&&candidate.recordType==='WEAPON_PROFILE'&&candidate.parent?.canonicalId===facts.id&&candidate.sourceOwner?.bookId==='death-guard');
+      if(weapons.length)sections.push(`WEAPON PROFILES\n${weapons.map(weapon=>`• ${weapon.label}: ${weaponProfileDefinition(weapon.facts||{})}`).join('\n')}`);
+      const abilities=Array.isArray(facts.ruleFacts?.abilities)?facts.ruleFacts.abilities.map(text).filter(Boolean):[];
+      if(abilities.length)sections.push(`ABILITIES\n${abilities.map(ability=>`• ${ability}`).join('\n')}`);
+      for(const section of facts.referenceSections||[])if(text(section.title)&&section.lines?.length)sections.push(`${section.title.toLocaleUpperCase()}\n${section.lines.join('\n')}`);
+      if((facts.keywords||[]).length)sections.push(`KEYWORDS\n${facts.keywords.join(', ')}`);
+      return sections.join('\n\n');
+    }
+    if(typeof facts.composition==='string')return [facts.composition,(facts.keywords||[]).length?`Keywords: ${facts.keywords.join(', ')}`:''].filter(Boolean).join('\n');
     const sections=[],composition=unitCompositionDefinition(facts.composition),profiles=(facts.profiles||[]).map(unitProfileDefinition).filter(Boolean);
     if(composition)sections.push(`UNIT COMPOSITION\n${composition}`);
     if(profiles.length)sections.push(`MODEL PROFILES\n${profiles.join('\n\n')}`);

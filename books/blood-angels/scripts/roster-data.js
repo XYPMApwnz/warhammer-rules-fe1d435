@@ -42371,7 +42371,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "blood-angels"
       ],
       "sourceUnitId": "unit-infiltrator-squad",
-      "scope": "selected-wargear",
+      "scope": "owner-or-attached-group",
       "selector": {
         "sourceUnitIds": [
           "unit-infiltrator-squad"
@@ -42383,7 +42383,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "clauses": [
         {
           "selector": {
-            "scope": "selected-wargear"
+            "scope": "owner-or-attached-group"
           },
           "conditions": [],
           "operations": [

@@ -10655,7 +10655,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "adeptus-mechanicus"
       ],
       "detachmentId": "detachment-eradication-cohort",
-      "scope": "bearer",
+      "scope": "owner-or-attached-group",
       "selector": {
         "kind": "assigned-enhancement",
         "canonicalRecordId": "enhancement-belicosa-class-capacitor-vanes"
@@ -10663,7 +10663,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "clauses": [
         {
           "selector": {
-            "subject": "bearer",
+            "scope": "owner-or-attached-group",
             "weaponMode": "ranged"
           },
           "conditions": [],

@@ -48,6 +48,44 @@
     }
     return lines.join('\n');
   };
+  const unitProfileDefinition=profile=>{
+    if(!profile||typeof profile!=='object')return'';
+    const stats=profile.stats&&typeof profile.stats==='object'?profile.stats:{};
+    const value=(...keys)=>{for(const key of keys)if(stats[key]!==undefined&&stats[key]!==null&&String(stats[key]).trim())return String(stats[key]).trim();return'';};
+    const characteristicLines=[['M',value('M')],['T',value('T')],['Sv',value('Sv','SV')],['W',value('W')],['Ld',value('Ld','LD')],['OC',value('OC')],['Invulnerable Save',value('Invulnerable','Inv')],['Base',value('Base')]]
+      .filter(([,stat])=>stat)
+      .map(([label,stat])=>`${label} ${stat}`);
+    return [text(profile.name),characteristicLines.join(' · ')].filter(Boolean).join('\n');
+  };
+  const unitCompositionDefinition=composition=>{
+    if(text(composition))return text(composition);
+    if(!Array.isArray(composition))return'';
+    return composition.map(item=>{
+      if(!item||typeof item!=='object')return text(item);
+      const label=text(item.name),minimum=Number.isFinite(item.min)?item.min:null,maximum=Number.isFinite(item.max)?item.max:null;
+      const count=minimum===null?'':minimum===maximum?String(minimum):`${minimum}–${maximum}`;
+      const models=Array.isArray(item.models)?item.models.map(text).filter(Boolean):[];
+      const modelDetail=models.length&&!(models.length===1&&normalize(models[0])===normalize(label))?`Models: ${models.join(', ')}`:'';
+      const keywords=Array.isArray(item.intrinsicKeywords)&&item.intrinsicKeywords.length?`Keywords: ${item.intrinsicKeywords.join(', ')}`:'';
+      return [`• ${[label,count].filter(Boolean).join(': ')}`,modelDetail,keywords].filter(Boolean).join('\n');
+    }).filter(Boolean).join('\n');
+  };
+  const unitDefinition=entry=>{
+    const facts=entry.facts||{};
+    if(entry.sourceOwner?.bookId==='death-guard'||typeof facts.composition==='string')return [facts.composition,(facts.keywords||[]).length?`Keywords: ${facts.keywords.join(', ')}`:''].filter(Boolean).join('\n');
+    const sections=[],composition=unitCompositionDefinition(facts.composition),profiles=(facts.profiles||[]).map(unitProfileDefinition).filter(Boolean);
+    if(composition)sections.push(`UNIT COMPOSITION\n${composition}`);
+    if(profiles.length)sections.push(`MODEL PROFILES\n${profiles.join('\n\n')}`);
+    const weapons=entries.filter(candidate=>candidate.domain==='ARMY'&&candidate.recordType==='WEAPON_PROFILE'&&candidate.parent?.canonicalId===facts.id&&candidate.sourceOwner?.bookId===entry.sourceOwner?.bookId);
+    if(weapons.length)sections.push(`WEAPON PROFILES\n${weapons.map(weapon=>`• ${weapon.label}: ${weaponProfileDefinition(weapon.facts||{})}`).join('\n')}`);
+    const abilities=Array.isArray(facts.ruleFacts?.abilities)?facts.ruleFacts.abilities.map(text).filter(Boolean):[];
+    if(abilities.length)sections.push(`ABILITIES\n${abilities.map(ability=>`• ${ability}`).join('\n')}`);
+    if((facts.keywords||[]).length)sections.push(`KEYWORDS\n${facts.keywords.join(', ')}`);
+    return sections.join('\n\n');
+  };
+  const weaponProfileDefinition=facts=>{
+    return `${facts.mode==='ranged'?'Ranged':'Melee'} · ${facts.range||facts.Range||''} · A ${facts.a||facts.A||''} · ${facts.bs||facts.BS||facts.ws||facts.WS||facts.skill||''} · S ${facts.s||facts.S||''} · AP ${facts.ap||facts.AP||''} · D ${facts.d||facts.D||''}${facts.abilities||facts.Abilities?` · ${facts.abilities||facts.Abilities}`:''}`;
+  };
   const detachmentDefinition=entry=>{
     const facts=entry.facts||{},lines=[];
     const forceDisposition=entry.canonicalReferences?.find(reference=>reference.relationType==='FORCE_DISPOSITION'),forceDispositionLabel=forceDisposition&&byId.get(forceDisposition.id)?.label;
@@ -365,8 +403,8 @@
       return JSON.stringify(body,null,2);
     }
     if(entry.recordType==='STRATAGEM')return [['WHEN',facts.when],['TARGET',facts.target],['EFFECT',facts.effect],['RESTRICTIONS',facts.restrictions]].filter(([,value])=>text(value)).map(([label,value])=>`${label}: ${value}`).join('\n');
-    if(entry.recordType==='WEAPON_PROFILE')return `${facts.mode==='ranged'?'Ranged':'Melee'} · ${facts.range||facts.Range||''} · A ${facts.a||facts.A||''} · ${facts.bs||facts.BS||facts.ws||facts.WS||facts.skill||''} · S ${facts.s||facts.S||''} · AP ${facts.ap||facts.AP||''} · D ${facts.d||facts.D||''}${facts.abilities||facts.Abilities?` · ${facts.abilities||facts.Abilities}`:''}`;
-    if(entry.recordType==='UNIT')return [facts.composition,(facts.keywords||[]).length?`Keywords: ${facts.keywords.join(', ')}`:''].filter(Boolean).join('\n');
+    if(entry.recordType==='WEAPON_PROFILE')return weaponProfileDefinition(facts);
+    if(entry.recordType==='UNIT')return unitDefinition(entry);
     if(Array.isArray(facts.requirements))return facts.requirements.map(item=>typeof item==='string'?item:item?.type||JSON.stringify(item)).join('\n');
     for(const field of ['effect','summary','label']){const value=text(facts[field]);if(value)return value;}
     return'';

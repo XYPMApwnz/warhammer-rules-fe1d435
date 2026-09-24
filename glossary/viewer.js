@@ -58,6 +58,15 @@
     return grid;
   }
 
+  function renderDeploymentReference(structured){
+    const reference=structured?.deploymentReference;if(!reference)return null;
+    const figure=document.createElement('figure');figure.className='deployment-reference';
+    const image=document.createElement('img');image.src=reference.url;image.alt=reference.alt;image.width=reference.width;image.height=reference.height;image.loading='lazy';image.decoding='async';image.referrerPolicy='no-referrer';
+    const caption=document.createElement('figcaption');caption.textContent=`Authenticated source reference · ${reference.battlefieldWidthInches}\" × ${reference.battlefieldHeightInches}\" battlefield`;
+    const source=document.createElement('a');source.href=reference.url;source.target='_blank';source.rel='noopener noreferrer';source.textContent='Open source image →';
+    figure.append(image,caption,source);return figure;
+  }
+
   function renderReferences(label,ids,limit=24){
     const resolved=[...new Set(ids)].map(id=>api.get(id)).filter(Boolean);
     if(!resolved.length)return null;
@@ -92,6 +101,7 @@
     const summaryText=term.summary?.en||'',definitionText=term.definition?.en||'';
     if(summaryText&&!placeholder.test(summaryText)&&!repeatsDefinition(summaryText,definitionText)){const quick=renderDefinition(summaryText);quick.classList.add('summary');detail.append(sectionLabel('Quick rule'),quick);}
     const profile=renderProfile(term.structured);if(profile)detail.append(sectionLabel('Profile'),profile);
+    const deploymentReference=renderDeploymentReference(term.structured);if(deploymentReference)detail.append(sectionLabel('Deployment reference'),deploymentReference);
     if(definitionText&&!placeholder.test(definitionText)&&term.presentation!=='profile')detail.append(sectionLabel(normalize(definitionText)===normalize(summaryText)?'Rule':'Full rule'),renderDefinition(definitionText));
     if(term.fullRulePath){const action=document.createElement('a');action.className='full-rule-action';action.href=new URL(`../${term.fullRulePath.replace(/^\/+/, '')}`,location.href).href;action.textContent='Open full rule →';action.addEventListener('click',()=>window.WHGlossaryReturn?.setRestoreMode('manual'));detail.append(action);}
     const groups=[['Rules of this unit type',term.references?.intrinsicRules||[]],['Referenced by core rules',term.references?.referencedByRules||[]],['Common rules',term.references?.commonRules||[]],['Faction terms',term.references?.factionTerms||[]],['Related keywords',term.references?.relatedKeywords||[]],['Related terms',term.related||[]]];

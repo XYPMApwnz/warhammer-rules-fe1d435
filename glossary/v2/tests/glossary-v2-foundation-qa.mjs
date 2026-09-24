@@ -72,6 +72,20 @@ assert.equal(forceDispositionMatchups.reduce((count,entry)=>count+entry.facts.di
 assert.equal(forceDispositionMatchups.reduce((count,entry)=>count+entry.facts.layoutIds.length,0),45,'matchups must retain all 45 A/B/C layout links');
 const matchupKeys=forceDispositionMatchups.map(entry=>[...entry.facts.memberForceDispositionIds].sort().join('|'));
 assert.equal(new Set(matchupKeys).size,15,'reverse order must not create duplicate matchup identities');
+const deployments=index.entries.filter(entry=>entry.recordType==='DEPLOYMENT');
+assert.equal(deployments.length,6,'all six Deployment identities must be projected');
+assert.equal(new Set(deployments.map(entry=>entry.id)).size,6,'Deployment identities must remain unique');
+assert.equal(new Set(deployments.map(entry=>entry.facts.geometry.sourceRegistration.url)).size,6,'each Deployment must retain its own authenticated source visual');
+for(const entry of deployments){
+  const geometry=entry.facts.geometry,source=geometry.sourceRegistration;
+  assert.deepEqual(geometry.coordinateSystem.battlefield,{width:60,height:44},`${entry.id}: battlefield dimensions`);
+  assert.equal(geometry.digitizationStatus,'SOURCE_REGISTERED_PENDING_VERIFIED_DIGITIZATION',`${entry.id}: pending digitization state`);
+  assert.deepEqual([geometry.zones,geometry.objectives,geometry.terrainAreas],[[],[],[]],`${entry.id}: unverified geometry must remain absent`);
+  assert.equal(geometry.requiredVerifiedLayers.length,5,`${entry.id}: all pending geometry layers retained`);
+  assert.equal(source.type,'AUTHENTICATED_RASTER_REFERENCE',`${entry.id}: authenticated raster registration`);
+  assert(source.url.endsWith(entry.facts.sourceImagePath),`${entry.id}: registered visual must match accepted source path`);
+  assert(Number.isInteger(source.pixelDimensions.width)&&Number.isInteger(source.pixelDimensions.height)&&Number.isInteger(source.byteSize)&&source.sha256,`${entry.id}: authenticated visual metadata`);
+}
 assert.deepEqual(index.coverage.armyEffectiveBooks,BOOK_IDS,'all nine supported Army Books must contribute');
 for(const bookId of BOOK_IDS)assert(index.entries.some(entry=>entry.domain==='ARMY'&&entry.contexts.some(context=>context.effectiveBookId===bookId)),`${bookId} must contribute an effective Army context`);
 

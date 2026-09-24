@@ -296,6 +296,28 @@
     lines.push(`EVENT TERRAIN LAYOUTS\n${layouts.join('\n')}`);
     return lines.join('\n\n');
   };
+  const deploymentReferenceOf=entry=>{
+    const facts=entry.facts||{},geometry=facts.geometry,source=geometry?.sourceRegistration,battlefield=geometry?.coordinateSystem?.battlefield;
+    const expectedLayers=new Map([
+      ['DEPLOYMENT_ZONES','deployment zones'],
+      ['TERRITORIES','territories'],
+      ['OBJECTIVE_POSITIONS','objective positions'],
+      ['TERRAIN_AREAS','terrain areas'],
+      ['MEASUREMENT_ENDPOINT_BINDINGS','measurement endpoint bindings']
+    ]);
+    if(geometry?.kind!=='DEPLOYMENT_GEOMETRY'||geometry.digitizationStatus!=='SOURCE_REGISTERED_PENDING_VERIFIED_DIGITIZATION')return null;
+    if(!Number.isFinite(battlefield?.width)||!Number.isFinite(battlefield?.height)||!Array.isArray(geometry.measurements)||geometry.measurements.length!==2)return null;
+    if(source?.type!=='AUTHENTICATED_RASTER_REFERENCE'||!/^https:\/\//.test(source.url||'')||!text(facts.sourceImagePath)||!source.url.endsWith(facts.sourceImagePath))return null;
+    if(!Number.isInteger(source.pixelDimensions?.width)||!Number.isInteger(source.pixelDimensions?.height)||!Number.isInteger(source.byteSize)||!text(source.sha256))return null;
+    if((geometry.zones||[]).length||(geometry.objectives||[]).length||(geometry.terrainAreas||[]).length)return null;
+    const pendingLayers=(geometry.requiredVerifiedLayers||[]).map(value=>expectedLayers.get(value));
+    if(pendingLayers.length!==expectedLayers.size||pendingLayers.some(value=>!value))return null;
+    return Object.freeze({url:source.url,width:source.pixelDimensions.width,height:source.pixelDimensions.height,alt:`${entry.label} deployment reference`,battlefieldWidthInches:battlefield.width,battlefieldHeightInches:battlefield.height,sourceLocator:text(facts.provenance?.contentLocator),pendingLayers:Object.freeze(pendingLayers)});
+  };
+  const deploymentDefinition=entry=>{
+    const reference=deploymentReferenceOf(entry);if(!reference)return'';
+    return [`BATTLEFIELD\n${reference.battlefieldWidthInches}\" × ${reference.battlefieldHeightInches}\".`,`SOURCE REFERENCE\n${reference.sourceLocator}. Authenticated raster: ${reference.width} × ${reference.height}px.`,`GEOMETRY STATUS\nSource visual registered. Verified machine-readable ${reference.pendingLayers.join(', ')} remain pending digitization.`].join('\n\n');
+  };
   function definitionOf(entry){
     const facts=entry.facts||{};
     if(entry.recordType==='DETACHMENT'){const definition=detachmentDefinition(entry);if(definition)return definition;}
@@ -304,6 +326,7 @@
     if(entry.recordType==='TWIST')return twistDefinition(entry);
     if(entry.recordType==='FORCE_DISPOSITION')return forceDispositionDefinition(entry);
     if(entry.recordType==='FORCE_DISPOSITION_MATCHUP')return forceDispositionMatchupDefinition(entry);
+    if(entry.recordType==='DEPLOYMENT')return deploymentDefinition(entry);
     for(const field of ['semanticContent','text','full','definition','ruleText','rulesText','answer','description']){const value=text(facts[field]);if(value)return value;}
     const structuredOptions=structuredOptionsDefinition(facts);if(structuredOptions)return structuredOptions;
     const content=collectContent(facts.content);if(content)return content;
@@ -325,6 +348,7 @@
   const summaryOf=(entry,definition)=>text(entry.presentation?.editorialSummary?.text)||definition.split(/\n+/).find(Boolean)||entry.label;
   function structuredOf(entry){
     const facts=entry.facts||{};
+    if(entry.recordType==='DEPLOYMENT'){const deploymentReference=deploymentReferenceOf(entry);if(deploymentReference)return{deploymentReference};}
     if(entry.recordType==='WEAPON_PROFILE'){
       const ranged=(facts.mode||'').toLowerCase()==='ranged'||String(facts.range||facts.Range||'').toLowerCase()!=='melee';
       return{weapon:{Range:facts.range??facts.Range??'',A:facts.a??facts.A??'',[ranged?'BS':'WS']:facts.skill??facts.bs??facts.BS??facts.ws??facts.WS??'',S:facts.s??facts.S??'',AP:facts.ap??facts.AP??'',D:facts.d??facts.D??'',Abilities:facts.abilities??facts.Abilities??''}};

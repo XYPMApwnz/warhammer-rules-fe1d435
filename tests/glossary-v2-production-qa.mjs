@@ -191,6 +191,27 @@ const unknownRelationScope={window:{WH40K_GLOSSARY_V2_INDEX:unknownRelationIndex
 vm.runInNewContext(read('glossary/v2/runtime/glossary-v2-runtime.js'),unknownRelationScope);
 assert.equal(unknownRelationScope.window.WH40K_GLOSSARY.get(unknownRelation.id).definition.en,'','unknown exact relation IDs must fail closed');
 
+const deployments=index.entries.filter(entry=>entry.recordType==='DEPLOYMENT');
+assert.equal(deployments.length,6,'all six Deployments must remain standalone');
+assert.equal(new Set(deployments.map(entry=>entry.id)).size,6,'Deployment articles must not duplicate');
+assert.equal(new Set(deployments.map(entry=>entry.facts.geometry.sourceRegistration.url)).size,6,'Deployment source visuals must not cross-wire');
+for(const source of deployments){
+  const article=api.get(source.id),definition=article.definition.en,registration=source.facts.geometry.sourceRegistration;
+  assert(definition.trim(),`${source.id}: useful Deployment definition`);
+  assert.notEqual(definition.trim().toLocaleLowerCase(),source.label.trim().toLocaleLowerCase(),`${source.id}: definition must not echo title`);
+  assert.match(definition,/BATTLEFIELD\n60\" × 44\"\./,`${source.id}: battlefield dimensions`);
+  assert(definition.includes(source.facts.provenance.contentLocator),`${source.id}: accepted source locator`);
+  assert.match(definition,/Verified machine-readable deployment zones, territories, objective positions, terrain areas, measurement endpoint bindings remain pending digitization\./,`${source.id}: honest pending geometry status`);
+  assert.doesNotMatch(definition,/SOURCE_REGISTERED_PENDING_VERIFIED_DIGITIZATION|DEPLOYMENT_ZONES|MEASUREMENT_ENDPOINT_BINDINGS/,`${source.id}: raw internal geometry codes hidden`);
+  assert.deepEqual(JSON.parse(JSON.stringify(article.structured.deploymentReference)),{url:registration.url,width:registration.pixelDimensions.width,height:registration.pixelDimensions.height,alt:`${source.label} deployment reference`,battlefieldWidthInches:60,battlefieldHeightInches:44,sourceLocator:source.facts.provenance.contentLocator,pendingLayers:['deployment zones','territories','objective positions','terrain areas','measurement endpoint bindings']},`${source.id}: source-backed visual projection`);
+  assert.equal(api.get(source.id).definition.en,definition,`${source.id}: popup/article identity parity`);
+}
+const crossWiredDeploymentIndex=structuredClone(index),crossWiredDawn=crossWiredDeploymentIndex.entries.find(entry=>entry.id==='missions::deployment-dawn-of-war'),crossWiredHammer=crossWiredDeploymentIndex.entries.find(entry=>entry.id==='missions::deployment-hammer-and-anvil');
+crossWiredDawn.facts.geometry.sourceRegistration.url=crossWiredHammer.facts.geometry.sourceRegistration.url;
+const crossWiredDeploymentScope={window:{WH40K_GLOSSARY_V2_INDEX:crossWiredDeploymentIndex}};
+vm.runInNewContext(read('glossary/v2/runtime/glossary-v2-runtime.js'),crossWiredDeploymentScope);
+assert.equal(crossWiredDeploymentScope.window.WH40K_GLOSSARY.get(crossWiredDawn.id).definition.en,'','cross-wired Deployment visuals must fail closed');
+
 assert.equal(index.counts.total,4630);
 assert.equal(index.counts.standalone,1738);
 assert.equal(index.counts.scopedChildren,2892);

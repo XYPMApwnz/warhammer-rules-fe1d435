@@ -20,6 +20,8 @@ const createBattlefieldId='missions::mission-sequence-create-battlefield';
 const primaryMissionId='missions::primary-death-trap';
 const secondaryMissionId='missions::secondary-plunder';
 const twistIds=['missions::twist-night-fighting','missions::twist-mirrored-world'];
+const forceDispositionId='missions::force-disposition-disruption';
+const matchupId='missions::force-disposition-matchup-disruption--priority-assets';
 const compact=value=>String(value).replace(/\s+/g,' ').trim();
 const mime={'.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp'};
 const server=createServer((request,response)=>{try{
@@ -99,6 +101,18 @@ try{
       await page.evaluate(termId=>{const trigger=document.createElement('button');trigger.type='button';trigger.dataset.autolink='';trigger.dataset.term=termId;trigger.textContent='Twist';document.querySelector('#termDetail').append(trigger);},id);
       await page.locator(`[data-autolink][data-term="${id}"]`).click();await page.locator('#termPopup[open]').waitFor();
       assert.equal(compact(await page.locator('#termPopupSummary').innerText()),article,`${viewport.name}: Twist popup/article parity ${id}`);
+      await page.locator('#termPopupClose').click();
+    }
+    for(const control of [
+      {id:forceDispositionId,expected:/EFFECTIVE DETACHMENT ASSIGNMENTS[\s\S]*DIRECTED PRIMARY MISSION MATRIX[\s\S]*PLAYER: Disruption \| OPPONENT: Priority Assets \| PRIMARY MISSION: Locate and Deny/i},
+      {id:matchupId,expected:/Disruption ↔ Priority Assets[\s\S]*PLAYER: Disruption \| OPPONENT: Priority Assets \| PRIMARY MISSION: Locate and Deny[\s\S]*PLAYER: Priority Assets \| OPPONENT: Disruption \| PRIMARY MISSION: Extract Relic[\s\S]*Layout A[\s\S]*Layout B[\s\S]*Layout C/i}
+    ]){
+      await page.goto(`${base}/glossary/index.html#${encodeURIComponent(control.id)}`);await page.locator('body.article-open').waitFor();
+      const article=compact(await page.locator('#termDetail .definition').last().innerText());
+      assert.match(article,control.expected,`${viewport.name}: structural Mission article ${control.id}`);
+      await page.evaluate(termId=>{const trigger=document.createElement('button');trigger.type='button';trigger.dataset.autolink='';trigger.dataset.term=termId;trigger.textContent='Mission relation';document.querySelector('#termDetail').append(trigger);},control.id);
+      await page.locator(`[data-autolink][data-term="${control.id}"]`).click();await page.locator('#termPopup[open]').waitFor();
+      assert.equal(compact(await page.locator('#termPopupSummary').innerText()),article,`${viewport.name}: structural Mission popup/article parity ${control.id}`);
       await page.locator('#termPopupClose').click();
     }
     await page.goto(`${base}/glossary/index.html#${encodeURIComponent(mortarionsHammerId)}`);await page.locator('body.article-open').waitFor();

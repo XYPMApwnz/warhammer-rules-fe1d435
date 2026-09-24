@@ -253,12 +253,57 @@
     if(notes.length)lines.push(`DESIGNER'S NOTES\n${notes.join('\n')}`);
     return lines.join('\n\n');
   };
+  const armyBookLabels=Object.freeze({'death-guard':'Death Guard','adeptus-mechanicus':'Adeptus Mechanicus',tyranids:'Tyranids','tau-empire':"T'au Empire",'emperors-children':"Emperor's Children",'chaos-space-marines':'Chaos Space Marines','space-marines':'Space Marines','dark-angels':'Dark Angels','blood-angels':'Blood Angels'});
+  const forceDispositionDefinition=entry=>{
+    const facts=entry.facts||{},lines=[];
+    if(!Number.isInteger(facts.physicalMultiplicity)||facts.physicalMultiplicity<1)return'';
+    lines.push(`PHYSICAL CARD MULTIPLICITY\n${facts.physicalMultiplicity}`);
+    const assignments=[];
+    for(const id of entry.mfm?.assignedDetachmentIds||[]){
+      const detachment=byId.get(id),bookLabel=armyBookLabels[detachment?.sourceOwner?.bookId];
+      if(!detachment||detachment.recordType!=='DETACHMENT'||!bookLabel)return'';
+      assignments.push(`${detachment.label} — ${bookLabel}`);
+    }
+    if(!assignments.length)return'';
+    lines.push(`EFFECTIVE DETACHMENT ASSIGNMENTS\n${assignments.sort((a,b)=>a.localeCompare(b)).join('\n')}`);
+    const relations=[];
+    for(const relation of facts.missionMatrixRelations||[]){
+      const opponent=byId.get(`missions::${relation.opponentForceDispositionId}`),primary=byId.get(`missions::${relation.primaryMissionId}`);
+      if(!opponent||opponent.recordType!=='FORCE_DISPOSITION'||!primary||primary.recordType!=='PRIMARY_MISSION')return'';
+      relations.push(`PLAYER: ${entry.label} | OPPONENT: ${opponent.label} | PRIMARY MISSION: ${primary.label}`);
+    }
+    if(!relations.length)return'';
+    lines.push(`DIRECTED PRIMARY MISSION MATRIX\n${relations.join('\n')}`);
+    return lines.join('\n\n');
+  };
+  const forceDispositionMatchupDefinition=entry=>{
+    const facts=entry.facts||{};
+    if(facts.unordered!==true||facts.reverseOrderEquivalent!==true||!Array.isArray(facts.memberForceDispositionIds)||facts.memberForceDispositionIds.length!==2)return'';
+    const memberIds=[...facts.memberForceDispositionIds].sort(),members=memberIds.map(id=>byId.get(`missions::${id}`));
+    if(members.some(member=>!member||member.recordType!=='FORCE_DISPOSITION'))return'';
+    const lines=[`MATCHUP MEMBERS\n${members[0].label} ↔ ${members[1].label}`,`MATCHUP IDENTITY\nUnordered. Reverse order is the same matchup.`];
+    const relations=[];
+    for(const relation of facts.directedPrimaryRelations||[]){
+      const player=byId.get(`missions::${relation.playerForceDispositionId}`),opponent=byId.get(`missions::${relation.opponentForceDispositionId}`),primary=byId.get(`missions::${relation.primaryMissionId}`);
+      if(!player||player.recordType!=='FORCE_DISPOSITION'||!opponent||opponent.recordType!=='FORCE_DISPOSITION'||!primary||primary.recordType!=='PRIMARY_MISSION')return'';
+      relations.push(`PLAYER: ${player.label} | OPPONENT: ${opponent.label} | PRIMARY MISSION: ${primary.label}`);
+    }
+    if(!relations.length)return'';
+    lines.push(`DIRECTED PRIMARY MISSIONS\n${relations.join('\n')}`);
+    const layouts=[];
+    for(const id of facts.layoutIds||[]){const layout=byId.get(`missions::${id}`);if(!layout||layout.recordType!=='TERRAIN_LAYOUT')return'';layouts.push(layout.label);}
+    if(layouts.length!==3)return'';
+    lines.push(`EVENT TERRAIN LAYOUTS\n${layouts.join('\n')}`);
+    return lines.join('\n\n');
+  };
   function definitionOf(entry){
     const facts=entry.facts||{};
     if(entry.recordType==='DETACHMENT'){const definition=detachmentDefinition(entry);if(definition)return definition;}
     if(entry.recordType==='MISSION_SEQUENCE_RULE')return missionSequenceDefinition(entry);
     if(entry.recordType==='PRIMARY_MISSION'||entry.recordType==='SECONDARY_MISSION')return missionCardDefinition(entry);
     if(entry.recordType==='TWIST')return twistDefinition(entry);
+    if(entry.recordType==='FORCE_DISPOSITION')return forceDispositionDefinition(entry);
+    if(entry.recordType==='FORCE_DISPOSITION_MATCHUP')return forceDispositionMatchupDefinition(entry);
     for(const field of ['semanticContent','text','full','definition','ruleText','rulesText','answer','description']){const value=text(facts[field]);if(value)return value;}
     const structuredOptions=structuredOptionsDefinition(facts);if(structuredOptions)return structuredOptions;
     const content=collectContent(facts.content);if(content)return content;

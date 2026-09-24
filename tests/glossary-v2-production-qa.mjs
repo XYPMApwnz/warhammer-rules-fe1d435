@@ -138,6 +138,59 @@ const unknownTwistScope={window:{WH40K_GLOSSARY_V2_INDEX:unknownTwistIndex}};
 vm.runInNewContext(read('glossary/v2/runtime/glossary-v2-runtime.js'),unknownTwistScope);
 assert.equal(unknownTwistScope.window.WH40K_GLOSSARY.get(unknownTwist.id).definition.en,'','unknown Twist operations must fail closed instead of exposing internal codes');
 
+const forceDispositions=index.entries.filter(entry=>entry.recordType==='FORCE_DISPOSITION');
+const matchups=index.entries.filter(entry=>entry.recordType==='FORCE_DISPOSITION_MATCHUP');
+assert.equal(forceDispositions.length,5,'all five Force Dispositions must remain standalone');
+assert.equal(matchups.length,15,'all 15 matchup identities must remain standalone');
+assert.equal(new Set(forceDispositions.map(entry=>entry.id)).size,5,'Force Dispositions must not duplicate');
+assert.equal(new Set(matchups.map(entry=>entry.id)).size,15,'matchups must not duplicate');
+for(const source of forceDispositions){
+  const article=api.get(source.id),definition=article.definition.en;
+  assert(definition.trim(),`${source.id}: useful Force Disposition definition`);
+  assert.notEqual(definition.trim().toLocaleLowerCase(),source.label.trim().toLocaleLowerCase(),`${source.id}: definition must not echo title`);
+  assert.match(definition,/PHYSICAL CARD MULTIPLICITY\n2/);
+  for(const id of source.mfm.assignedDetachmentIds){const target=index.entries.find(entry=>entry.id===id);assert(target&&definition.includes(target.label),`${source.id}: Detachment assignment ${id}`);assert(!definition.includes(id),`${source.id}: raw Detachment ID hidden`);}
+  for(const relation of source.facts.missionMatrixRelations){
+    const opponent=index.entries.find(entry=>entry.id===`missions::${relation.opponentForceDispositionId}`),primary=index.entries.find(entry=>entry.id===`missions::${relation.primaryMissionId}`);
+    assert(definition.includes(`PLAYER: ${source.label} | OPPONENT: ${opponent.label} | PRIMARY MISSION: ${primary.label}`),`${source.id}: directed Primary relation`);
+    assert(!definition.includes(relation.opponentForceDispositionId)&&!definition.includes(relation.primaryMissionId),`${source.id}: raw Mission IDs hidden`);
+    assert(article.related.includes(opponent.id)&&article.related.includes(primary.id),`${source.id}: directed relation targets remain canonical links`);
+  }
+  assert.equal(api.get(source.id)?.definition.en,definition,`${source.id}: popup/article parity`);
+}
+for(const source of matchups){
+  const article=api.get(source.id),definition=article.definition.en;
+  assert(definition.trim(),`${source.id}: useful matchup definition`);
+  assert.notEqual(definition.trim().toLocaleLowerCase(),source.label.trim().toLocaleLowerCase(),`${source.id}: definition must not echo title`);
+  assert.match(definition,/MATCHUP IDENTITY\nUnordered\. Reverse order is the same matchup\./);
+  for(const relation of source.facts.directedPrimaryRelations){
+    const player=index.entries.find(entry=>entry.id===`missions::${relation.playerForceDispositionId}`),opponent=index.entries.find(entry=>entry.id===`missions::${relation.opponentForceDispositionId}`),primary=index.entries.find(entry=>entry.id===`missions::${relation.primaryMissionId}`);
+    assert(definition.includes(`PLAYER: ${player.label} | OPPONENT: ${opponent.label} | PRIMARY MISSION: ${primary.label}`),`${source.id}: directed Primary relation`);
+    assert(article.related.includes(player.id)&&article.related.includes(opponent.id)&&article.related.includes(primary.id),`${source.id}: directed relation targets remain canonical links`);
+  }
+  for(const id of source.facts.layoutIds){const layout=index.entries.find(entry=>entry.id===`missions::${id}`);assert(layout&&definition.includes(layout.label),`${source.id}: Event layout ${id}`);assert(!definition.includes(id),`${source.id}: raw layout ID hidden`);assert(article.related.includes(layout.id),`${source.id}: layout remains a canonical link`);}
+  assert.equal(api.get(source.id)?.definition.en,definition,`${source.id}: popup/article parity`);
+}
+const disruption=api.get('missions::force-disposition-disruption');
+assert.match(disruption.definition.en,/EFFECTIVE DETACHMENT ASSIGNMENTS[\s\S]*Mortarion’s Hammer|EFFECTIVE DETACHMENT ASSIGNMENTS[\s\S]*Spearpoint Task Force/i,'representative Force Disposition must expose MFM assignments');
+assert.match(disruption.definition.en,/PLAYER: Disruption \| OPPONENT: Priority Assets \| PRIMARY MISSION: Locate and Deny/,'representative directed Primary matrix relation');
+const disruptionPriority=api.get('missions::force-disposition-matchup-disruption--priority-assets');
+assert.match(disruptionPriority.definition.en,/Disruption ↔ Priority Assets[\s\S]*Layout A[\s\S]*Layout B[\s\S]*Layout C/,'representative matchup and A/B/C layouts');
+assert.match(disruptionPriority.definition.en,/PLAYER: Disruption \| OPPONENT: Priority Assets \| PRIMARY MISSION: Locate and Deny/,'forward directed Primary relation');
+assert.match(disruptionPriority.definition.en,/PLAYER: Priority Assets \| OPPONENT: Disruption \| PRIMARY MISSION: Extract Relic/,'reverse directed Primary relation remains distinct');
+assert.notEqual('Locate and Deny','Extract Relic','directed Primary controls must not become symmetric');
+
+const reversedMatchupIndex=structuredClone(index),reversedMatchup=reversedMatchupIndex.entries.find(entry=>entry.id==='missions::force-disposition-matchup-disruption--priority-assets');
+reversedMatchup.facts.memberForceDispositionIds.reverse();
+const reversedMatchupScope={window:{WH40K_GLOSSARY_V2_INDEX:reversedMatchupIndex}};
+vm.runInNewContext(read('glossary/v2/runtime/glossary-v2-runtime.js'),reversedMatchupScope);
+assert.equal(reversedMatchupScope.window.WH40K_GLOSSARY.get(reversedMatchup.id).definition.en,disruptionPriority.definition.en,'reverse member order must render the same unordered matchup identity');
+const unknownRelationIndex=structuredClone(index),unknownRelation=unknownRelationIndex.entries.find(entry=>entry.id==='missions::force-disposition-disruption');
+unknownRelation.facts.missionMatrixRelations[0].primaryMissionId='unknown-primary-id';
+const unknownRelationScope={window:{WH40K_GLOSSARY_V2_INDEX:unknownRelationIndex}};
+vm.runInNewContext(read('glossary/v2/runtime/glossary-v2-runtime.js'),unknownRelationScope);
+assert.equal(unknownRelationScope.window.WH40K_GLOSSARY.get(unknownRelation.id).definition.en,'','unknown exact relation IDs must fail closed');
+
 assert.equal(index.counts.total,4630);
 assert.equal(index.counts.standalone,1738);
 assert.equal(index.counts.scopedChildren,2892);

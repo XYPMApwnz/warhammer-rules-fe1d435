@@ -56,6 +56,22 @@ const mirroredWorld=twists.find(entry=>entry.id==='missions::twist-mirrored-worl
 assert.equal(mirroredWorld.facts.ruleBody.options.length,6,'Mirrored World must retain all accepted options including reroll');
 assert(mirroredWorld.facts.ruleBody.options.every(option=>option.roll===''),'Mirrored World roll-to-option mapping must remain explicitly unproven');
 assert.deepEqual(mirroredWorld.facts.ruleBody.operations[0].randomSelection,{die:'D6',rerollResults:[6]},'Mirrored World must retain only its proven D6 metadata');
+const forceDispositions=index.entries.filter(entry=>entry.recordType==='FORCE_DISPOSITION');
+const forceDispositionMatchups=index.entries.filter(entry=>entry.recordType==='FORCE_DISPOSITION_MATCHUP');
+assert.equal(forceDispositions.length,5,'all five Force Disposition identities must be projected');
+assert.equal(new Set(forceDispositions.map(entry=>entry.id)).size,5,'Force Disposition identities must remain unique');
+assert.equal(forceDispositions.reduce((count,entry)=>count+entry.facts.missionMatrixRelations.length,0),25,'all 25 directed Primary matrix relations must remain projected');
+assert.equal(forceDispositions.reduce((count,entry)=>count+entry.facts.references.length,0),50,'all 50 Force Disposition Mission references must remain projected');
+assert.equal(forceDispositions.reduce((count,entry)=>count+entry.mfm.assignedDetachmentIds.length,0),102,'all 102 effective Detachment assignments must augment Force Dispositions');
+assert.equal(new Set(forceDispositions.flatMap(entry=>entry.mfm.assignedDetachmentIds)).size,102,'effective Detachment assignments must not duplicate across Force Dispositions');
+assert(forceDispositions.every(entry=>entry.facts.physicalMultiplicity===2),'each Force Disposition must retain its physical card multiplicity');
+assert.equal(forceDispositionMatchups.length,15,'all 15 unordered matchup identities must be projected');
+assert.equal(new Set(forceDispositionMatchups.map(entry=>entry.id)).size,15,'matchup identities must remain unique');
+assert(forceDispositionMatchups.every(entry=>entry.facts.unordered&&entry.facts.reverseOrderEquivalent),'every matchup must retain unordered reverse-order equivalence');
+assert.equal(forceDispositionMatchups.reduce((count,entry)=>count+entry.facts.directedPrimaryRelations.length,0),25,'matchups must retain all 25 directed Primary relations');
+assert.equal(forceDispositionMatchups.reduce((count,entry)=>count+entry.facts.layoutIds.length,0),45,'matchups must retain all 45 A/B/C layout links');
+const matchupKeys=forceDispositionMatchups.map(entry=>[...entry.facts.memberForceDispositionIds].sort().join('|'));
+assert.equal(new Set(matchupKeys).size,15,'reverse order must not create duplicate matchup identities');
 assert.deepEqual(index.coverage.armyEffectiveBooks,BOOK_IDS,'all nine supported Army Books must contribute');
 for(const bookId of BOOK_IDS)assert(index.entries.some(entry=>entry.domain==='ARMY'&&entry.contexts.some(context=>context.effectiveBookId===bookId)),`${bookId} must contribute an effective Army context`);
 

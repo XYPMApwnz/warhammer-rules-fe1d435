@@ -1,8 +1,9 @@
 (function(){
   'use strict';
   const api=window.WH40K_GLOSSARY;
-  const allTerms=api.entries().filter(term=>term&&term.presentation!=='metadata').sort((a,b)=>a.title.en.localeCompare(b.title.en));
-  const terms=api.standaloneEntries().filter(term=>term&&term.presentation!=='metadata').sort((a,b)=>a.title.en.localeCompare(b.title.en));
+  const bookId=new URL(location.href).searchParams.get('book')||'',get=id=>api.get(id,{bookId});
+  const allTerms=api.entries({bookId}).filter(term=>term&&term.presentation!=='metadata').sort((a,b)=>a.title.en.localeCompare(b.title.en));
+  const terms=api.standaloneEntries({bookId}).filter(term=>term&&term.presentation!=='metadata').sort((a,b)=>a.title.en.localeCompare(b.title.en));
   const search=document.getElementById('search'),filters=document.getElementById('filters'),list=document.getElementById('termList'),detail=document.getElementById('termDetail'),resultCount=document.getElementById('resultCount'),libraryBack=document.getElementById('libraryBack'),popup=document.getElementById('termPopup'),popupTitle=document.getElementById('termPopupTitle'),popupSummary=document.getElementById('termPopupSummary'),popupFull=document.getElementById('termPopupFull');
   let category='all',selected='',visibleLimit=120,searchTimer=0;
   const returnRecord=window.WHGlossaryReturn?.read();
@@ -77,7 +78,7 @@
   }
 
   function renderReferences(label,ids,limit=24){
-    const resolved=[...new Set(ids)].map(id=>api.get(id)).filter(Boolean);
+    const resolved=[...new Set(ids)].map(get).filter(Boolean);
     if(!resolved.length)return null;
     const section=document.createElement('section');section.className='reference-section';
     const grid=document.createElement('div');grid.className='reference-grid';
@@ -103,7 +104,7 @@
   function detailsBlock(label,className){const node=document.createElement('details'),summary=document.createElement('summary'),content=document.createElement('div');node.className=className;summary.textContent=label;content.className='details-content';node.append(summary,content);return{node,content};}
 
   function renderTerm(id,{scrollToArticle=false}={}){
-    const term=api.get(id);if(!term){showCatalogue(false);return;}
+    const term=get(id);if(!term){showCatalogue(false);return;}
     selected=term.id;document.body.classList.add('article-open');renderList();detail.replaceChildren();
     const another=document.createElement('button');another.type='button';another.className='search-another';another.textContent='← Search another term';another.addEventListener('click',()=>showCatalogue(true,true));
     const categoryLine=document.createElement('p'),title=document.createElement('h2');categoryLine.className='kind';categoryLine.textContent=`${kindLabel(term)} · ${scopeLabel(term)}`;title.textContent=displayTitle(term);title.dataset.term=term.id;title.tabIndex=-1;detail.append(another,categoryLine,title);
@@ -116,7 +117,7 @@
     if(term.fullRulePath){const action=document.createElement('a');action.className='full-rule-action';action.href=new URL(`../${term.fullRulePath.replace(/^\/+/, '')}`,location.href).href;action.textContent='Open full rule →';action.addEventListener('click',()=>window.WHGlossaryReturn?.setRestoreMode('manual'));detail.append(action);}
     const groups=[['Rules of this unit type',term.references?.intrinsicRules||[]],['Referenced by core rules',term.references?.referencedByRules||[]],['Common rules',term.references?.commonRules||[]],['Faction terms',term.references?.factionTerms||[]],['Related keywords',term.references?.relatedKeywords||[]],['Related terms',term.related||[]]];
     const seenConnections=new Set();
-    const uniqueGroups=groups.map(([label,ids])=>[label,ids.filter(id=>{const linked=api.get(id);if(!linked||seenConnections.has(linked.id))return false;seenConnections.add(linked.id);return true;})]);
+    const uniqueGroups=groups.map(([label,ids])=>[label,ids.filter(id=>{const linked=get(id);if(!linked||seenConnections.has(linked.id))return false;seenConnections.add(linked.id);return true;})]);
     const connectionCount=seenConnections.size;
     if(connectionCount){const connections=detailsBlock(`Explore connections · ${connectionCount} related rules and terms`,'connection-details');for(const [label,ids] of uniqueGroups){const section=renderReferences(label,ids,label==='Faction terms'?16:24);if(section)connections.content.append(section);}detail.append(connections.node);}
     const registry=detailsBlock('Registry details','registry-details'),source=term.canonicalSource||{},sourceDocument=String(source.documentId||'').trim(),readableSource=sourceDocument&&!/[(){}]|=>|\bbuildCanonicalBook\b/i.test(sourceDocument)&&!['CORE','ARMY','MFM','MISSIONS'].includes(sourceDocument);
@@ -132,11 +133,11 @@
     if(scrollToArticle){detail.scrollIntoView({block:'start'});title.focus({preventScroll:true});}
   }
 
-  function select(id){const term=api.get(id);if(!term)return;const url=new URL(location.href);url.hash=term.id;if(location.hash.slice(1)!==encodeURIComponent(term.id))history.pushState(null,'',url);renderTerm(term.id,{scrollToArticle:true});}
+  function select(id){const term=get(id);if(!term)return;const url=new URL(location.href);url.hash=term.id;if(location.hash.slice(1)!==encodeURIComponent(term.id))history.pushState(null,'',url);renderTerm(term.id,{scrollToArticle:true});}
   function showCatalogue(focus=false,push=false){selected='';document.body.classList.remove('article-open');detail.replaceChildren(Object.assign(document.createElement('p'),{className:'empty',textContent:'Select a term from the archive.'}));renderList();if(push){const url=new URL(location.href);url.hash='';history.pushState(null,'',url);}if(focus){search.focus();document.querySelector('.catalogue')?.scrollIntoView({block:'start'});}}
   function reconcileSelection(){if(selected&&!visibleTerms().some(term=>term.id===selected)){showCatalogue(false,true);return;}renderList();}
-  function syncFromUrl(){const id=decodeURIComponent(location.hash.slice(1));const term=api.get(id);if(term){if((category!=='all'||search.value)&&!visibleTerms().some(item=>item.id===term.id)){category='all';search.value='';visibleLimit=120;renderFilters();}renderTerm(term.id);}else showCatalogue(false);}
-  function openPopup(id){const term=api.get(id);if(!term)return;popup.dataset.term=term.id;popupTitle.textContent=displayTitle(term);popupSummary.textContent=term.definition?.en||'';popup.showModal();}
+  function syncFromUrl(){const id=decodeURIComponent(location.hash.slice(1));const term=get(id);if(term){if((category!=='all'||search.value)&&!visibleTerms().some(item=>item.id===term.id)){category='all';search.value='';visibleLimit=120;renderFilters();}renderTerm(term.id);}else showCatalogue(false);}
+  function openPopup(id){const term=get(id);if(!term)return;popup.dataset.term=term.id;popupTitle.textContent=displayTitle(term);popupSummary.textContent=term.definition?.en||'';popup.showModal();}
   detail.addEventListener('click',event=>{const trigger=event.target.closest('[data-autolink][data-term]');if(!trigger)return;event.preventDefault();openPopup(trigger.dataset.term);});
   document.getElementById('termPopupClose').addEventListener('click',()=>popup.close());
   popup.addEventListener('click',event=>{if(event.target===popup)popup.close();});

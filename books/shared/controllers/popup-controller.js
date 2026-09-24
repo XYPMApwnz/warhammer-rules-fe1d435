@@ -107,7 +107,7 @@
     actionList(term){
       const actions=window.WHPopupRuleActions.resolve(term,{resolveHref:path=>window.WHGlossaryReturn.href(path)});
       if(term.id&&this.fullEntry?.isUseful(term.id))actions.push({label:'Full entry',fullEntry:term.id});
-      if(term.id)actions.push({label:'Glossary entry',href:'../../glossary/index.html#'+encodeURIComponent(term.id),megaGlossary:true});
+      if(term.id){const glossaryUrl=new URL('../../glossary/index.html',location.href);if(term.scope&&term.scope!=='global'&&term.scope!=='missions')glossaryUrl.searchParams.set('book',term.scope);glossaryUrl.hash=term.id;actions.push({label:'Glossary entry',href:glossaryUrl.href,megaGlossary:true});}
       const relatedUnitId=this.rootElement()?.closest?.('.related-rules-layer')?.dataset.unitId||'';
       if(relatedUnitId)actions.push({label:'Open datasheet',target:relatedUnitId,type:'datasheet'});
       return actions.filter(action=>action.href||action.fullEntry||document.getElementById(action.target));

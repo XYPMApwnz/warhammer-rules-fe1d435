@@ -12,7 +12,8 @@
     const documentRoot=document.querySelector('.document');
     root.WH40K_GLOSSARY?.bindArmyRoot?.(documentRoot,config.bookId);
     const terms=root.WH40K_GLOSSARY?.forBook(config.bookId)||{};
-    const fullEntry=new root.DGFullEntry(root.WH40K_GLOSSARY);
+    const fullEntryApi=Object.freeze({get:(id,options={})=>root.WH40K_GLOSSARY.get(id,{...options,bookId:config.bookId})});
+    const fullEntry=new root.DGFullEntry(fullEntryApi);
     const popups=new root.DGPopups(terms,fullEntry);
     const relatedConfig=config.relatedRules===false?null:config.relatedRules||{};
     const relatedInstaller=relatedConfig&&(relatedConfig.installer||root.WHArmyRelatedRules);

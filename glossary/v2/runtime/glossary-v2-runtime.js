@@ -438,7 +438,7 @@
     }
     return{};
   }
-  const scopeOf=entry=>entry.domain==='CORE'?'global':entry.domain==='MISSIONS'?'missions':entry.sourceOwner?.bookId||entry.contexts?.[0]?.effectiveBookId||entry.domain.toLocaleLowerCase();
+  const scopeOf=(entry,bookId='')=>entry.domain==='CORE'?'global':entry.domain==='MISSIONS'?'missions':bookId&&(entry.contexts||[]).some(context=>context.effectiveBookId===bookId)?bookId:entry.sourceOwner?.bookId||entry.contexts?.[0]?.effectiveBookId||entry.domain.toLocaleLowerCase();
   const kindOf=entry=>entry.recordType.toLocaleLowerCase().replaceAll('_','-');
   const sourceOf=entry=>{const source=entry.provenance?.base||entry.provenance||{};return{documentId:source.sourceId||source.profileId||entry.sourceOwner?.interface||entry.domain,revision:source.sourceVersion||source.sourceDate||entry.currentness?.asOf||entry.currentness?.cutoff||'',locator:source.sourceLocator?.partition||source.contentLocator||entry.sourceOwner?.canonicalId||''};};
   const relatedOf=entry=>{
@@ -450,11 +450,17 @@
     return[...new Set(ids)];
   };
   const articleCache=new Map();
-  function article(entry){
-    let result=articleCache.get(entry.id);if(result)return result;
-    const definition=definitionOf(entry),summary=summaryOf(entry,definition),kind=kindOf(entry),scope=scopeOf(entry),structured=structuredOf(entry),related=relatedOf(entry);
-    result=Object.freeze({...entry,canonicalId:entry.sourceOwner.canonicalId,title:Object.freeze({en:entry.label}),summary:Object.freeze({en:summary}),definition:Object.freeze({en:definition}),kind,scope,edition:'11E',status:entry.currentness?.state||entry.currentness?.publicationState||'CURRENT',structured:Object.freeze(structured),related:Object.freeze(related),references:Object.freeze({}),canonicalSource:Object.freeze(sourceOf(entry)),presentation:entry.recordType==='WEAPON_PROFILE'?'profile':'article',matchLabels:Object.freeze(entry.presentation?.preferredMatchLabels||[])});
-    articleCache.set(entry.id,result);return result;
+  const contextualEntry=(entry,bookId='')=>{
+    if(!bookId||entry.domain!=='ARMY')return entry;
+    const context=(entry.contexts||[]).find(item=>item.effectiveBookId===bookId);if(!context)return entry;
+    const facts={...entry.facts,...(context.factOverrides||{})};for(const field of context.omittedFactFields||[])delete facts[field];
+    return{...entry,facts,mfm:context.mfm||entry.mfm};
+  };
+  function article(entry,bookId=''){
+    const key=`${bookId}\u0000${entry.id}`;let result=articleCache.get(key);if(result)return result;
+    const contextual=contextualEntry(entry,bookId),definition=definitionOf(contextual),summary=summaryOf(contextual,definition),kind=kindOf(contextual),scope=scopeOf(contextual,bookId),structured=structuredOf(contextual),related=relatedOf(contextual);
+    result=Object.freeze({...contextual,canonicalId:entry.sourceOwner.canonicalId,title:Object.freeze({en:entry.label}),summary:Object.freeze({en:summary}),definition:Object.freeze({en:definition}),kind,scope,edition:'11E',status:entry.currentness?.state||entry.currentness?.publicationState||'CURRENT',structured:Object.freeze(structured),related:Object.freeze(related),references:Object.freeze({}),canonicalSource:Object.freeze(sourceOf(entry)),presentation:entry.recordType==='WEAPON_PROFILE'?'profile':'article',matchLabels:Object.freeze(entry.presentation?.preferredMatchLabels||[])});
+    articleCache.set(key,result);return result;
   }
   const bookMatches=(entry,bookId)=>{if(!bookId)return true;if(bookId==='core-rules')return entry.domain==='CORE';if(entry.domain==='CORE')return true;if(entry.domain!=='ARMY')return false;return(entry.contexts||[]).some(context=>context.effectiveBookId===bookId);};
   function candidates(id,{bookId='',parentId='',recordType=''}={}){
@@ -466,12 +472,12 @@
   }
   function resolveEntry(id,options={}){const values=candidates(id,options);return values.length===1?values[0]:null;}
   function resolvePreferred(label,{bookId=''}={}){const token=normalize(label),values=entries.filter(entry=>(entry.presentation?.preferredMatchLabels||[]).some(value=>normalize(value)===token)&&bookMatches(entry,bookId));return values.length===1?values[0]:null;}
-  function resolveArticle(id,options={}){const entry=resolveEntry(id,options)||resolvePreferred(id,options);return entry?article(entry):null;}
+  function resolveArticle(id,options={}){const entry=resolveEntry(id,options)||resolvePreferred(id,options);return entry?article(entry,options.bookId||''):null;}
   function flatView(term){return Object.freeze({...term,title:term.title.en,summary:term.summary.en,definition:term.definition.en,glossary:`glossary-${term.id}`});}
   function contextualEntries(bookId){return entries.filter(entry=>bookMatches(entry,bookId));}
   function forBook(bookId){
     const result={},contextual=contextualEntries(bookId);
-    for(const entry of contextual)result[entry.id]=flatView(article(entry));
+    for(const entry of contextual)result[entry.id]=flatView(article(entry,bookId));
     const keys=new Set(contextual.flatMap(entry=>[entry.sourceOwner?.canonicalId,...(entry.aliases||[])]).filter(Boolean));
     for(const key of keys){const resolved=resolveEntry(key,{bookId});if(resolved)result[key]=result[resolved.id];}
     return Object.freeze(result);
@@ -493,5 +499,5 @@
     return Object.freeze({bound,unresolved:Object.freeze(unresolved),ambiguous:Object.freeze(ambiguous)});
   }
 
-  root.WH40K_GLOSSARY=Object.freeze({schema:data.schema,language:data.language,factualAuthority:false,resolve(id,options){return resolveArticle(id,options)?.id||null;},get(id,options){return resolveArticle(id,options);},resolveView(bookId,id,options={}){const term=resolveArticle(id,{...options,bookId});return term?flatView(term):null;},entries(){return Object.freeze(entries.map(article));},standaloneEntries(){return Object.freeze(entries.filter(entry=>!entry.parent).map(article));},forBook,linkables,preferredMatches,bindArmyRoot,counts:Object.freeze({terms:data.counts.total,standalone:data.counts.standalone,scopedChildren:data.counts.scopedChildren,aliases:[...byKey.keys()].length})});
+  root.WH40K_GLOSSARY=Object.freeze({schema:data.schema,language:data.language,factualAuthority:false,resolve(id,options){return resolveArticle(id,options)?.id||null;},get(id,options){return resolveArticle(id,options);},resolveView(bookId,id,options={}){const term=resolveArticle(id,{...options,bookId});return term?flatView(term):null;},entries(options={}){return Object.freeze(entries.map(entry=>article(entry,options.bookId||'')));},standaloneEntries(options={}){return Object.freeze(entries.filter(entry=>!entry.parent).map(entry=>article(entry,options.bookId||'')));},forBook,linkables,preferredMatches,bindArmyRoot,counts:Object.freeze({terms:data.counts.total,standalone:data.counts.standalone,scopedChildren:data.counts.scopedChildren,aliases:[...byKey.keys()].length})});
 }(window));

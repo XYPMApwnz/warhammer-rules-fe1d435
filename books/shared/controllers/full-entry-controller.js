@@ -154,7 +154,9 @@
       this.title.textContent=term.title.en;this.title.dataset.term=term.id;
       this.dialog.classList.toggle('is-compact',this.isCompact(term));
       this.backButton.hidden=this.stack.length<2;
-      this.megaLink.href='../../glossary/index.html#'+encodeURIComponent(term.id);
+      const glossaryUrl=new URL('../../glossary/index.html',location.href);
+      if(term.scope&&term.scope!=='global'&&term.scope!=='missions')glossaryUrl.searchParams.set('book',term.scope);
+      glossaryUrl.hash=term.id;this.megaLink.href=glossaryUrl.href;
       const nodes=[];
       const kind=document.createElement('p');kind.className='full-entry-kind';kind.textContent=term.kind+' // '+term.edition;nodes.push(kind);
       if(summary&&!placeholder.test(summary)&&summary!==definition&&term.presentation!=='profile'){const quick=document.createElement('p');quick.className='full-entry-summary';quick.textContent=summary;nodes.push(this.sectionLabel('Quick reference // popup'),quick);}

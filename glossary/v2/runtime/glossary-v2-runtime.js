@@ -203,11 +203,62 @@
     if(clarifications.length)lines.push(`FAQ / CLARIFICATION\n${clarifications.join('\n\n')}`);
     return lines.join('\n\n');
   };
+  const twistDefinition=entry=>{
+    const body=entry.facts?.ruleBody;
+    if(!body||typeof body!=='object')return'';
+    const lines=[];
+    if(text(body.flavorText))lines.push(`FLAVOR\n${text(body.flavorText)}`);
+    const rules=[];
+    for(const rule of body.rules||[]){const value=missionSourceText(rule);if(!value)return'';rules.push(value);}
+    if(!rules.length)return'';
+    lines.push(`RULES\n${rules.join('\n')}`);
+    const operationDetails=[];
+    for(const operation of body.operations||[]){
+      if(operation.type==='BATTLELINE_ACTION_AND_SHOOTING_PERMISSION'){
+        if(operation.keywordId!=='keyword-battleline')return'';
+      }else if(operation.type==='REPLACE_BOTH_PRIMARY_MISSIONS'){
+        if(!Array.isArray(operation.optionPrimaryMissionIds)||!operation.optionPrimaryMissionIds.length||operation.randomSelection?.die!=='D6'||!Array.isArray(operation.randomSelection.rerollResults))return'';
+        operationDetails.push(`RANDOM SELECTION: ${operation.randomSelection.die}. Reroll results: ${operation.randomSelection.rerollResults.join(', ')}.`);
+        if((body.options||[]).some(option=>!text(option.roll)))operationDetails.push(`ROLL-TO-OPTION MAPPING: Unresolved in accepted evidence.`);
+      }else if(operation.type==='VISIBILITY_RANGE_LIMIT'){
+        if(!Number.isFinite(operation.distanceInches))return'';
+        operationDetails.push(`VISIBILITY RANGE LIMIT: ${operation.distanceInches}".`);
+      }else if(operation.type==='INDIRECT_FIRE_TARGETING_RANGE_LIMIT'){
+        if(!Number.isFinite(operation.distanceInches))return'';
+        operationDetails.push(`INDIRECT FIRE TARGETING RANGE LIMIT: ${operation.distanceInches}".`);
+      }else if(operation.type==='REMOVE_TERRAIN_RULE'){
+        const target=byId.get(`core::${operation.canonicalTarget}`);
+        if(!target)return'';
+        operationDetails.push(`REMOVED TERRAIN RULE: ${target.label}.`);
+      }else if(operation.type==='TEMPORARY_KEYWORD_GRANT_DURING_MOVE'){
+        if(operation.keywordId!=='keyword-mobile'||!Array.isArray(operation.moveTypes)||!operation.moveTypes.length)return'';
+        const moveLabels=new Map([['NORMAL','Normal'],['ADVANCE','Advance']]),moves=operation.moveTypes.map(value=>moveLabels.get(value));
+        if(moves.some(value=>!value))return'';
+        operationDetails.push(`TEMPORARY KEYWORD: MOBILE. MOVE TYPES: ${moves.join(', ')}.`);
+      }else if(operation.type==='EXCHANGE_PRIMARY_MISSIONS'){
+        // The accepted rule text completely expresses this operation.
+      }else return'';
+    }
+    if(operationDetails.length)lines.push(`STRUCTURED DETAILS\n${operationDetails.join('\n')}`);
+    if(Array.isArray(body.options)&&body.options.length){
+      const options=[];
+      for(const option of body.options){
+        if(!text(option.label))return'';
+        options.push(text(option.roll)?`${text(option.roll)}: ${text(option.label)}`:text(option.label));
+      }
+      lines.push(`OPTIONS\n${options.join('\n')}`);
+    }
+    const notes=(body.designersNotes||[]).map(text);
+    if(notes.some(note=>!note))return'';
+    if(notes.length)lines.push(`DESIGNER'S NOTES\n${notes.join('\n')}`);
+    return lines.join('\n\n');
+  };
   function definitionOf(entry){
     const facts=entry.facts||{};
     if(entry.recordType==='DETACHMENT'){const definition=detachmentDefinition(entry);if(definition)return definition;}
     if(entry.recordType==='MISSION_SEQUENCE_RULE')return missionSequenceDefinition(entry);
     if(entry.recordType==='PRIMARY_MISSION'||entry.recordType==='SECONDARY_MISSION')return missionCardDefinition(entry);
+    if(entry.recordType==='TWIST')return twistDefinition(entry);
     for(const field of ['semanticContent','text','full','definition','ruleText','rulesText','answer','description']){const value=text(facts[field]);if(value)return value;}
     const structuredOptions=structuredOptionsDefinition(facts);if(structuredOptions)return structuredOptions;
     const content=collectContent(facts.content);if(content)return content;

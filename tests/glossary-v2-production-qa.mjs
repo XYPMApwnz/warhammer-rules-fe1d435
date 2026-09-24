@@ -103,6 +103,41 @@ const unknownCardScope={window:{WH40K_GLOSSARY_V2_INDEX:unknownCardIndex}};
 vm.runInNewContext(read('glossary/v2/runtime/glossary-v2-runtime.js'),unknownCardScope);
 assert.equal(unknownCardScope.window.WH40K_GLOSSARY.get(unknownCard.id).definition.en,'','unknown Mission card operations must fail closed instead of exposing internal codes');
 
+const twists=index.entries.filter(entry=>entry.recordType==='TWIST');
+assert.equal(twists.length,6,'all six Twist identities must remain standalone');
+assert.equal(new Set(twists.map(entry=>entry.id)).size,6,'Twist identities must remain unique');
+const twistOperationCodes=new Set(twists.flatMap(entry=>entry.facts.ruleBody.operations.map(operation=>operation.type)));
+for(const source of twists){
+  const article=api.get(source.id),body=source.facts.ruleBody,definition=article.definition.en;
+  assert(definition.trim(),`${source.id}: readable Twist definition`);
+  assert(definition.includes(body.flavorText),`${source.id}: flavor remains distinct`);
+  assert.notEqual(definition.trim(),body.flavorText.trim(),`${source.id}: article must not stop at flavor text`);
+  for(const rule of body.rules)assert(definition.includes(rule.text),`${source.id}: accepted gameplay rule ${rule.id}`);
+  for(const note of body.designersNotes)assert(definition.includes(note),`${source.id}: accepted Designer's Note`);
+  for(const option of body.options)assert(definition.includes(option.label),`${source.id}: accepted option ${option.label}`);
+  for(const operationCode of twistOperationCodes)assert(!definition.includes(operationCode),`${source.id}: internal operation code ${operationCode} must not be visible`);
+  assert.equal(api.get(source.id)?.definition.en,definition,`${source.id}: popup/article definition parity`);
+}
+const nowhereToHide=api.get('missions::twist-nowhere-to-hide');
+assert.match(nowhereToHide.definition.en,/Terrain features do not have the Solid rule[\s\S]*Designer’s Note:/,'simple Twist must include its rule and note');
+const nightFighting=api.get('missions::twist-night-fighting');
+assert.match(nightFighting.definition.en,/not visible to enemy models unless they are within 18"[\s\S]*VISIBILITY RANGE LIMIT: 18"[\s\S]*INDIRECT FIRE TARGETING RANGE LIMIT: 18"/,'structured Twist range operations must be readable');
+const ruinscape=api.get('missions::twist-ruinscape');
+assert.match(ruinscape.definition.en,/until that move ends[\s\S]*TEMPORARY KEYWORD: MOBILE[\s\S]*MOVE TYPES: Normal, Advance/,'Twist timing and duration must remain explicit');
+const mirroredWorldArticle=api.get('missions::twist-mirrored-world');
+assert.match(mirroredWorldArticle.definition.en,/both replace their Primary Mission card with the same one/i,'Mirrored World accepted rule');
+for(const label of ['Battlefield Dominance','Meatgrinder','Outmanoeuvre','Gather Intel','Sabotage','(Roll again)'])assert(mirroredWorldArticle.definition.en.includes(label),`Mirrored World option ${label}`);
+assert.match(mirroredWorldArticle.definition.en,/RANDOM SELECTION: D6\. Reroll results: 6\./,'Mirrored World proven D6 metadata');
+assert.match(mirroredWorldArticle.definition.en,/ROLL-TO-OPTION MAPPING: Unresolved in accepted evidence\./,'Mirrored World unresolved mapping must remain visible');
+assert.doesNotMatch(mirroredWorldArticle.definition.en,/\b[1-5]\s*[:=\-–]\s*(?:Battlefield Dominance|Meatgrinder|Outmanoeuvre|Gather Intel|Sabotage)/,'Mirrored World must not invent roll-to-option assignments');
+
+const unknownTwistIndex=structuredClone(index);
+const unknownTwist=unknownTwistIndex.entries.find(entry=>entry.id==='missions::twist-night-fighting');
+unknownTwist.facts.ruleBody.operations[0].type='UNKNOWN_TWIST_OPERATION';
+const unknownTwistScope={window:{WH40K_GLOSSARY_V2_INDEX:unknownTwistIndex}};
+vm.runInNewContext(read('glossary/v2/runtime/glossary-v2-runtime.js'),unknownTwistScope);
+assert.equal(unknownTwistScope.window.WH40K_GLOSSARY.get(unknownTwist.id).definition.en,'','unknown Twist operations must fail closed instead of exposing internal codes');
+
 assert.equal(index.counts.total,4630);
 assert.equal(index.counts.standalone,1738);
 assert.equal(index.counts.scopedChildren,2892);

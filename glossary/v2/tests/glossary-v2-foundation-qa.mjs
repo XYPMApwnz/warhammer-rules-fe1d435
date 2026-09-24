@@ -44,6 +44,18 @@ assert.equal(secondaryMissions.filter(entry=>entry.facts.ruleBody.whenDrawn.leng
 assert.equal(secondaryMissions.filter(entry=>entry.facts.ruleBody.caps).length,4,'all Secondary per-card caps must remain projected');
 assert.equal(primaryMissions.filter(entry=>entry.facts.effectiveClarifications?.length).length,3,'all effective Primary FAQ clarifications must remain projected');
 assert.equal(secondaryMissions.filter(entry=>entry.facts.effectiveClarifications?.length).length,2,'all effective Secondary FAQ clarifications must remain projected');
+const twists=index.entries.filter(entry=>entry.recordType==='TWIST');
+assert.equal(twists.length,6,'all six accepted Twist identities must be projected');
+assert.equal(new Set(twists.map(entry=>entry.id)).size,6,'Twist identities must remain unique');
+assert.equal(twists.reduce((count,entry)=>count+entry.facts.ruleBody.operations.length,0),7,'all seven accepted Twist operations must remain projected');
+for(const entry of twists){
+  assert(entry.facts.ruleBody.rules.length,`${entry.id}: accepted readable Twist rule`);
+  assert(entry.facts.ruleBody.designersNotes.length,`${entry.id}: accepted Designer's Note`);
+}
+const mirroredWorld=twists.find(entry=>entry.id==='missions::twist-mirrored-world');
+assert.equal(mirroredWorld.facts.ruleBody.options.length,6,'Mirrored World must retain all accepted options including reroll');
+assert(mirroredWorld.facts.ruleBody.options.every(option=>option.roll===''),'Mirrored World roll-to-option mapping must remain explicitly unproven');
+assert.deepEqual(mirroredWorld.facts.ruleBody.operations[0].randomSelection,{die:'D6',rerollResults:[6]},'Mirrored World must retain only its proven D6 metadata');
 assert.deepEqual(index.coverage.armyEffectiveBooks,BOOK_IDS,'all nine supported Army Books must contribute');
 for(const bookId of BOOK_IDS)assert(index.entries.some(entry=>entry.domain==='ARMY'&&entry.contexts.some(context=>context.effectiveBookId===bookId)),`${bookId} must contribute an effective Army context`);
 

@@ -19,6 +19,7 @@ const redeployId='missions::mission-sequence-redeploy-units';
 const createBattlefieldId='missions::mission-sequence-create-battlefield';
 const primaryMissionId='missions::primary-death-trap';
 const secondaryMissionId='missions::secondary-plunder';
+const twistIds=['missions::twist-night-fighting','missions::twist-mirrored-world'];
 const compact=value=>String(value).replace(/\s+/g,' ').trim();
 const mime={'.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp'};
 const server=createServer((request,response)=>{try{
@@ -85,6 +86,19 @@ try{
       await page.evaluate(termId=>{const trigger=document.createElement('button');trigger.type='button';trigger.dataset.autolink='';trigger.dataset.term=termId;trigger.textContent='Mission card';document.querySelector('#termDetail').append(trigger);},control.id);
       await page.locator(`[data-autolink][data-term="${control.id}"]`).click();await page.locator('#termPopup[open]').waitFor();
       assert.equal(compact(await page.locator('#termPopupSummary').innerText()),article,`${viewport.name}: Mission card popup/article parity ${control.id}`);
+      await page.locator('#termPopupClose').click();
+    }
+    for(const id of twistIds){
+      await page.goto(`${base}/glossary/index.html#${encodeURIComponent(id)}`);await page.locator('body.article-open').waitFor();
+      const article=compact(await page.locator('#termDetail .definition').last().innerText());
+      if(id.endsWith('night-fighting'))assert.match(article,/not visible to enemy models unless they are within 18"[\s\S]*INDIRECT FIRE TARGETING RANGE LIMIT: 18"/i,`${viewport.name}: structured Twist article`);
+      else{
+        assert.match(article,/RANDOM SELECTION: D6\. Reroll results: 6\./i,`${viewport.name}: Mirrored World proven D6 metadata`);
+        assert.match(article,/ROLL-TO-OPTION MAPPING: Unresolved in accepted evidence\./i,`${viewport.name}: Mirrored World evidence limitation`);
+      }
+      await page.evaluate(termId=>{const trigger=document.createElement('button');trigger.type='button';trigger.dataset.autolink='';trigger.dataset.term=termId;trigger.textContent='Twist';document.querySelector('#termDetail').append(trigger);},id);
+      await page.locator(`[data-autolink][data-term="${id}"]`).click();await page.locator('#termPopup[open]').waitFor();
+      assert.equal(compact(await page.locator('#termPopupSummary').innerText()),article,`${viewport.name}: Twist popup/article parity ${id}`);
       await page.locator('#termPopupClose').click();
     }
     await page.goto(`${base}/glossary/index.html#${encodeURIComponent(mortarionsHammerId)}`);await page.locator('body.article-open').waitFor();

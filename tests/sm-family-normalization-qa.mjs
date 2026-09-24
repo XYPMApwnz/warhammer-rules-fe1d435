@@ -49,7 +49,7 @@ assert.equal(commonDetachments.length,16,'common compatible SM Detachments');
 const stormlance=book=>{const context={window:{}};vm.createContext(context);vm.runInContext(fs.readFileSync(path.join(root,'books',book,'scripts/target-data.js'),'utf8'),context);const html=JSON.stringify(context.window.WH_ARMY_BOOK_TARGETS.html);return Number(html.match(/Stormlance Task Force<span class=\\"detachment-dp\\">(\d+)DP/)?.[1]);};
 assert.notEqual(stormlance('space-marines'),2,'SM Stormlance value unchanged');
 assert.notEqual(stormlance('dark-angels'),2,'DA Stormlance value unchanged');
-assert.equal(stormlance('blood-angels'),2,'BA Stormlance override preserved');
+assert.equal(stormlance('blood-angels'),2,'BA contextual MFM Stormlance value preserved');
 
 const fact=value=>JSON.parse(JSON.stringify(value??null));
 const canonicalSourceId=(item,book)=>item.sourceId||(book==='space-marines'?item.ruleId:null);

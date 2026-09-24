@@ -80,7 +80,7 @@ const dependencyCodices=(config.dependencies||[]).map(id=>{
 });
 const dependencyById=new Map(dependencyCodices.map(item=>[item.id,item]));
 const dependencyScope=config.dependencyDatasheets||{};
-const dependencyPointOverrides=dependencyScope.pointOverrides||{};
+const dependencyCanonicalPublicationTitleIds=new Set(dependencyScope.canonicalPublicationTitleUnitIds||[]);
 const excludedDependencyKeywords=new Set((dependencyScope.excludeAnyKeywords||[]).map(value=>clean(value).toUpperCase()));
 const dependencyKeywordOverlays=new Map();
 for(const overlay of dependencyScope.keywordOverlays||[])for(const unitId of overlay.unitIds||[]){
@@ -99,25 +99,15 @@ for(const dependency of dependencyCodices){
   const unitIds=new Set((dependency.codex.datasheets||[]).map(unit=>unit.id));
   for(const unitId of Object.keys(dependency.config.unitCompatibleChapterKeywords||{}))if(!unitIds.has(unitId))throw new Error(`${dependency.id}: unit compatibility references unknown unit ${unitId}`);
 }
-const validateDependencyPointOverride=(unitId,override)=>{
-  for(const [index,row] of (override.points||[]).entries()){
-    if(typeof row?.label!=='string'||!clean(row.label))throw new Error(`${config.id}: dependency point override ${unitId} row ${index+1} requires a non-empty label`);
-    if(typeof row?.value!=='number'||!Number.isFinite(row.value))throw new Error(`${config.id}: dependency point override ${unitId} row ${index+1} requires a finite numeric value`);
-  }
-};
 const dependencyUnits=dependencyCodices.flatMap(dependency=>(dependencyScope.currentOnly?[...(dependency.codex.datasheets||[]),...(dependency.codex.imperialArmour||[])]:unitInventory(dependency.codex))
   .filter(unit=>![...(unit.keywords||[]),...dependencyCompatibilityKeywords(dependency,unit)].some(keyword=>excludedDependencyKeywords.has(clean(keyword).toUpperCase())))
   .map(unit=>{
-    const inheritedPoint=dependency.pointsById.get(unit.id),pointOverride=dependencyPointOverrides[unit.id],exact=dependency.wargearByUnitId.get(unit.id),official=dependency.officialByUnitId.get(unit.id);
-    if(pointOverride&&!inheritedPoint)throw new Error(`${config.id}: dependency point override ${unit.id} has no inherited point record`);
-    if(pointOverride&&titleKey(pointOverride.title)!==titleKey(unit.title))throw new Error(`${config.id}: dependency point override ${unit.id} title mismatch`);
-    if(pointOverride)validateDependencyPointOverride(unit.id,pointOverride);
-    const point=pointOverride?{...inheritedPoint,...pointOverride}:inheritedPoint;
+    const point=dependency.pointsById.get(unit.id),exact=dependency.wargearByUnitId.get(unit.id),official=dependency.officialByUnitId.get(unit.id);
     const overlayKeywords=dependencyKeywordOverlays.get(unit.id)||new Set();
     return {...unit,keywords:[...new Set([...(unit.keywords||[]),...overlayKeywords])],...(point?{points:point.points,paidWargear:point.paidWargear,pointsSource:point.pointsSource}:{}),...(exact?{wargear:exact.wargear,compositionText:exact.composition,wargearSource:{label:dependency.wargearSource?.label||'Current 11e reference',url:exact.url}}:{}),...(official?{sourcePages:official.sourcePages,provenance:official.provenance}:{}),dependencyBook:dependency.id,dependencyTitle:dependency.config.title,dependencySourceFile:path.basename(dependency.pack.meta.file),dependencySourceVersion:dependency.pack.meta.version,dependencyCompactSharedAbilities:dependency.config.compactSharedAbilities||[],sourceLayer:`${dependency.id}-${official&&unit.sourceLayer==='codex'?'faction-pack':unit.sourceLayer||'source'}`};
   }));
 const dependencyUnitIds=new Set(dependencyUnits.map(unit=>unit.id));
-for(const unitId of Object.keys(dependencyPointOverrides))if(!dependencyUnitIds.has(unitId))throw new Error(`${config.id}: dependency point override ${unitId} does not resolve to an effective dependency Datasheet`);
+for(const unitId of dependencyCanonicalPublicationTitleIds)if(!dependencyUnitIds.has(unitId))throw new Error(`${config.id}: canonical publication title references unknown dependency unit ${unitId}`);
 const ownUnits=config.currentDatasheetLayers?config.currentDatasheetLayers.flatMap(layer=>codex[layer]||[]):config.currentDatasheetsOnly?codex.datasheets||[]:unitInventory(codex);
 const pointsById=indexCanonicalById(points.units,{label:`${config.id} points unit`});
 const boundWargear=bindRowsToCanonicalIds(codexWargear?.units||[],ownUnits,{label:`${config.id} wargear unit`,rowId:sourceUnitId});
@@ -168,9 +158,9 @@ const dependencyDetachments=!dependencyDetachmentScope||dependencyDetachmentScop
   const pointEnhancements=new Map((dependency.points.enhancements||[]).map(item=>{const detachmentId=item.detachmentId||dependencyDetachmentIdByTitle.get(titleKey(item.detachment));if(!detachmentId)throw new Error(`${dependency.id}: Enhancement points ${item.id} references unknown Detachment ${item.detachment}`);return[`${detachmentId}\0${item.id}`,{...item,detachmentId}];}));
   const chapterKey=titleKey(dependencyDetachmentScope.chapterKeyword||config.factionKeyword);
   const selected=source.filter(item=>{const restriction=item.restriction||dependency.config.detachmentChapterRestrictionsById?.[item.id]||dependency.config.detachmentChapterRestrictions?.[item.title];return currentIds.has(item.id)&&(!restriction||titleKey(restriction)===chapterKey);}).map(item=>{
-    const meta=pointMeta.get(item.id)||{},override=dependencyDetachmentScope.pointOverridesById?.[item.id]||dependencyDetachmentScope.pointOverrides?.[item.title]||{};
+    const meta=pointMeta.get(item.id)||{};
     const mark=record=>({...record,dependencyBook:dependency.id});
-    const pointsPublication={...meta,...override,id:item.id,title:item.title},enhancements=(item.enhancements||[]).map(enhancement=>{const current=resolvePointEnhancement(enhancement,item.id,[...pointEnhancements.values()],{aliases:dependency.config.pointEnhancementAliases,label:`${dependency.id} dependency Enhancement points`})||{},sourceId=enhancementSourceId(enhancement),enriched=mark({...enhancement,...current,text:enhancement.text,...(sourceId?{sourceId}:{}),...enhancementDependencyFacts(enhancement,current)});pointsPublicationByEnhancement.set(enriched,current);if(current.id&&sourceId)dependencyEnhancementIdentityByPublication.set([dependency.id,item.id,current.id].join('\0'),sourceId);return enriched;}),enriched={...item,...meta,...override,id:item.id,title:item.title,rule:item.rule?mark(item.rule):item.rule,enhancements,stratagems:(item.stratagems||[]).map(mark),dependencyBook:dependency.id,dependencyTitle:dependency.config.title,dependencySourceFile:path.basename(dependency.pack.meta.file),dependencySourceVersion:dependency.pack.meta.version,dependencyCodexSourceLabel:dependency.config.codexSourceLabel||'SECONDARY CODEX'};
+    const pointsPublication={...meta,id:item.id,title:item.title},enhancements=(item.enhancements||[]).map(enhancement=>{const current=resolvePointEnhancement(enhancement,item.id,[...pointEnhancements.values()],{aliases:dependency.config.pointEnhancementAliases,label:`${dependency.id} dependency Enhancement points`})||{},sourceId=enhancementSourceId(enhancement),enriched=mark({...enhancement,...current,text:enhancement.text,...(sourceId?{sourceId}:{}),...enhancementDependencyFacts(enhancement,current)});pointsPublicationByEnhancement.set(enriched,current);if(current.id&&sourceId)dependencyEnhancementIdentityByPublication.set([dependency.id,item.id,current.id].join('\0'),sourceId);return enriched;}),enriched={...item,...meta,id:item.id,title:item.title,rule:item.rule?mark(item.rule):item.rule,enhancements,stratagems:(item.stratagems||[]).map(mark),dependencyBook:dependency.id,dependencyTitle:dependency.config.title,dependencySourceFile:path.basename(dependency.pack.meta.file),dependencySourceVersion:dependency.pack.meta.version,dependencyCodexSourceLabel:dependency.config.codexSourceLabel||'SECONDARY CODEX'};
     pointsPublicationByDetachment.set(enriched,pointsPublication);return enriched;
   });
   if(dependencyDetachmentScope.expected!=null&&selected.length!==dependencyDetachmentScope.expected)throw new Error(`${config.id}: expected ${dependencyDetachmentScope.expected} compatible ${dependency.config.title} Detachments, got ${selected.length}`);
@@ -310,7 +300,7 @@ let effectContracts=effectiveEffectContracts(effectiveEffectContractSets,config.
 const canonicalDetachmentRules=canonicalDetachmentRuleSet(detachments,{...config.rosterCatalog,bookId:config.id});
 let rosterCatalog=createRosterCatalog({config,units,detachments,relationGraphs,legacyEnhancements:rosterEnhancements,enhancementContracts:canonicalRosterEnhancements,keywordGrants:relatedRules?.keywordGrants||[],effectContracts});
 for(const contractSet of effectiveEffectContractSets)validateEffectContractsAgainstCatalog(contractSet,rosterCatalog,{effectiveBookId:config.id});
-const unitPointsPublication=unit=>{if(!unit.dependencyBook)return pointsById.get(unit.id);const dependency=dependencyById.get(unit.dependencyBook),inherited=dependency?.pointsById.get(unit.id),override=dependencyPointOverrides[unit.id];return override?{...inherited,...override}:inherited;};
+const unitPointsPublication=unit=>{if(!unit.dependencyBook)return pointsById.get(unit.id);const publication=dependencyById.get(unit.dependencyBook)?.pointsById.get(unit.id);return publication&&dependencyCanonicalPublicationTitleIds.has(unit.id)?{...publication,title:unit.title}:publication;};
 const effectiveUnitById=indexCanonicalById(units,{label:`${config.id} effective unit`}),pointOrderedUnits=[...(points.units||[]),...dependencyCodices.flatMap(dependency=>dependency.points.units||[])].map(publication=>effectiveUnitById.get(publication.id)).filter((unit,index,items)=>unit&&items.indexOf(unit)===index);
 if(pointOrderedUnits.length!==units.length)throw new Error(`${config.id}: effective points unit ordering did not cover the effective unit inventory`);
 const effectiveDetachmentById=indexCanonicalById(detachments,{label:`${config.id} effective Detachment`});

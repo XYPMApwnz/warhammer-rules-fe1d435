@@ -144,7 +144,7 @@ assert.equal(JSON.stringify(first.catalog),JSON.stringify(second.catalog),'point
 assert.deepEqual(pointsApi.createPointsCatalogFromProjections(new Map([...projections].reverse())).catalog,catalog,'projection construction order changed points output');
 assert.deepEqual(JSON.parse(JSON.stringify(catalog)),published.catalog,'effective projection changed published points semantics');
 assert.equal(published.source,`window.WH_POINTS_CATALOG=Object.freeze(${JSON.stringify(catalog)});\n`,'points-data.js is not byte-current');
-assert.equal(crypto.createHash('sha256').update(published.source).digest('hex'),'7e8451d32331b070ebffc5ed7cb19bb2ba033e4e3d951e085feef51d88973e46');
+assert.equal(crypto.createHash('sha256').update(published.source).digest('hex'),'9a994961069ed941b40824eac06978781dc33d16a7604c3e8c224312182765ee');
 assertProjectionCatalogIdentity(projections,catalog);
 assertSupplementControls(projections);
 assertEmperorsChildrenUpgradeIdentities(projections,catalog);

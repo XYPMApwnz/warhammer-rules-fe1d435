@@ -194,6 +194,6 @@ const tauPoints=json('books/tau-empire/content/tau-empire-points.en.json');
 assert.equal(recordByTitle(tauPoints.units,'Tidewall Shieldline').paidWargear.find(item=>item.name==='Tidewall Defence Platform')?.value,20);
 const smPoints=json('books/space-marines/content/space-marines-points.en.json');
 assert.equal(recordByTitle(smPoints.units,'Outrider Squad').paidWargear.find(item=>item.name==='Invader ATV')?.value,60);
-assert.equal(json('books/blood-angels/book.config.json').dependencyDetachments.pointOverrides['Stormlance Task Force'].detachmentPoints,2,'BA Stormlance factual override');
+assert.equal(one(exact(json('books/blood-angels/sources/official-mfm-v1.4.json'),'Stormlance Task Force'),'BA Stormlance current MFM').detachmentPoints,2,'BA Stormlance current MFM fact');
 
 console.log('GW 26-Aug-2026 exact official delta QA: PASS');

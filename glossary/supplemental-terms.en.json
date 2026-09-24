@@ -518,7 +518,8 @@
     "core-characteristic-range": "core::core-rule-02-04-weapons",
     "core-characteristic-attacks": "core::core-rule-02-04-weapons",
     "core-characteristic-damage": "core::core-rule-02-04-weapons",
-    "keyword-transport": "core::core-rule-18-01-transport-capacity"
+    "keyword-transport": "core::core-rule-18-01-transport-capacity",
+    "keyword-death-guard": "core::core-rule-02-05-keywords"
   },
   "aliases": {
     "advance-roll": "core-rule-09-06-advance-move",
@@ -541,6 +542,7 @@
     "damage-characteristic": "core-characteristic-damage",
     "sustained-hits": "core-sustained-hits",
     "remain-stationary": "core-rule-09-04-remain-stationary",
-    "ingress-move": "core-rule-20-04-ingress-move"
+    "ingress-move": "core-rule-20-04-ingress-move",
+    "keyword-death-guard": "keyword-death-guard"
   }
 }

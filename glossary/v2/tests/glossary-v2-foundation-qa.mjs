@@ -161,8 +161,8 @@ assert(!index.entries.some(entry=>entry.sourceOwner.domain==='GLOSSARY'),'legacy
 assert.equal(index.coverage.legacy.editorialMigrated,11,'only editorial contracts with one exact canonical target may migrate');
 assert.equal(index.coverage.legacy.editorialUnresolved.length,13,'unbound legacy editorial identities must remain explicit');
 assert.equal(index.coverage.legacy.resolutionAliasesMigrated,10);
-assert.equal(index.coverage.legacy.supplementalAliasesMigrated,55,'all accepted supplemental aliases and match labels must resolve');
-assert.equal(index.coverage.legacy.supplementalTargetBindings,7,'legacy presentation IDs must bind explicitly to existing V2 owners');
+assert.equal(index.coverage.legacy.supplementalAliasesMigrated,56,'all accepted supplemental aliases and match labels must resolve');
+assert.equal(index.coverage.legacy.supplementalTargetBindings,8,'legacy presentation IDs must bind explicitly to existing V2 owners');
 assert.equal(index.coverage.legacy.preferredMatchesMigrated,5);
 assert.equal(index.coverage.legacy.preferredMatchesUnresolved.length,0);
 assert.equal(index.coverage.legacy.legacyGameplayRejected.length,65,'legacy supplemental gameplay bodies are rejected as factual input');
@@ -192,6 +192,9 @@ for(const [label,targetId] of migratedLegacyLabels){
   assert.equal(matches.length,1,`${label}: supplemental label must resolve without dangling or ambiguous bindings`);
   assert.equal(matches[0].id,targetId,`${label}: supplemental label must resolve to its explicit factual owner`);
 }
+const deathGuardKeyword=index.entries.filter(entry=>entry.aliases.includes('keyword-death-guard'));
+assert.deepEqual(deathGuardKeyword.map(entry=>entry.id),['core::core-rule-02-05-keywords'],'Death Guard keyword compatibility identity must resolve to the canonical Core Keywords rule');
+assert(!index.entries.some(entry=>entry.id==='keyword-death-guard'),'Death Guard keyword compatibility identity must not create a duplicate article');
 const transportPreferred=index.entries.filter(entry=>entry.presentation.preferredMatchLabels?.includes('transport'));
 assert.deepEqual(transportPreferred.map(entry=>entry.id),['core::core-rule-18-01-transport-capacity'],'transport preferred match must resolve through the accepted keyword-transport migration binding');
 

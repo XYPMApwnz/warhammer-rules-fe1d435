@@ -130,8 +130,8 @@
         "death-guard-plagues-skullsquirm-blight"
       ],
       "resolutionAliasesMigrated": 10,
-      "supplementalAliasesMigrated": 55,
-      "supplementalTargetBindings": 7,
+      "supplementalAliasesMigrated": 56,
+      "supplementalTargetBindings": 8,
       "preferredMatchesMigrated": 5,
       "preferredMatchesUnresolved": [],
       "legacyGameplayRejected": [
@@ -354898,7 +354898,9 @@
       "domain": "CORE",
       "recordType": "MAIN_RULE",
       "label": "5. Keywords",
-      "aliases": [],
+      "aliases": [
+        "keyword-death-guard"
+      ],
       "searchableContent": "02.05\n2026-09-19\n5. Keywords\nDatasheets have a list of keywords, separated into faction keywords and other keywords. The former are used when deciding which models to include in your army, but otherwise both are functionally the same. Keywords appear in full capitals, in KEYWORD BOLD.\nSome rules are linked to one or more keywords. For example, a rule might say that it applies to INFANTRY units. This means it only applies to units that have the INFANTRY keyword. Singular and plural instances of the same keyword function in the same way.\nSEE ALSO\n• Using Keywords & Mixed Keywords in Units 02.05.01\nFULL_CONTENT\nrule\nSECONDARY\nSECONDARY_CORE_SNAPSHOT\nWAHA_SECONDARY",
       "parent": null,
       "canonicalReferences": [],

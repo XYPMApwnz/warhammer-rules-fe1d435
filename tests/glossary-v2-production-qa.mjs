@@ -47,6 +47,62 @@ const unknownScope={window:{WH40K_GLOSSARY_V2_INDEX:unknownSequenceIndex}};
 vm.runInNewContext(read('glossary/v2/runtime/glossary-v2-runtime.js'),unknownScope);
 assert.equal(unknownScope.window.WH40K_GLOSSARY.get(unknownSequence.id).definition.en,'','unknown Mission Sequence operations must fail closed instead of exposing internal codes');
 
+const missionCards=index.entries.filter(entry=>entry.recordType==='PRIMARY_MISSION'||entry.recordType==='SECONDARY_MISSION');
+const primaryCards=missionCards.filter(entry=>entry.recordType==='PRIMARY_MISSION');
+const secondaryCards=missionCards.filter(entry=>entry.recordType==='SECONDARY_MISSION');
+assert.equal(primaryCards.length,25,'all 25 Primary Mission identities must remain standalone');
+assert.equal(secondaryCards.length,18,'all 18 Secondary Mission identities must remain standalone');
+assert.equal(new Set(missionCards.map(entry=>entry.id)).size,43,'Mission card identities must remain unique');
+for(const source of missionCards){
+  const article=api.get(source.id),body=source.facts.ruleBody,definition=article.definition.en;
+  assert(definition.trim(),`${source.id}: readable Mission card definition`);
+  assert(definition.includes(body.flavorText),`${source.id}: flavor text remains visibly distinct`);
+  assert.match(definition,/SCORING\n/,`${source.id}: scoring section`);
+  assert.notEqual(definition.trim(),body.flavorText.trim(),`${source.id}: article must not stop at flavor text`);
+  assert.doesNotMatch(definition,rawOperationCode,`${source.id}: internal operation codes must not be user-facing`);
+  assert.equal(api.get(source.id)?.definition.en,definition,`${source.id}: popup/article definition parity`);
+  for(const component of body.ruleComponents||[])assert(definition.includes(component.text),`${source.id}: additional rule component ${component.id}`);
+  for(const rule of body.whenDrawn||[])assert(definition.includes(rule.text),`${source.id}: When Drawn rule ${rule.id}`);
+  for(const clause of body.scoringClauses||[]){
+    assert(definition.includes(clause.battleRoundWindow),`${source.id}: scoring window ${clause.id}`);
+    if(clause.timing)assert(definition.includes(clause.timing),`${source.id}: scoring timing ${clause.id}`);
+    assert(definition.includes(clause.condition.text),`${source.id}: scoring condition ${clause.id}`);
+    for(const award of clause.victoryPointAwards){
+      assert(definition.includes(`${award.victoryPoints}VP`),`${source.id}: VP award ${clause.id}`);
+      if(award.mode!=='ALL')assert(definition.includes(award.mode==='FIXED'?'Fixed':'Tactical'),`${source.id}: scoring mode ${clause.id}`);
+      if(award.limitText)assert(definition.includes(award.limitText),`${source.id}: award limit ${clause.id}`);
+    }
+  }
+  if(body.objectiveAction){
+    const restrictions=typeof body.objectiveAction.restrictions==='string'?body.objectiveAction.restrictions:body.objectiveAction.restrictions?.text;
+    for(const value of [body.objectiveAction.label,body.objectiveAction.starts,body.objectiveAction.unitSelector.text,body.objectiveAction.useLimit,body.objectiveAction.completes,body.objectiveAction.effect.text,restrictions].filter(Boolean))assert(definition.includes(value),`${source.id}: Objective Action semantics`);
+  }
+  if(body.caps)assert(definition.includes(`${body.caps.fixedModePerCardMaximumVictoryPoints}VP`),`${source.id}: per-card cap`);
+  for(const overlay of source.facts.effectiveClarifications||[]){
+    if(overlay.clarification.appliesToClauseText)assert(definition.includes(overlay.clarification.appliesToClauseText),`${source.id}: FAQ target clause`);
+    assert(definition.includes(overlay.clarification.sourceText),`${source.id}: effective FAQ answer`);
+  }
+}
+const battlefieldDominance=api.get('missions::primary-battlefield-dominance');
+assert.match(battlefieldDominance.definition.en,/For each objective you control[\s\S]*VP: 3VP[\s\S]*cumulative with the previous scoring condition[\s\S]*ADDITIONAL VP: 2VP/i,'Primary multi-branch scoring must remain explicit');
+const deathTrap=api.get('missions::primary-death-trap');
+assert.match(deathTrap.definition.en,/OBJECTIVE ACTION — Booby Trap[\s\S]*USE LIMIT:[\s\S]*EFFECT:/,'Primary Objective Action must remain structured');
+assert.match(deathTrap.definition.en,/FAQ \/ CLARIFICATION[\s\S]*ANSWER: No\./,'Primary FAQ clarification must be separate from source rules');
+const grievousBlow=api.get('missions::secondary-a-grievous-blow');
+assert.match(grievousBlow.definition.en,/ELIGIBILITY[\s\S]*Fixed: Yes\. Tactical: Yes\./,'Secondary eligibility must be explicit');
+assert.match(grievousBlow.definition.en,/WHEN DRAWN[\s\S]*discard this card and draw one new Secondary Mission card/i,'Secondary When Drawn rule must be retained');
+assert.match(grievousBlow.definition.en,/CAPS[\s\S]*maximum 20VP from this card/i,'Secondary per-card cap must be retained');
+const plunder=api.get('missions::secondary-plunder');
+assert.match(plunder.definition.en,/OBJECTIVE ACTION — Plunder[\s\S]*Once per turn[\s\S]*That terrain area is plundered/,'Secondary Objective Action must remain structured');
+assert.match(plunder.definition.en,/FAQ \/ CLARIFICATION[\s\S]*The terrain area\./,'Secondary FAQ clarification must be retained');
+
+const unknownCardIndex=structuredClone(index);
+const unknownCard=unknownCardIndex.entries.find(entry=>entry.id==='missions::primary-battlefield-dominance');
+unknownCard.facts.ruleBody.scoringClauses[0].victoryPointAwards[0].operation='UNKNOWN_SCORING_OPERATION';
+const unknownCardScope={window:{WH40K_GLOSSARY_V2_INDEX:unknownCardIndex}};
+vm.runInNewContext(read('glossary/v2/runtime/glossary-v2-runtime.js'),unknownCardScope);
+assert.equal(unknownCardScope.window.WH40K_GLOSSARY.get(unknownCard.id).definition.en,'','unknown Mission card operations must fail closed instead of exposing internal codes');
+
 assert.equal(index.counts.total,4630);
 assert.equal(index.counts.standalone,1738);
 assert.equal(index.counts.scopedChildren,2892);

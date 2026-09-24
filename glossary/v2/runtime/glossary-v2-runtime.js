@@ -139,10 +139,75 @@
     for(const clarification of facts.effectiveClarifications||[]){const sourceText=text(clarification?.clarification?.sourceText);if(sourceText)lines.push(`Clarification: ${sourceText}`);}
     return lines.join('\n');
   };
+  const missionSourceText=value=>typeof value==='string'?text(value):value?.type==='SOURCE_RULE_TEXT'?text(value.text):'';
+  const missionCardDefinition=entry=>{
+    const facts=entry.facts||{},body=facts.ruleBody;
+    if(!body||typeof body!=='object')return'';
+    const lines=[];
+    if(text(body.flavorText))lines.push(`FLAVOR\n${text(body.flavorText)}`);
+    if(entry.recordType==='SECONDARY_MISSION'){
+      const eligibility=facts.eligibility;
+      if(!eligibility||typeof eligibility.fixed!=='boolean'||typeof eligibility.tactical!=='boolean')return'';
+      lines.push(`ELIGIBILITY\nFixed: ${eligibility.fixed?'Yes':'No'}. Tactical: ${eligibility.tactical?'Yes':'No'}.`);
+    }
+    const ruleComponents=[];
+    for(const component of body.ruleComponents||[]){const value=missionSourceText(component);if(!value)return'';ruleComponents.push(value);}
+    if(ruleComponents.length)lines.push(`RULES\n${ruleComponents.join('\n')}`);
+    const whenDrawn=[];
+    for(const rule of body.whenDrawn||[]){const value=missionSourceText(rule);if(!value)return'';whenDrawn.push(value);}
+    if(whenDrawn.length)lines.push(`WHEN DRAWN\n${whenDrawn.join('\n')}`);
+    const scoring=[];
+    const relationLabels=new Map([[null,''],[undefined,''],['OR','RELATION: alternative to the previous scoring condition.'],['CUMULATIVE','RELATION: cumulative with the previous scoring condition.']]);
+    const modeLabels=new Map([['ALL',''],['FIXED','Fixed'],['TACTICAL','Tactical']]);
+    const operationLabels=new Map([['AWARD','VP'],['ADD_TO_PREVIOUS_AWARD','ADDITIONAL VP']]);
+    for(const clause of body.scoringClauses||[]){
+      const condition=missionSourceText(clause.condition),relation=relationLabels.get(clause.relationToPrevious);
+      if(!condition||relation===undefined||!text(clause.battleRoundWindow))return'';
+      const clauseLines=[];
+      if(relation)clauseLines.push(relation);
+      clauseLines.push(text(clause.battleRoundWindow));
+      if(text(clause.timing))clauseLines.push(`TIMING: ${text(clause.timing)}`);
+      clauseLines.push(`CONDITION: ${condition}`);
+      if(!Array.isArray(clause.victoryPointAwards)||!clause.victoryPointAwards.length)return'';
+      for(const award of clause.victoryPointAwards){
+        const operation=operationLabels.get(award.operation),mode=modeLabels.get(award.mode);
+        if(!operation||mode===undefined||!Number.isFinite(award.victoryPoints))return'';
+        const qualifiers=[mode,text(award.limitText)].filter(Boolean).join(' · ');
+        clauseLines.push(`${operation}: ${award.victoryPoints}VP${qualifiers?` (${qualifiers})`:''}`);
+      }
+      scoring.push(clauseLines.join('\n'));
+    }
+    if(scoring.length)lines.push(`SCORING\n${scoring.join('\n\n')}`);
+    const action=body.objectiveAction;
+    if(action){
+      const units=missionSourceText(action.unitSelector),effect=missionSourceText(action.effect);
+      if(!text(action.label)||!text(action.starts)||!units||!text(action.completes)||!effect)return'';
+      const actionLines=[`STARTS: ${text(action.starts)}`,`UNITS: ${units}`];
+      if(text(action.useLimit))actionLines.push(`USE LIMIT: ${text(action.useLimit)}`);
+      actionLines.push(`COMPLETES: ${text(action.completes)}`,`EFFECT: ${effect}`);
+      if(action.restrictions){const restrictions=missionSourceText(action.restrictions);if(!restrictions)return'';actionLines.push(`RESTRICTIONS: ${restrictions}`);}
+      lines.push(`OBJECTIVE ACTION — ${text(action.label)}\n${actionLines.join('\n')}`);
+    }
+    if(body.caps){
+      const keys=Object.keys(body.caps);
+      if(keys.length!==1||keys[0]!=='fixedModePerCardMaximumVictoryPoints'||!Number.isFinite(body.caps.fixedModePerCardMaximumVictoryPoints))return'';
+      lines.push(`CAPS\nFixed mode: maximum ${body.caps.fixedModePerCardMaximumVictoryPoints}VP from this card.`);
+    }
+    const clarifications=[];
+    for(const overlay of facts.effectiveClarifications||[]){
+      if(overlay.operation!=='APPEND_CLARIFICATION')return'';
+      const clarification=overlay.clarification||{},answer=text(clarification.sourceText);
+      if(!answer)return'';
+      clarifications.push([text(clarification.appliesToClauseText)&&`APPLIES TO: ${text(clarification.appliesToClauseText)}`,`ANSWER: ${answer}`].filter(Boolean).join('\n'));
+    }
+    if(clarifications.length)lines.push(`FAQ / CLARIFICATION\n${clarifications.join('\n\n')}`);
+    return lines.join('\n\n');
+  };
   function definitionOf(entry){
     const facts=entry.facts||{};
     if(entry.recordType==='DETACHMENT'){const definition=detachmentDefinition(entry);if(definition)return definition;}
     if(entry.recordType==='MISSION_SEQUENCE_RULE')return missionSequenceDefinition(entry);
+    if(entry.recordType==='PRIMARY_MISSION'||entry.recordType==='SECONDARY_MISSION')return missionCardDefinition(entry);
     for(const field of ['semanticContent','text','full','definition','ruleText','rulesText','answer','description']){const value=text(facts[field]);if(value)return value;}
     const structuredOptions=structuredOptionsDefinition(facts);if(structuredOptions)return structuredOptions;
     const content=collectContent(facts.content);if(content)return content;

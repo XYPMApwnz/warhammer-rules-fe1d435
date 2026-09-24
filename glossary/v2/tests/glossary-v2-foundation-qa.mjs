@@ -31,6 +31,19 @@ assert.deepEqual(createBattlefieldFacts.map(requirement=>requirement.type),[
 ],'Create the Battlefield must retain all four accepted structured operations');
 assert.deepEqual(createBattlefieldFacts[0],{type:'BATTLEFIELD_SIZE',widthInches:60,heightInches:44});
 assert.deepEqual(createBattlefieldFacts[1],{type:'CENTRAL_OBJECTIVE_ROLL',singleOnResults:[1,2,3,4,5],doubleOnResults:[6],doubleOffsetInches:6});
+const primaryMissions=index.entries.filter(entry=>entry.recordType==='PRIMARY_MISSION');
+const secondaryMissions=index.entries.filter(entry=>entry.recordType==='SECONDARY_MISSION');
+assert.equal(primaryMissions.length,25,'all 25 accepted Primary Missions must be projected');
+assert.equal(secondaryMissions.length,18,'all 18 accepted Secondary Missions must be projected');
+assert.equal(primaryMissions.reduce((count,entry)=>count+entry.facts.ruleBody.scoringClauses.length,0),100,'all Primary scoring clauses must remain projected');
+assert.equal(secondaryMissions.reduce((count,entry)=>count+entry.facts.ruleBody.scoringClauses.length,0),27,'all Secondary scoring clauses must remain projected');
+assert.equal(secondaryMissions.reduce((count,entry)=>count+entry.facts.ruleBody.scoringClauses.reduce((sum,clause)=>sum+clause.victoryPointAwards.length,0),0),31,'all Secondary VP award branches must remain projected');
+assert.equal(primaryMissions.filter(entry=>entry.facts.ruleBody.objectiveAction).length,11,'all Primary Objective Actions must remain projected');
+assert.equal(secondaryMissions.filter(entry=>entry.facts.ruleBody.objectiveAction).length,2,'all Secondary Objective Actions must remain projected');
+assert.equal(secondaryMissions.filter(entry=>entry.facts.ruleBody.whenDrawn.length).length,10,'all Secondary When Drawn records must remain projected');
+assert.equal(secondaryMissions.filter(entry=>entry.facts.ruleBody.caps).length,4,'all Secondary per-card caps must remain projected');
+assert.equal(primaryMissions.filter(entry=>entry.facts.effectiveClarifications?.length).length,3,'all effective Primary FAQ clarifications must remain projected');
+assert.equal(secondaryMissions.filter(entry=>entry.facts.effectiveClarifications?.length).length,2,'all effective Secondary FAQ clarifications must remain projected');
 assert.deepEqual(index.coverage.armyEffectiveBooks,BOOK_IDS,'all nine supported Army Books must contribute');
 for(const bookId of BOOK_IDS)assert(index.entries.some(entry=>entry.domain==='ARMY'&&entry.contexts.some(context=>context.effectiveBookId===bookId)),`${bookId} must contribute an effective Army context`);
 

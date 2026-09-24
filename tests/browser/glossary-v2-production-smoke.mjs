@@ -17,6 +17,8 @@ const mortarionsHammerId='army::death-guard::detachment::detachment-mortarions-h
 const structuredAmIds=['army::adeptus-mechanicus::army_rule::army-rule-doctrina','army::adeptus-mechanicus::ability::datasheet-canticles-of-the-omnissiah'];
 const redeployId='missions::mission-sequence-redeploy-units';
 const createBattlefieldId='missions::mission-sequence-create-battlefield';
+const primaryMissionId='missions::primary-death-trap';
+const secondaryMissionId='missions::secondary-plunder';
 const compact=value=>String(value).replace(/\s+/g,' ').trim();
 const mime={'.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp'};
 const server=createServer((request,response)=>{try{
@@ -72,6 +74,19 @@ try{
     assert.match(battlefieldArticle,/After a roll-off, players alternate placing terrain features/i,`${viewport.name}: terrain ordering`);
     assert.match(battlefieldArticle,/terrain objective at each objective point/i,`${viewport.name}: terrain objective placement`);
     assert.doesNotMatch(battlefieldArticle,/BATTLEFIELD_SIZE|CENTRAL_OBJECTIVE_ROLL|ALTERNATING_TERRAIN|TERRAIN_OBJECTIVE_AT/,`${viewport.name}: battlefield raw operation codes hidden`);
+    for(const control of [
+      {id:primaryMissionId,expected:/OBJECTIVE ACTION — Booby Trap[\s\S]*FAQ \/ CLARIFICATION/i},
+      {id:secondaryMissionId,expected:/ELIGIBILITY[\s\S]*WHEN DRAWN[\s\S]*OBJECTIVE ACTION — Plunder[\s\S]*FAQ \/ CLARIFICATION/i}
+    ]){
+      await page.goto(`${base}/glossary/index.html#${encodeURIComponent(control.id)}`);await page.locator('body.article-open').waitFor();
+      const article=compact(await page.locator('#termDetail .definition').last().innerText());
+      assert.match(article,control.expected,`${viewport.name}: structured Mission card article ${control.id}`);
+      assert.doesNotMatch(article,/SOURCE_RULE_TEXT|ADD_TO_PREVIOUS_AWARD|APPEND_CLARIFICATION/,`${viewport.name}: Mission card internal codes hidden`);
+      await page.evaluate(termId=>{const trigger=document.createElement('button');trigger.type='button';trigger.dataset.autolink='';trigger.dataset.term=termId;trigger.textContent='Mission card';document.querySelector('#termDetail').append(trigger);},control.id);
+      await page.locator(`[data-autolink][data-term="${control.id}"]`).click();await page.locator('#termPopup[open]').waitFor();
+      assert.equal(compact(await page.locator('#termPopupSummary').innerText()),article,`${viewport.name}: Mission card popup/article parity ${control.id}`);
+      await page.locator('#termPopupClose').click();
+    }
     await page.goto(`${base}/glossary/index.html#${encodeURIComponent(mortarionsHammerId)}`);await page.locator('body.article-open').waitFor();
     const mortarionsHammerArticle=await page.locator('#termDetail').innerText();
     assert.match(mortarionsHammerArticle,/Miasmic Bombardment/i,`${viewport.name}: Mortarion’s Hammer rule projection`);

@@ -15,6 +15,8 @@ const oathCompatibilityId='space-marines-army-rule-oath-of-moment';
 const oathId='army::space-marines::army_rule::army-rule-oath-of-moment';
 const mortarionsHammerId='army::death-guard::detachment::detachment-mortarions-hammer';
 const structuredAmIds=['army::adeptus-mechanicus::army_rule::army-rule-doctrina','army::adeptus-mechanicus::ability::datasheet-canticles-of-the-omnissiah'];
+const redeployId='missions::mission-sequence-redeploy-units';
+const createBattlefieldId='missions::mission-sequence-create-battlefield';
 const compact=value=>String(value).replace(/\s+/g,' ').trim();
 const mime={'.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp'};
 const server=createServer((request,response)=>{try{
@@ -53,6 +55,23 @@ try{
       await page.goto(`${base}/glossary/index.html#${encodeURIComponent(id)}`);await page.locator('body.article-open').waitFor();
       assert.equal(await page.locator('#termDetail h2').innerText(),byId.get(id).label,`${viewport.name}: direct V2 article ${id}`);
     }
+    await page.goto(`${base}/glossary/index.html#${encodeURIComponent(redeployId)}`);await page.locator('body.article-open').waitFor();
+    const redeployArticle=compact(await page.locator('#termDetail .definition').last().innerText());
+    assert.match(redeployArticle,/after both armies have been deployed/i,`${viewport.name}: Redeploy timing`);
+    assert.match(redeployArticle,/Starting with the Attacker, players alternate/i,`${viewport.name}: Redeploy ordering`);
+    assert.match(redeployArticle,/Strategic Reserves points limit/i,`${viewport.name}: Redeploy reserve exception`);
+    assert.doesNotMatch(redeployArticle,/RESOLVE_REDEPLOY|ALTERNATE_REDEPLOYS|REDEPLOY_TO_STRATEGIC_RESERVES/,`${viewport.name}: Redeploy raw operation codes hidden`);
+    await page.evaluate(termId=>{const trigger=document.createElement('button');trigger.type='button';trigger.dataset.autolink='';trigger.dataset.term=termId;trigger.textContent='Redeploy Units';document.querySelector('#termDetail').append(trigger);},redeployId);
+    await page.locator(`[data-autolink][data-term="${redeployId}"]`).click();const redeployPopup=page.locator('#termPopup[open]');await redeployPopup.waitFor();
+    assert.equal(compact(await page.locator('#termPopupSummary').innerText()),redeployArticle,`${viewport.name}: Redeploy popup/article parity`);
+    await page.locator('#termPopupClose').click();
+    await page.goto(`${base}/glossary/index.html#${encodeURIComponent(createBattlefieldId)}`);await page.locator('body.article-open').waitFor();
+    const battlefieldArticle=compact(await page.locator('#termDetail .definition').last().innerText());
+    assert.match(battlefieldArticle,/60" by 44" battlefield/i,`${viewport.name}: battlefield size`);
+    assert.match(battlefieldArticle,/on 1, 2, 3, 4, 5, use one central objective; on 6, use two central objectives, each 6" from the battlefield centre/i,`${viewport.name}: central objective roll`);
+    assert.match(battlefieldArticle,/After a roll-off, players alternate placing terrain features/i,`${viewport.name}: terrain ordering`);
+    assert.match(battlefieldArticle,/terrain objective at each objective point/i,`${viewport.name}: terrain objective placement`);
+    assert.doesNotMatch(battlefieldArticle,/BATTLEFIELD_SIZE|CENTRAL_OBJECTIVE_ROLL|ALTERNATING_TERRAIN|TERRAIN_OBJECTIVE_AT/,`${viewport.name}: battlefield raw operation codes hidden`);
     await page.goto(`${base}/glossary/index.html#${encodeURIComponent(mortarionsHammerId)}`);await page.locator('body.article-open').waitFor();
     const mortarionsHammerArticle=await page.locator('#termDetail').innerText();
     assert.match(mortarionsHammerArticle,/Miasmic Bombardment/i,`${viewport.name}: Mortarion’s Hammer rule projection`);

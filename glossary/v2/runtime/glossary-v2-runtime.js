@@ -72,9 +72,77 @@
     }
     return lines.join('\n');
   };
+  const missionSequenceRequirement=requirement=>{
+    const renderers={
+      MUSTER_ARMIES_AS_DESCRIBED_IN_CORE_RULES:()=>`Muster armies as described in the Core Rules.`,
+      SECRET_FORCE_DISPOSITION_SELECTION:()=>`Each player secretly selects one available Force Disposition.`,
+      SIMULTANEOUS_REVEAL:()=>`Reveal both players' selections simultaneously.`,
+      DIRECTED_PRIMARY_MATRIX_LOOKUP:()=>`For each player, use their Force Disposition and their opponent's Force Disposition to find that player's Primary Mission in the mission matrix.`,
+      SHUFFLE_AND_DRAW_ONE_DEPLOYMENT_CARD:()=>`Shuffle the Deployment cards and draw one Deployment card.`,
+      MUTUAL_AGREEMENT_REQUIRED:()=>`Use a Twist only if both players agree.`,
+      CHOOSE_ONE_TWIST:()=>`If both players agree to use a Twist, select one Twist.`,
+      BATTLEFIELD_SIZE:value=>`Use a ${value.widthInches}\" by ${value.heightInches}\" battlefield.`,
+      CENTRAL_OBJECTIVE_ROLL:value=>`Roll one D6 for the central objective setup: on ${value.singleOnResults.join(', ')}, use one central objective; on ${value.doubleOnResults.join(', ')}, use two central objectives, each ${value.doubleOffsetInches}\" from the battlefield centre.`,
+      ALTERNATING_TERRAIN_PLACEMENT_AFTER_ROLL_OFF:()=>`After a roll-off, players alternate placing terrain features.`,
+      TERRAIN_OBJECTIVE_AT_EACH_OBJECTIVE_POINT:()=>`Place a terrain objective at each objective point.`,
+      AGREE_BATTLEFIELD_EDGE_MAPPING:()=>`Agree which battlefield edges correspond to the Attacker and Defender.`,
+      ROLL_OFF_WINNER_ASSIGN_ATTACKER_DEFENDER:()=>`Roll off; the winner assigns one player as the Attacker and the other as the Defender.`,
+      ATTACKER_AND_DEFENDER_DECKS_IDENTICAL:()=>`The Attacker and Defender Secondary Mission decks must contain identical cards.`,
+      SECRET_FIXED_OR_TACTICAL_SELECTION:()=>`Each player secretly selects Fixed or Tactical Secondary Missions.`,
+      FIXED_MODE_SELECT_EXACTLY_TWO:()=>`A player selecting Fixed Secondary Missions selects exactly two.`,
+      DISPLAY_SELECTED_FIXED_MISSIONS_FACE_UP:()=>`Place selected Fixed Secondary Missions face up.`,
+      FIXED_MISSIONS_CANNOT_BE_DISCARDED:()=>`Fixed Secondary Missions cannot be discarded.`,
+      FIXED_MISSIONS_ACTIVE_THROUGHOUT_BATTLE:()=>`Fixed Secondary Missions remain active throughout the battle.`,
+      SHUFFLE_SECONDARY_DECK_FACE_DOWN:()=>`Shuffle the Secondary Mission deck and place it face down.`,
+      DRAW_TWO_AT_START_OF_COMMAND_PHASE:()=>`At the start of each Command phase, draw until you have two Secondary Missions.`,
+      ONCE_PER_BATTLE_SPEND_ONE_CP_AT_END_OF_COMMAND_PHASE_TO_DISCARD_AND_DRAW:()=>`Once per battle, at the end of your Command phase, you can spend 1CP to discard one Secondary Mission and draw a replacement.`,
+      END_OF_EACH_PLAYER_TURN_ACTIVE_PLAYER_RESOLVES_FIRST:()=>`At the end of each player turn, the active player resolves Secondary Missions first.`,
+      OPTIONALLY_SCORE_MET_SECONDARY_CONDITIONS:()=>`A player can score a Secondary Mission whose scoring condition has been met.`,
+      TACTICAL_ACHIEVED_MISSION_DISCARDED:()=>`After a Tactical Secondary Mission is achieved, discard it.`,
+      ACTIVE_PLAYER_MAY_DISCARD_TACTICAL_MISSIONS_FOR_ONE_CP:()=>`The active player can discard Tactical Secondary Missions for 1CP.`,
+      SECRETLY_RECORD_TRANSPORT_EMBARKATION:()=>`Each player secretly records which units will start the battle embarked within Transports.`,
+      SECRETLY_RECORD_STRATEGIC_RESERVES:()=>`Each player secretly records which units will start the battle in Strategic Reserves.`,
+      ALTERNATING_UNIT_DEPLOYMENT_DEFENDER_FIRST:()=>`Starting with the Defender, players alternate setting up one unit at a time.`,
+      EXCLUDE_STRATEGIC_RESERVES:()=>`Do not deploy units that are in Strategic Reserves.`,
+      WHOLLY_WITHIN_DEPLOYMENT_ZONE:()=>`Each deployed unit must be set up wholly within its player's deployment zone.`,
+      TITANIC_SETUP_SKIPS_NEXT_SETUP_TURN:()=>`After a player sets up a TITANIC unit, that player skips their next opportunity to set up a unit.`,
+      FINISHED_PLAYER_ALLOWS_OPPONENT_REMAINING_SETUPS:()=>`After one player has finished deploying, their opponent sets up all remaining units.`,
+      RESOLVE_REDEPLOY_RULES_AFTER_BOTH_ARMIES_DEPLOYED:()=>`Resolve redeploy rules after both armies have been deployed.`,
+      ALTERNATE_REDEPLOYS_ATTACKER_FIRST:()=>`Starting with the Attacker, players alternate resolving redeploy rules.`,
+      REDEPLOY_TO_STRATEGIC_RESERVES_IGNORES_POINTS_LIMIT:()=>`Units redeployed into Strategic Reserves do not count towards the Strategic Reserves points limit.`,
+      ROLL_OFF_WINNER_TAKES_FIRST_TURN:()=>`Roll off; the winner takes the first turn.`,
+      ALTERNATE_PRE_BATTLE_RULES_FIRST_TURN_PLAYER_FIRST:()=>`Starting with the player taking the first turn, players alternate resolving pre-battle rules.`,
+      FIRST_BATTLE_ROUND_BEGINS:()=>`The first battle round begins.`,
+      BATTLE_ENDS_AFTER_COMPLETED_BATTLE_ROUNDS:value=>`The battle ends after ${value.battleRounds} completed battle rounds.`,
+      CONTINUE_TURNS_WHEN_ARMY_HAS_NO_MODELS_AT_TURN_START:()=>`Players continue taking turns even if an army has no models on the battlefield at the start of a turn.`,
+      BATTLE_READY_VP:value=>`A Battle Ready army scores ${value.victoryPoints}VP.`,
+      WINNER_HAS_MOST_VP:()=>`The player with the most VP is the winner.`,
+      EQUAL_VP_IS_DRAW:()=>`If the players have equal VP, the battle is a draw.`,
+      IGNORE_VP_ABOVE_APPLICABLE_MAXIMUM:()=>`Ignore VP scored above an applicable maximum.`,
+      SCORING_CAPS:value=>`Scoring limits: Primary Missions ${value.primaryTotal}VP total and ${value.primaryPerBattleRound}VP per battle round; Secondary Missions ${value.secondaryTotal}VP total and ${value.secondaryPerBattleRound}VP per battle round; each Fixed Secondary Mission ${value.fixedSecondaryPerCard}VP; Battle Ready ${value.battleReady}VP.`,
+      MUSTER_ARMIES_AS_DESCRIBED_IN_WARHAMMER_40000_APP:()=>`Muster armies as described in the Warhammer 40,000 app.`,
+      AFTER_MUSTERING_SELECT_ONE_AVAILABLE_FORCE_DISPOSITION:()=>`After mustering, select one available Force Disposition.`,
+      RECORD_SELECTED_FORCE_DISPOSITION_ON_ROSTER:()=>`Record the selected Force Disposition on the army roster.`,
+      COMPLETE_BEFORE_ATTENDING_EVENT:()=>`Complete this step before attending the event.`,
+      USE_PRESELECTED_FORCE_DISPOSITION_CARD:()=>`Use the Force Disposition card selected when the army was mustered.`,
+      FIND_OPPONENT_FORCE_DISPOSITION_SYMBOL_ON_OWN_CARD:()=>`On that card, find the symbol for the opponent's Force Disposition.`,
+      ASSIGN_LISTED_PRIMARY_MISSION_TO_PLAYER:()=>`Use the listed Primary Mission for that player.`,
+      SELECT_LAYOUT_BY_FORCE_DISPOSITION_MATCHUP:value=>`Use the terrain layout for the two players' Force Dispositions; available variants are ${value.variants.join(', ')}.`,
+      ORGANIZER_SPECIFIES_OR_RANDOMLY_DETERMINES_VARIANT:()=>`The event organizer specifies the layout variant or determines it randomly.`,
+      SET_UP_OFFICIAL_TERRAIN_AREAS_AND_FEATURES:()=>`Set up the official terrain areas and terrain features for the selected layout.`
+    };
+    return renderers[requirement?.type]?.(requirement)||'';
+  };
+  const missionSequenceDefinition=entry=>{
+    const facts=entry.facts||{},requirements=facts.requirements||[],lines=requirements.map(missionSequenceRequirement);
+    if(lines.some(line=>!line))return'';
+    for(const clarification of facts.effectiveClarifications||[]){const sourceText=text(clarification?.clarification?.sourceText);if(sourceText)lines.push(`Clarification: ${sourceText}`);}
+    return lines.join('\n');
+  };
   function definitionOf(entry){
     const facts=entry.facts||{};
     if(entry.recordType==='DETACHMENT'){const definition=detachmentDefinition(entry);if(definition)return definition;}
+    if(entry.recordType==='MISSION_SEQUENCE_RULE')return missionSequenceDefinition(entry);
     for(const field of ['semanticContent','text','full','definition','ruleText','rulesText','answer','description']){const value=text(facts[field]);if(value)return value;}
     const structuredOptions=structuredOptionsDefinition(facts);if(structuredOptions)return structuredOptions;
     const content=collectContent(facts.content);if(content)return content;

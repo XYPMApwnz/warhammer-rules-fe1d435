@@ -12,6 +12,41 @@ vm.runInNewContext(read('glossary/v2/generated/index.en.js'),scope);
 vm.runInNewContext(read('glossary/v2/runtime/glossary-v2-runtime.js'),scope);
 const api=scope.window.WH40K_GLOSSARY;
 
+const missionSequence=api.standaloneEntries().filter(entry=>entry.recordType==='MISSION_SEQUENCE_RULE');
+assert.equal(missionSequence.length,21,'all 21 Mission Sequence Rule identities must remain standalone');
+assert.equal(new Set(missionSequence.map(entry=>entry.id)).size,21,'Mission Sequence Rule identities must remain unique');
+const rawOperationCode=/\b[A-Z][A-Z0-9]*(?:_[A-Z0-9]+){2,}\b/;
+for(const entry of missionSequence){
+  assert(entry.definition.en.trim(),`${entry.id}: readable Mission Sequence definition`);
+  assert.notEqual(entry.definition.en.trim().toLocaleLowerCase(),entry.label.trim().toLocaleLowerCase(),`${entry.id}: definition must not echo its title`);
+  assert.doesNotMatch(entry.definition.en,rawOperationCode,`${entry.id}: internal operation codes must not be user-facing`);
+  assert.equal(api.get(entry.id)?.definition.en,entry.definition.en,`${entry.id}: popup/article definition parity`);
+}
+const missionSequenceById=id=>api.get(`missions::${id}`);
+const redeploy=missionSequenceById('mission-sequence-redeploy-units');
+assert.match(redeploy.definition.en,/after both armies have been deployed/i);
+assert.match(redeploy.definition.en,/Starting with the Attacker, players alternate/i);
+assert.match(redeploy.definition.en,/Strategic Reserves points limit/i);
+const createBattlefield=missionSequenceById('mission-sequence-create-battlefield');
+assert.match(createBattlefield.definition.en,/60" by 44" battlefield/i);
+assert.match(createBattlefield.definition.en,/on 1, 2, 3, 4, 5, use one central objective; on 6, use two central objectives, each 6" from the battlefield centre/i);
+assert.match(createBattlefield.definition.en,/After a roll-off, players alternate placing terrain features/i);
+assert.match(createBattlefield.definition.en,/terrain objective at each objective point/i);
+const scoring=missionSequenceById('mission-sequence-determine-victor');
+assert.match(scoring.definition.en,/Primary Missions 45VP total and 15VP per battle round/i);
+assert.match(scoring.definition.en,/Secondary Missions 45VP total and 15VP per battle round/i);
+const ordering=missionSequenceById('mission-sequence-deploy-armies');
+assert.match(ordering.definition.en,/Starting with the Defender, players alternate setting up one unit at a time/i);
+const reserve=missionSequenceById('mission-sequence-declare-battle-formations');
+assert.match(reserve.definition.en,/Strategic Reserves/i);
+
+const unknownSequenceIndex=structuredClone(index);
+const unknownSequence=unknownSequenceIndex.entries.find(entry=>entry.id==='missions::mission-sequence-redeploy-units');
+unknownSequence.facts.requirements[0].type='UNKNOWN_SEQUENCE_OPERATION';
+const unknownScope={window:{WH40K_GLOSSARY_V2_INDEX:unknownSequenceIndex}};
+vm.runInNewContext(read('glossary/v2/runtime/glossary-v2-runtime.js'),unknownScope);
+assert.equal(unknownScope.window.WH40K_GLOSSARY.get(unknownSequence.id).definition.en,'','unknown Mission Sequence operations must fail closed instead of exposing internal codes');
+
 assert.equal(index.counts.total,4630);
 assert.equal(index.counts.standalone,1738);
 assert.equal(index.counts.scopedChildren,2892);

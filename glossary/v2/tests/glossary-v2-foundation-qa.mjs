@@ -18,6 +18,19 @@ assert.equal(index.counts.byDomain.CORE,293,'Core must contribute full factual r
 assert.equal(index.coverage.coreNotIndexed.identityOnly.length,2);
 assert.equal(index.coverage.coreNotIndexed.aliasOnlyErrata.length,2);
 assert.equal(index.counts.byDomain.MISSIONS,156,'Missions must contribute the Standard/Event union plus eight factual FAQ clarifications');
+const missionSequenceEntries=index.entries.filter(entry=>entry.recordType==='MISSION_SEQUENCE_RULE');
+assert.equal(missionSequenceEntries.length,21,'all 21 accepted Mission Sequence Rule identities must be projected');
+assert.equal(new Set(missionSequenceEntries.map(entry=>entry.id)).size,21,'Mission Sequence Rule identities must remain unique');
+for(const entry of missionSequenceEntries)assert(entry.facts.requirements?.length,`${entry.id}: accepted structured requirements must remain the factual source`);
+const createBattlefieldFacts=missionSequenceEntries.find(entry=>entry.id==='missions::mission-sequence-create-battlefield').facts.requirements;
+assert.deepEqual(createBattlefieldFacts.map(requirement=>requirement.type),[
+  'BATTLEFIELD_SIZE',
+  'CENTRAL_OBJECTIVE_ROLL',
+  'ALTERNATING_TERRAIN_PLACEMENT_AFTER_ROLL_OFF',
+  'TERRAIN_OBJECTIVE_AT_EACH_OBJECTIVE_POINT'
+],'Create the Battlefield must retain all four accepted structured operations');
+assert.deepEqual(createBattlefieldFacts[0],{type:'BATTLEFIELD_SIZE',widthInches:60,heightInches:44});
+assert.deepEqual(createBattlefieldFacts[1],{type:'CENTRAL_OBJECTIVE_ROLL',singleOnResults:[1,2,3,4,5],doubleOnResults:[6],doubleOffsetInches:6});
 assert.deepEqual(index.coverage.armyEffectiveBooks,BOOK_IDS,'all nine supported Army Books must contribute');
 for(const bookId of BOOK_IDS)assert(index.entries.some(entry=>entry.domain==='ARMY'&&entry.contexts.some(context=>context.effectiveBookId===bookId)),`${bookId} must contribute an effective Army context`);
 

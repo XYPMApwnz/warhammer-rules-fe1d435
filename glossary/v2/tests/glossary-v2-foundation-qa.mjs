@@ -15,6 +15,14 @@ assert.equal(index.factualAuthority,false);
 assert.equal(index.counts.total,index.entries.length);
 assert.equal(new Set(index.entries.map(entry=>entry.id)).size,index.entries.length,'V2 entry IDs must be unique');
 
+const admechUpdate=index.entries.find(entry=>entry.id==='army::adeptus-mechanicus::update::rules-updates');
+assert(admechUpdate,'the canonical Adeptus Mechanicus rules update must remain indexed');
+assert.deepEqual([...new Set(admechUpdate.facts.acceptedResultingSemantics.map(item=>item.sourcePage))],[17,18],'the Update projection must use its two accepted source pages');
+assert.equal(admechUpdate.facts.acceptedResultingSemantics.reduce((count,group)=>count+group.items.length,0),16,'all accepted AM update result groups must remain projected');
+const updateItems=admechUpdate.facts.acceptedResultingSemantics.flatMap(group=>group.items);
+assert.match(updateItems.find(item=>item.changedRule.includes('Cyber-psalm Programming')).resultingEffectiveRule,/Add 2" to the Move characteristic/,'page 17 must retain the changed and resulting Detachment rule');
+assert.match(updateItems.find(item=>item.changedRule==='Belisarius Cawl').resultingEffectiveRule,/Canticles of the Omnissiah section[\s\S]*Solar atomiser/,'page 18 must retain the changed and resulting datasheet ability and profile');
+
 assert.equal(index.counts.byDomain.CORE,293,'Core must contribute full factual records, excluding alias-only errata and evidence-pending identities');
 assert.equal(index.coverage.coreNotIndexed.identityOnly.length,2);
 assert.equal(index.coverage.coreNotIndexed.aliasOnlyErrata.length,2);

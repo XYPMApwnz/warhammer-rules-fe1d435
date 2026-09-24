@@ -222,6 +222,48 @@ function detachmentArticleFacts(model,detachment){
   return {...article,detachmentRules};
 }
 
+function updateArticleFacts(model,update){
+  if(model.book.id!=='adeptus-mechanicus'||update.id!=='rules-updates')return update;
+  const byId=(records,id,kind)=>{const record=records.find(item=>item.id===id);if(!record)throw new Error(`adeptus-mechanicus/${update.id}: missing ${kind} ${id}`);return record;};
+  const unit=id=>byId(model.units,id,'unit');
+  const detachment=id=>byId(model.detachments,id,'Detachment');
+  const ability=(unitId,termId)=>{const record=unit(unitId).abilities?.find(item=>item.termId===termId);if(!record)throw new Error(`adeptus-mechanicus/${update.id}: missing ability ${unitId}/${termId}`);return record;};
+  const weapon=(unitId,termId)=>{const record=unit(unitId).weapons?.find(item=>item.termId===termId);if(!record)throw new Error(`adeptus-mechanicus/${update.id}: missing weapon ${unitId}/${termId}`);return record;};
+  const weaponText=record=>`${record.name}: Range ${record.range}; A ${record.a}; ${String(record.range).toLowerCase()==='melee'?'WS':'BS'} ${record.skill}; S ${record.s}; AP ${record.ap}; D ${record.d}${record.abilities?`; ${record.abilities}`:''}.`;
+  const abilityText=record=>[record.openingText,...(record.options||[]).flatMap(option=>[option.title,...(option.effects||[]),option.text]),record.text].filter(Boolean).join('\n');
+  const detachmentRule=id=>{const record=detachment(id).rule;if(!record?.id||!record?.text)throw new Error(`adeptus-mechanicus/${update.id}: incomplete Detachment rule ${id}`);return record;};
+  const affectedDoctrinaUnits=['unit-belisarius-cawl','unit-corpuscarii-electro-priests','unit-cybernetica-datasmith','unit-fulgurite-electro-priests','unit-kastelan-robots','unit-tech-priest-dominus','unit-tech-priest-enginseer','unit-tech-priest-manipulus','unit-technoarcheologist'].map(id=>unit(id).title);
+  const cawl=unit('unit-belisarius-cawl'),datasmith=unit('unit-cybernetica-datasmith'),fusilave=unit('unit-archaeopter-fusilave'),stratoraptor=unit('unit-archaeopter-stratoraptor'),transvector=unit('unit-archaeopter-transvector');
+  const veiledHunter=byId(model.enhancements,'enhancement-veiled-hunter','Enhancement');
+  const acceptedResultingSemantics=[
+    {sourcePage:17,section:'ARMY RULES',items:[
+      {changedRule:'Doctrina Imperatives — Protector and Conqueror Imperatives',resultingEffectiveRule:model.rules.armyRule.options.map(option=>`${option.label.toUpperCase()} IMPERATIVE\n${option.effects.join('\n')}`).join('\n\n')}
+    ]},
+    {sourcePage:17,section:'DETACHMENT RULES AND ENHANCEMENT',items:[
+      {changedRule:`${detachment('detachment-cohort-cybernetica').title} — ${detachmentRule('detachment-cohort-cybernetica').title}`,resultingEffectiveRule:detachmentRule('detachment-cohort-cybernetica').text},
+      {changedRule:`${detachment('detachment-rad-zone-corps').title} — ${detachmentRule('detachment-rad-zone-corps').title}`,resultingEffectiveRule:detachmentRule('detachment-rad-zone-corps').text},
+      {changedRule:`${detachment('detachment-skitarii-hunter-cohort').title} — ${detachmentRule('detachment-skitarii-hunter-cohort').title}`,resultingEffectiveRule:detachmentRule('detachment-skitarii-hunter-cohort').text},
+      {changedRule:`${detachment('detachment-skitarii-hunter-cohort').title} — ${veiledHunter.title}`,resultingEffectiveRule:veiledHunter.text}
+    ]},
+    {sourcePage:17,section:'DATASHEET UPDATES',items:[
+      {changedRule:'Doctrina Imperatives faction ability added',resultingEffectiveRule:affectedDoctrinaUnits.join('; ')},
+      {changedRule:fusilave.title,resultingEffectiveRule:[`M ${fusilave.stats.M}; OC ${fusilave.stats.OC}.`,abilityText(ability(fusilave.id,'datasheet-bomb-rack'))].join('\n')},
+      {changedRule:stratoraptor.title,resultingEffectiveRule:`M ${stratoraptor.stats.M}; OC ${stratoraptor.stats.OC}.`},
+      {changedRule:transvector.title,resultingEffectiveRule:[`M ${transvector.stats.M}; Keywords: ${transvector.intrinsicKeywords.join(', ')}.`,abilityText(ability(transvector.id,'datasheet-aerial-deployment'))].join('\n')}
+    ]},
+    {sourcePage:18,section:'DATASHEET UPDATES',items:[
+      {changedRule:cawl.title,resultingEffectiveRule:[`M ${cawl.stats.M}; Keywords: ${cawl.intrinsicKeywords.join(', ')}.`,abilityText(ability(cawl.id,'datasheet-canticles-of-the-omnissiah')),weaponText(weapon(cawl.id,'weapon-solar-atomiser'))].join('\n')},
+      {changedRule:datasmith.title,resultingEffectiveRule:[`Keywords: ${datasmith.intrinsicKeywords.join(', ')}.`,abilityText(ability(datasmith.id,'core-support')),abilityText(ability(datasmith.id,'datasheet-data-severed'))].join('\n')},
+      {changedRule:unit('unit-ironstrider-ballistarii').title,resultingEffectiveRule:['weapon-twin-cognis-autocannon','weapon-twin-cognis-lascannon-2'].map(id=>weaponText(weapon('unit-ironstrider-ballistarii',id))).join('\n')},
+      {changedRule:`${unit('unit-kastelan-robots').title} — ${ability('unit-kastelan-robots','datasheet-repulsor-grid').title}`,resultingEffectiveRule:abilityText(ability('unit-kastelan-robots','datasheet-repulsor-grid'))},
+      {changedRule:unit('unit-onager-dunecrawler').title,resultingEffectiveRule:['weapon-daedalus-missile-launcher','weapon-eradication-beamer-dissipated','weapon-eradication-beamer-focused','weapon-neutron-laser','weapon-twin-onager-heavy-phosphor-blaster'].map(id=>weaponText(weapon('unit-onager-dunecrawler',id))).concat(abilityText(ability('unit-onager-dunecrawler','datasheet-scuttling-walker'))).join('\n')},
+      {changedRule:`${unit('unit-serberys-raiders').title} — ${ability('unit-serberys-raiders','datasheet-tactica-obliqua').title}`,resultingEffectiveRule:abilityText(ability('unit-serberys-raiders','datasheet-tactica-obliqua'))},
+      {changedRule:unit('unit-sicarian-infiltrators').title,resultingEffectiveRule:['weapon-power-weapon-2','weapon-taser-goad-2'].map(id=>weaponText(weapon('unit-sicarian-infiltrators',id))).join('\n')}
+    ]}
+  ];
+  return {...update,acceptedResultingSemantics};
+}
+
 function addArmyEntries(entries,models){
   const lookups={unit:new Map(),detachment:new Map(),enhancement:new Map(),armyRule:new Map()};
   for(const model of models){
@@ -253,7 +295,7 @@ function addArmyEntries(entries,models){
     addDeathGuardArmyRuleComponents(entries,model,lookups);
     addRequiredEffectiveArmyGlossaryFacts(entries,model);
     const updates=Array.isArray(model.rules?.updates)?model.rules.updates:model.rules?.updates?[model.rules.updates]:[];
-    for(const update of updates)if(update.id)addArmyEntry(entries,model,'UPDATE',update);
+    for(const update of updates)if(update.id)addArmyEntry(entries,model,'UPDATE',update,{facts:updateArticleFacts(model,update)});
     for(const unit of model.units){if(unit.subsections||unit.blocks)addStructuredUnitChildren(entries,lookups,model,unit);else addGenericUnitChildren(entries,lookups,model,unit);}
   }
   return lookups;

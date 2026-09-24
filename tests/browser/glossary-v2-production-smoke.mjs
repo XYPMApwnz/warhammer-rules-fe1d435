@@ -15,6 +15,7 @@ const oathCompatibilityId='space-marines-army-rule-oath-of-moment';
 const oathId='army::space-marines::army_rule::army-rule-oath-of-moment';
 const mortarionsHammerId='army::death-guard::detachment::detachment-mortarions-hammer';
 const structuredAmIds=['army::adeptus-mechanicus::army_rule::army-rule-doctrina','army::adeptus-mechanicus::ability::datasheet-canticles-of-the-omnissiah'];
+const admechUpdateId='army::adeptus-mechanicus::update::rules-updates';
 const redeployId='missions::mission-sequence-redeploy-units';
 const createBattlefieldId='missions::mission-sequence-create-battlefield';
 const primaryMissionId='missions::primary-death-trap';
@@ -173,6 +174,14 @@ try{
       if(facts.openingText)assert(article.includes(compact(facts.openingText)),`${viewport.name}: ${id} article opening text`);
       for(const option of facts.options)for(const rule of [option.text,...(option.effects||[])].filter(Boolean))assert(article.includes(compact(rule)),`${viewport.name}: ${id} complete article option ${option.id}`);
     }
+    await page.goto(`${base}/glossary/index.html#${encodeURIComponent(admechUpdateId)}`);await page.locator('body.article-open').waitFor();
+    const admechUpdateArticle=compact(await page.locator('#termDetail .definition').last().innerText());
+    assert.match(admechUpdateArticle,/ACCEPTED UPDATE — PAGE 17[\s\S]*Cyber-psalm Programming[\s\S]*RESULTING EFFECTIVE RULE[\s\S]*Add 2" to the Move characteristic/i,`${viewport.name}: AM Update page 17 resulting rule`);
+    assert.match(admechUpdateArticle,/ACCEPTED UPDATE — PAGE 18[\s\S]*Belisarius Cawl[\s\S]*RESULTING EFFECTIVE RULE[\s\S]*At the start of your Command phase[\s\S]*Solar atomiser/i,`${viewport.name}: AM Update page 18 resulting rule`);
+    await page.evaluate(termId=>{const trigger=document.createElement('button');trigger.type='button';trigger.dataset.autolink='';trigger.dataset.term=termId;trigger.textContent='Faction Pack Rules Updates';document.querySelector('#termDetail').append(trigger);},admechUpdateId);
+    await page.locator(`[data-autolink][data-term="${admechUpdateId}"]`).click();await page.locator('#termPopup[open]').waitFor();
+    assert.equal(compact(await page.locator('#termPopupSummary').innerText()),admechUpdateArticle,`${viewport.name}: AM Update popup/article parity`);
+    await page.locator('#termPopupClose').click();
 
     await page.goto(`${base}/books/core-rules/reader/monsters-vehicles.html`);
     const coreTrigger=page.locator('[data-term="core-blast"]').first();await coreTrigger.click();await page.locator('#termDialog[open]').waitFor();

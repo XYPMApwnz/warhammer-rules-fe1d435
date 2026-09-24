@@ -341,6 +341,13 @@ for(const {id,compatibilityId} of structuredAmControls){
 const ordinaryAm=api.get('army::adeptus-mechanicus::ability::datasheet-aerial-deployment');
 assert.equal(ordinaryAm.definition.en,index.entries.find(entry=>entry.id===ordinaryAm.id).facts.text,'ordinary AM definitions remain unchanged');
 assert.equal(deepStrike.definition.en,index.entries.find(entry=>entry.id===deepStrike.id).facts.semanticContent,'non-AM definitions remain unchanged');
+const admechUpdateId='army::adeptus-mechanicus::update::rules-updates',admechUpdate=api.get(admechUpdateId),admechUpdatePopup=api.forBook('adeptus-mechanicus')['rules-updates'];
+assert(admechUpdate?.definition.en.trim(),'the accepted AM Update must have a substantive definition');
+assert.equal(admechUpdatePopup?.id,admechUpdateId,'the AM Update compatibility identity must resolve to its canonical article');
+assert.equal(admechUpdatePopup.definition,admechUpdate.definition.en,'the AM Update popup and article must use one canonical definition');
+assert.match(admechUpdate.definition.en,/CHANGED RULE[\s\S]*Cyber-psalm Programming[\s\S]*RESULTING EFFECTIVE RULE[\s\S]*Add 2" to the Move characteristic/,'the AM Update must distinguish the changed rule from the resulting effective rule');
+assert.match(admechUpdate.definition.en,/Belisarius Cawl[\s\S]*Canticles of the Omnissiah section[\s\S]*Solar atomiser/,'the AM Update must retain accepted page 18 datasheet results');
+assert.doesNotMatch(admechUpdate.definition.en,/\b[A-Z][A-Z0-9]*(?:_[A-Z0-9]+){2,}\b/,'the AM Update must not expose raw operation codes');
 for(const [termId,bookId] of [
   ['datasheet-broad-spectrum-data-tether','adeptus-mechanicus'],
   ['tau-empire-ability-battlesuit-support-system','tau-empire'],

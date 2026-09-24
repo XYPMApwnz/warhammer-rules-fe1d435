@@ -404,6 +404,7 @@
     if(entry.recordType==='FORCE_DISPOSITION_MATCHUP')return forceDispositionMatchupDefinition(entry);
     if(entry.recordType==='DEPLOYMENT')return deploymentDefinition(entry);
     if(entry.recordType==='TERRAIN_LAYOUT')return terrainLayoutDefinition(entry);
+    if(entry.recordType==='UPDATE'&&Array.isArray(facts.acceptedResultingSemantics))return facts.acceptedResultingSemantics.map(group=>[`ACCEPTED UPDATE — PAGE ${group.sourcePage}`,group.section,...group.items.flatMap(item=>[`CHANGED RULE\n${item.changedRule}`,`RESULTING EFFECTIVE RULE\n${text(item.resultingEffectiveRule).replace(/[■▪▫•]/g,'-')}`])].join('\n\n')).join('\n\n');
     for(const field of ['semanticContent','text','full','definition','ruleText','rulesText','answer','description']){const value=text(facts[field]);if(value)return value;}
     const structuredOptions=structuredOptionsDefinition(facts);if(structuredOptions)return structuredOptions;
     const content=collectContent(facts.content);if(content)return content;

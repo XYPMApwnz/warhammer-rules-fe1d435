@@ -52,6 +52,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-judiciar",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-lazarus",
             "maxCharacters": 2
           },
@@ -106,6 +110,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-ezekiel",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-judiciar",
               "maxCharacters": 2
             },
             {
@@ -718,6 +726,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-judiciar",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-lazarus",
             "maxCharacters": 2
           },
@@ -772,6 +784,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-ezekiel",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-judiciar",
               "maxCharacters": 2
             },
             {
@@ -6546,7 +6562,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
+            "unitId": "unit-assault-intercessor-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-bladeguard-veteran-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-infernus-squad",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-inner-circle-companions",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-intercessor-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-sternguard-veteran-squad",
             "maxCharacters": 2
           },
           {
@@ -6583,7 +6619,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
+              "unitId": "unit-assault-intercessor-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-bladeguard-veteran-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-infernus-squad",
+              "maxCharacters": 2
+            },
+            {
               "unitId": "unit-inner-circle-companions",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-intercessor-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-sternguard-veteran-squad",
               "maxCharacters": 2
             },
             {
@@ -10777,6 +10833,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-judiciar",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-lazarus",
             "maxCharacters": 2
           }
@@ -10823,6 +10883,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-ezekiel",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-judiciar",
               "maxCharacters": 2
             },
             {
@@ -14470,6 +14534,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-judiciar",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-lazarus",
             "maxCharacters": 2
           },
@@ -14520,6 +14588,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-ezekiel",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-judiciar",
               "maxCharacters": 2
             },
             {
@@ -15711,6 +15783,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-judiciar",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-lazarus",
             "maxCharacters": 2
           },
@@ -15761,6 +15837,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-ezekiel",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-judiciar",
               "maxCharacters": 2
             },
             {

@@ -9,7 +9,7 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const source=fs.readFileSync(path.join(root,'books/shared/roster-context.js'),'utf8');
 const local=value=>JSON.parse(JSON.stringify(value));
 const load=(file,key)=>{const scope={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,file),'utf8'),scope);return local(scope.window[key]);};
-const catalogs=Object.fromEntries(['space-marines','death-guard','adeptus-mechanicus'].map(book=>[book,load('books/'+book+'/scripts/roster-data.js','WH_BOOK_ROSTER_CATALOG')]));
+const catalogs=Object.fromEntries(['space-marines','dark-angels','blood-angels','death-guard','adeptus-mechanicus'].map(book=>[book,load('books/'+book+'/scripts/roster-data.js','WH_BOOK_ROSTER_CATALOG')]));
 const points=load('roster-guides/points-data.js','WH_POINTS_CATALOG');
 const apiFor=text=>{const scope={window:{},URL,URLSearchParams};vm.runInNewContext(text,scope);return scope.window.WHArmyRosterContext;};
 const physical=(catalog,id,instanceId)=>{const matches=catalog.units.filter(unit=>unit.id===id);assert.equal(matches.length,1,id+' exact canonical identity');return{instanceId,canonicalUnit:matches[0]};};
@@ -64,9 +64,18 @@ function checks(text=source){
   for(const ids of positiveDG)groupCheck(api,dg,dgUnits,ids,2,ids.includes('plaguecaster')?'DG dual-role + Leader '+ids.join('+'):'DG two dual-role '+ids.join('+'));
   for(const pair of [['ancient-1','apothecary-1'],['apothecary-1','ancient-1']])groupCheck(api,sm,smUnits,pair,1,'two-Support negative '+pair.join('+'));
   for(const pair of [['captain-1','chaplain-1'],['chaplain-1','captain-1']])groupCheck(api,sm,smUnits,pair,1,'two-Leader negative '+pair.join('+'));
-  for(const ids of [['captain-1','judiciar-1'],['judiciar-1','captain-1']])groupCheck(api,sm,smUnits,ids,2,'Judiciar current Support + Leader '+ids.join('+'));
-  for(const ids of [['judiciar-1','ancient-1'],['ancient-1','judiciar-1']])groupCheck(api,sm,smUnits,ids,1,'Judiciar cannot occupy stale Leader role '+ids.join('+'));
-  groupCheck(api,sm,smUnits,['judiciar-1','judiciar-2'],1,'Judiciar physical copies remain Support cardinality');
+  for(const ids of [['captain-1','judiciar-1'],['judiciar-1','captain-1']])groupCheck(api,sm,smUnits,ids,2,'Judiciar Support alternative + Leader '+ids.join('+'));
+  for(const ids of [['judiciar-1','ancient-1'],['ancient-1','judiciar-1'],['judiciar-1','apothecary-1'],['apothecary-1','judiciar-1']])groupCheck(api,sm,smUnits,ids,2,'Judiciar Leader alternative + Support '+ids.join('+'));
+  groupCheck(api,sm,smUnits,['judiciar-1','judiciar-1'],1,'one physical Judiciar cannot fill both roles');
+  groupCheck(api,sm,smUnits,['judiciar-1','judiciar-2'],1,'dual-role does not bypass duplicate-canonical rejection');
+  for(const bookId of ['space-marines','dark-angels','blood-angels']){
+    const catalog=catalogs[bookId],judiciar=physical(catalog,'unit-judiciar',`${bookId}-judiciar`),relations=judiciar.canonicalUnit.relations;
+    for(const target of relations.canLead){const units=[physical(catalog,target.unitId,'body-1'),judiciar];groupCheck(api,catalog,units,[judiciar.instanceId],1,`${bookId} Judiciar Leader ${target.unitId}`);}
+    for(const target of relations.canSupport){const units=[physical(catalog,target.unitId,'body-1'),judiciar];groupCheck(api,catalog,units,[judiciar.instanceId],1,`${bookId} Judiciar Support ${target.unitId}`);}
+    const intercessorUnits=[physical(catalog,'unit-intercessor-squad','body-1'),judiciar,physical(catalog,'unit-apothecary',`${bookId}-apothecary`),physical(catalog,'unit-captain',`${bookId}-captain`)];
+    groupCheck(api,catalog,intercessorUnits,[judiciar.instanceId,`${bookId}-apothecary`],2,`${bookId} Intercessors + Judiciar Leader + Apothecary Support`);
+    groupCheck(api,catalog,intercessorUnits,[`${bookId}-captain`,judiciar.instanceId],2,`${bookId} Captain Leader + Judiciar Support`);
+  }
   groupCheck(api,sm,smUnits,['captain-1','ancient-1','apothecary-1'],2,'capacity two');
   groupCheck(api,sm,smUnits,['captain-1','captain-2'],1,'duplicate canonical character');
   groupCheck(api,sm,smUnits,['body-1'],0,'self attachment');
@@ -159,7 +168,8 @@ async function browserChecks(){
       });
       console.log('BROWSER two-Support negative + stale mapping PASS '+pair.join('+'));
     }
-    const cases=[...positiveSM.filter(ids=>ids.length===2).map(ids=>({catalog:sm,units:smUnits,ids})),...positiveDG.map(ids=>({catalog:dg,units:dgUnits,ids}))];
+    const dualRoleBrowserCases=['space-marines','dark-angels','blood-angels'].flatMap(bookId=>{const catalog=catalogs[bookId],units=[physical(catalog,'unit-intercessor-squad','body-1'),physical(catalog,'unit-judiciar',`${bookId}-judiciar`),physical(catalog,'unit-apothecary',`${bookId}-apothecary`),physical(catalog,'unit-captain',`${bookId}-captain`)];return[[`${bookId}-judiciar`,`${bookId}-apothecary`],[`${bookId}-captain`,`${bookId}-judiciar`]].map(ids=>({catalog,units,ids}));});
+    const cases=[...positiveSM.filter(ids=>ids.length===2).map(ids=>({catalog:sm,units:smUnits,ids})),...positiveDG.map(ids=>({catalog:dg,units:dgUnits,ids})),...dualRoleBrowserCases];
     for(const [index,item] of cases.entries()){
       const record=recordFor(item.catalog,item.units,'ra03-positive-'+index);
       await withRecord(record,async page=>{
@@ -187,7 +197,7 @@ async function browserChecks(){
       assert.deepEqual((await saved(page,record.id)).attachments,{'body-2':['ancient-2']},'detach isolated physical copy');
     });
     assert.deepEqual(errors,[],'role-assignment browser exceptions');
-    console.log('RA03 browser: PASS (11 scenarios; editor, stale mapping, reload, detach/reattach, physical isolation)');
+    console.log('RA03 browser: PASS (17 scenarios; editor, stale mapping, reload, detach/reattach, physical isolation)');
   }finally{await browser.close();await new Promise(resolve=>server.close(resolve));}
 }
 checks();console.log('RA03 feasible attachment role QA: PASS (canonical + points catalogs; direct/inverse; capacity; physical IDs; Datasmith)');

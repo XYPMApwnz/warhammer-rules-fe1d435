@@ -101,9 +101,7 @@ export function createEffectiveMfmArmyProjection(bookId){
       const source=unitRefs.get(record.sourceUnitReferenceId)?.armyBinding;if(source?.bindingStatus!=='BOUND'||!ids.has(source.armyUnitId))continue;
       for(const targetRefId of record.targetUnitReferenceIds){const target=unitRefs.get(targetRefId)?.armyBinding;if(target?.bindingStatus==='BOUND'&&ids.has(target.armyUnitId))base.push({role,sourceId:source.armyUnitId,targetId:target.armyUnitId,mfmRecordId:record.id});}
     }
-    const supportPairs=new Set(base.filter(edge=>edge.role==='support').map(edge=>`${edge.sourceId}\0${edge.targetId}`));
-    const resolvedBase=base.filter(edge=>edge.role!=='leader'||!supportPairs.has(`${edge.sourceId}\0${edge.targetId}`));
-    const result=new Map(resolvedBase.map(edge=>[edgeKey(edge),edge])),allowed=armyRelationOverlays[bookId]||new Set();
+    const result=new Map(base.map(edge=>[edgeKey(edge),edge])),allowed=armyRelationOverlays[bookId]||new Set();
     for(const edge of armyEdges){const key=edgeKey(edge);if(result.has(key))continue;if(allowed.has(key))result.set(key,{...edge,overlaySource:'ARMY_EFFECTIVE_MODEL'});else if(!retiredArmyRelationEdges.has(key))throw new Error(`${bookId}: unclassified Army relation outside effective MFM: ${key.replaceAll('\0',' / ')}`);}
     for(const key of allowed)if(!result.has(key))throw new Error(`${bookId}: required Army-domain relation overlay is absent: ${key.replaceAll('\0',' / ')}`);
     return [...result.values()].sort((a,b)=>edgeKey(a).localeCompare(edgeKey(b)));

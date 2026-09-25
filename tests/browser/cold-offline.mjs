@@ -78,7 +78,8 @@ async function openPhonePopup(page,name){
   assert.equal(await card.getAttribute('data-popup-term'),termId,`${name} popup lost its canonical term identity`);
   const labelledBy=await card.getAttribute('aria-labelledby');
   assert.ok(labelledBy,`${name} popup lost its accessible title binding`);
-  assert.equal(await card.locator(`:scope > h3#${labelledBy}`).count(),1,`${name} popup title binding does not resolve`);
+  const escapedLabelledBy=await page.evaluate(value=>CSS.escape(value),labelledBy);
+  assert.equal(await card.locator(`:scope > h3#${escapedLabelledBy}`).count(),1,`${name} popup title binding does not resolve`);
   assert.equal(await card.locator(':scope > h3 + :is(p, div, dl)').count(),1,`${name} popup lost its structured rule content`);
   await card.locator('[data-popup-close]').click();
   await card.waitFor({state:'hidden'});
@@ -238,8 +239,12 @@ try{
     assert.match(deathwingWargear,/Watcher in the Dark/,'Dark Angels Phone Wargear ability regressed');
     assert.match(deathwingWargear,/These abilities apply only while the corresponding wargear is equipped\./,'Dark Angels Phone Wargear note regressed');
     const glossaryTrigger=page.locator('#unit-deathwing-knights button[data-term]').first();
+    const glossaryTermId=await glossaryTrigger.getAttribute('data-term');
     await glossaryTrigger.click();
-    const glossaryLink=page.locator('#popupLayer .term-popup .popup-actions a[href*="/glossary/index.html#"]').last();
+    const glossaryPopup=page.locator('#popupLayer .term-popup:not([hidden])').last();
+    await glossaryPopup.waitFor({state:'visible'});
+    assert.equal(await glossaryPopup.getAttribute('data-popup-term'),glossaryTermId,'Popup glossary action lost its canonical source identity');
+    const glossaryLink=glossaryPopup.locator('.popup-actions a.popup-action').filter({hasText:/^Glossary entry$/});
     await glossaryLink.waitFor({state:'visible'});
     assert.equal(new URL(await glossaryLink.getAttribute('href'),page.url()).pathname,'/glossary/index.html','Popup glossary action lost its canonical destination');
     await Promise.all([page.waitForURL(url=>url.pathname==='/glossary/index.html'),glossaryLink.click()]);
@@ -365,6 +370,7 @@ try{
   try{
     const {page,errors}=await observedPage(compatibleRosterContext);
     const ecFixture=createRosterFixture({catalog:ecCatalog,pointsCatalog:ecPoints,id:'multi-detachment-compatible',name:'Multi-detachment Compatible Rules fixture',detachmentIds:['carnival-of-excess','frenzied-host'],factionPrefix:'Chaos - ',units:[{datasheetId:'unit-lord-exultant',instanceId:'parsed-unit-1',enhancementIds:['enhancement-dark-blessings','enhancement-euphoric-crown']}]}),rosterRecord=ecFixture.record,[carnival,frenzied]=ecFixture.detachments,foreign=ecCatalog.detachments.find(item=>item.id==='court-of-the-phoenician');
+    const hasCanonicalTitle=(headings,canonicalTitle)=>headings.some(title=>title.toLocaleLowerCase('en-US').startsWith(canonicalTitle.toLocaleLowerCase('en-US')));
     assert.ok(foreign,'canonical foreign Detachment control');
     await page.goto(`${origin}/books/emperors-children/reader.html#unit-lord-exultant`);
     await page.locator('#unit-lord-exultant .related-rules-trigger').click();
@@ -379,12 +385,12 @@ try{
     await page.locator('.full-related-content').waitFor({state:'visible'});
     assert.equal(await page.locator('.full-related-filter').count(),0,'Desktop roster mode still exposes a Detachment selector');
     const desktopHeadings=await page.locator('.full-related-content .related-detachment:visible > h2').allTextContents();
-    assert.ok(desktopHeadings.some(title=>title.startsWith(carnival.title))&&desktopHeadings.some(title=>title.startsWith(frenzied.title)),'Desktop roster union omitted a roster Detachment');
-    assert.ok(!desktopHeadings.some(title=>title.startsWith(foreign.title)),'Desktop roster union included a foreign Detachment');
+    assert.ok(hasCanonicalTitle(desktopHeadings,carnival.title)&&hasCanonicalTitle(desktopHeadings,frenzied.title),'Desktop roster union omitted a roster Detachment');
+    assert.ok(!hasCanonicalTitle(desktopHeadings,foreign.title),'Desktop roster union included a foreign Detachment');
     assert.equal(desktopHeadings.filter(title=>title==='Core Stratagems').length,1,'Desktop roster union duplicated Core Stratagems');
     await page.locator('[data-kind="enhancements"]').click();
     const enhancementHeadings=await page.locator('.full-related-content .related-detachment:visible > h2').allTextContents();
-    assert.ok(enhancementHeadings.some(title=>title.startsWith(carnival.title))&&enhancementHeadings.some(title=>title.startsWith(frenzied.title)),'Desktop roster union omitted an assigned Enhancement group');
+    assert.ok(hasCanonicalTitle(enhancementHeadings,carnival.title)&&hasCanonicalTitle(enhancementHeadings,frenzied.title),'Desktop roster union omitted an assigned Enhancement group');
     const snapshot=await page.evaluate(()=>{const related=window.DG_APP.relatedRules;return related.snapshot(related.layer.querySelector('[data-kind="enhancements"]'));});
     assert.equal(snapshot.detachment,'all','Roster snapshot persisted a manual Detachment');
     await page.locator('.related-rules-close').click();
@@ -400,8 +406,8 @@ try{
     await page.locator('.full-related-content').waitFor({state:'visible'});
     assert.equal(await page.locator('.full-related-filter').count(),0,'Responsive roster mode still exposes a Detachment selector');
     const phoneHeadings=await page.locator('.full-related-content .related-detachment:visible > h2').allTextContents();
-    assert.ok(phoneHeadings.some(title=>title.startsWith(carnival.title))&&phoneHeadings.some(title=>title.startsWith(frenzied.title)),'Responsive roster union omitted a roster Detachment');
-    assert.ok(!phoneHeadings.some(title=>title.startsWith(foreign.title)),'Responsive roster union included a foreign Detachment');
+    assert.ok(hasCanonicalTitle(phoneHeadings,carnival.title)&&hasCanonicalTitle(phoneHeadings,frenzied.title),'Responsive roster union omitted a roster Detachment');
+    assert.ok(!hasCanonicalTitle(phoneHeadings,foreign.title),'Responsive roster union included a foreign Detachment');
     assert.equal(phoneHeadings.filter(title=>title==='Core Stratagems').length,1,'Responsive roster union duplicated Core Stratagems');
     assert.deepEqual(errors,[],'Responsive roster Compatible Rules emitted an uncaught runtime error');
     const csmFixture=createRosterFixture({catalog:csmCatalog,pointsCatalog:csmPoints,id:'csm-publication-roster',name:'CSM publication fixture',detachmentId:'nightmare-hunt',factionPrefix:'Chaos - ',units:[{datasheetId:'unit-chaos-lord-with-jump-pack',instanceId:'parsed-unit-1'}]}),csmRosterRecord=csmFixture.record;
@@ -428,7 +434,8 @@ try{
     await control(page);
     const install=await page.evaluate(async()=>{const keys=await caches.keys(),cache=await caches.open(keys[0]),requests=await cache.keys();return{keys,urls:requests.map(request=>new URL(request.url).pathname+new URL(request.url).search)};});
     assert.equal(install.keys.length,1,'Fresh install must create exactly one current application cache');
-    assert.ok(install.urls.includes('/glossary/generated/glossary.en.js?v=tyranids-1'),'Fresh install omitted the active standalone Glossary script');
+    assert.ok(install.urls.includes('/glossary/v2/generated/index.en.js?v=1'),'Fresh install omitted the active Glossary V2 index');
+    assert.ok(install.urls.includes('/glossary/v2/runtime/glossary-v2-runtime.js?v=1'),'Fresh install omitted the active Glossary V2 runtime');
     assert.ok(install.urls.includes('/books/shared/rule-facts.js?v=5'),'Fresh install omitted the active Roster Guides Rule Facts script');
     for(const route of offlineMobileRoutes)assert.ok(install.urls.includes(route.url.slice(1)),`Fresh install omitted physical mobile route ${route.url}`);
     const diagramUrls=install.urls.filter(url=>url.startsWith('/books/core-rules/assets/diagrams/'));
@@ -453,9 +460,10 @@ try{
       await page.locator(`#${route.target}`).waitFor({state:'visible'});
     }
     await page.goto(`${origin}/glossary/index.html`,{waitUntil:'domcontentloaded'});
-    await page.waitForFunction(()=>window.WH40K_GLOSSARY?.get?.('core-characteristic-move')?.id==='core-characteristic-move'&&document.querySelector('.term-button:not(.load-more) strong')&&document.getElementById('termCount')?.textContent===String(window.WH40K_GLOSSARY.counts.terms));
-    assert.equal(await page.evaluate(()=>window.WH40K_GLOSSARY.get('core-characteristic-move')?.id),'core-characteristic-move','Standalone Glossary lost the canonical Move characteristic offline');
-    assert.equal(await page.locator('#termCount').textContent(),await page.evaluate(()=>String(window.WH40K_GLOSSARY.counts.terms)),'Standalone Glossary count does not reflect its loaded registry');
+    const offlineCoreGlossaryId='core::core-rule-02-05-keywords';
+    await page.waitForFunction(id=>window.WH40K_GLOSSARY?.get?.(id)?.id===id&&document.querySelector('.term-button:not(.load-more) strong')&&document.getElementById('termCount')?.textContent===String(window.WH40K_GLOSSARY.counts.standalone),offlineCoreGlossaryId);
+    assert.equal(await page.evaluate(id=>window.WH40K_GLOSSARY.get(id)?.id,offlineCoreGlossaryId),offlineCoreGlossaryId,'Standalone Glossary lost the canonical Core Keywords rule offline');
+    assert.equal(await page.locator('#termCount').textContent(),await page.evaluate(()=>String(window.WH40K_GLOSSARY.counts.standalone)),'Standalone Glossary count does not reflect its standalone V2 catalog');
     await page.goto(`${origin}/books/core-rules/reader/datasheets.html`,{waitUntil:'domcontentloaded'});
     await page.locator('main').waitFor({state:'visible'});
     assert.match(await page.locator('main').textContent(),/Datasheet/i,'Core Rules text is unavailable on first offline use');

@@ -164,7 +164,9 @@ for(const bookId of migratedBooks.keys()){
   assert.doesNotMatch(reader,/mobile\/mobile\.css|mobile\/mobile\.js|mobile\/phone-popup-controller\.js/,`${bookId}: canonical reader still loads the obsolete Phone content runtime`);
 }
 
-assert.match(read('books/shared/popup-content.js'),/term\.kind==='stratagem'\?term\.definition:term\.summary/);
+const popupContent=read('books/shared/popup-content.js');
+assert.match(popupContent,/paragraph\.textContent=term\.definition/,'popup must render the canonical Glossary V2 definition for non-profile entries');
+assert.doesNotMatch(popupContent,/term\.kind==='stratagem'\?term\.definition:term\.summary/,'popup must not retain the retired Stratagem-only definition branch');
 assert.match(read('glossary/tools/build-glossary.mjs'),/kind:term\.kind/);
 const sharedMobileBuilder=read('books/shared/tools/build-mobile-stubs.mjs');
 assert.match(sharedMobileBuilder,/data-canonical-reader="\.\.\/reader\.html"/);

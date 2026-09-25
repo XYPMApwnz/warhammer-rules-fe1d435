@@ -120,7 +120,7 @@ try {
   assert.ok(renegade.refs.some(ref=>ref.id==='chaos-space-marines-detachment-rule-slaves-to-none'));
   assert.ok(renegade.unit.effects.some(effect=>effect.source?.id==='renegade-warband'));
   assert.equal(renegade.unit.effective.abilities.some(ability=>ability.id==='chaos-space-marines-ability-dark-pacts'||ability.title==='Dark Pacts'),false);
-  assert.deepEqual(renegade.darkPactPresentation,[{hidden:true,display:'none',height:0}]);
+  assert.deepEqual(renegade.darkPactPresentation,[],'removed Dark Pacts ability must not retain a hidden presentation artifact');
   assert.match(renegade.active,new RegExp(`${renegadeTitle} → Dark Pacts removed`));
   assert.doesNotMatch(renegade.active,/Slaves to None/);await shot(renegadeView.page,'09-detachment-class-c');await renegadeView.context.close();
 

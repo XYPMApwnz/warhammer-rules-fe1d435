@@ -81,12 +81,13 @@ const checks=[...sharedBuildBooks.map(id=>['books/shared/tools/build-army-book.m
 for(const [script,args] of checks){const result=spawnSync(process.execPath,[script,...args],{cwd:root,encoding:'utf8',maxBuffer:16*1024*1024});assert(result.status===0,'Generated check failed: '+script+' '+args.join(' ')+'\n'+(result.stderr||result.stdout));}
 assert(status()===before,'Wiring checks changed working tree');
 const resolveConsumerAsset=(consumer,asset)=>{const resolved=new URL(asset,`https://offline.local/${consumer}`);return `.${resolved.pathname}${resolved.search}`;};
-const exactScriptAsset=(consumer,pattern,label)=>{const source=fs.readFileSync(path.join(root,...consumer.split('/')),'utf8'),match=source.match(pattern);assert(match,`${label} active script URL is missing`);return resolveConsumerAsset(consumer,match[1]);};
-const glossaryRuntimeUrl=exactScriptAsset('glossary/index.html',/<script src="(\.\/generated\/glossary\.en\.js\?v=[^"]+)"/, 'Standalone Glossary');
+const exactScriptAsset=(consumer,pattern,label)=>{const source=fs.readFileSync(path.join(root,...consumer.split('/')),'utf8'),match=source.match(pattern);assert(match,`${label} active script URL is missing`);return match?resolveConsumerAsset(consumer,match[1]):null;};
+const glossaryIndexUrl=exactScriptAsset('glossary/index.html',/<script src="(\.\/v2\/generated\/index\.en\.js\?v=[^"]+)"/, 'Standalone Glossary V2 index');
+const glossaryRuntimeUrl=exactScriptAsset('glossary/index.html',/<script src="(\.\/v2\/runtime\/glossary-v2-runtime\.js\?v=[^"]+)"/, 'Standalone Glossary V2 runtime');
 const ruleFactsRuntimeUrl=exactScriptAsset('roster-guides/index.html',/<script src="(\.\.\/books\/shared\/rule-facts\.js\?v=[^"]+)"/, 'Roster Guides Rule Facts');
 const coreDiagramPaths=readPublishedCoreDiagramInventory({root}),coreDiagramUrls=coreDiagramPaths.map(value=>`./${value}`),cachedCoreDiagramUrls=shell.urls.filter(url=>url.startsWith('./books/core-rules/assets/diagrams/'));
 assertCoreDiagramInventoriesEqual(coreDiagramUrls,cachedCoreDiagramUrls,'APP_SHELL Core Rules diagrams');
-const firstInstallRequired=[glossaryRuntimeUrl,ruleFactsRuntimeUrl,...coreDiagramUrls],runtimeOnlyRequired=firstInstallRequired.filter(url=>!urls.has(url));
+const firstInstallRequired=[glossaryIndexUrl,glossaryRuntimeUrl,ruleFactsRuntimeUrl,...coreDiagramUrls].filter(Boolean),runtimeOnlyRequired=firstInstallRequired.filter(url=>!urls.has(url));
 assert(runtimeOnlyRequired.length===0,'Required first-install assets are absent from exact APP_SHELL URLs: '+runtimeOnlyRequired.join(', '));
 if(failures.length){console.error('Repository wiring consistency: FAIL');for(const failure of failures)console.error('- '+failure);process.exit(1);}
 console.log('Repository wiring consistency: PASS');console.log('Books: '+books.length+'; APP_SHELL URLs: '+shell.urls.length+'; cache revision: '+revision.revision+'; generated checks: '+checks.length+'.');console.log('First-install required URLs: '+firstInstallRequired.length+'; runtime-only required: '+runtimeOnlyRequired.length+'; network-only required: 0; Core Rules diagrams: '+coreDiagramUrls.length+'.');

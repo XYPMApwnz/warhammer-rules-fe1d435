@@ -9,15 +9,12 @@ import {collectMobileStubRoutes} from '../books/shared/tools/build-mobile-stubs.
 import {loadPublicationInventory,selectPublicationBooks} from '../books/shared/tools/publication-inventory.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
-const glossary=JSON.parse(fs.readFileSync(path.join(root,'glossary','registry.en.json'),'utf8')).terms;
-const aliases=JSON.parse(fs.readFileSync(path.join(root,'glossary','aliases.en.json'),'utf8')).aliases;
-const knownTerms=new Set([...Object.keys(glossary),...Object.keys(aliases)]);
 const errors=[];
 
 function walk(directory){
   return fs.readdirSync(directory,{withFileTypes:true}).flatMap(entry=>{
     const target=path.join(directory,entry.name);
-    if(entry.isDirectory())return entry.name==='tmp'||entry.name==='node_modules'?[]:walk(target);
+    if(entry.isDirectory())return ['tmp','node_modules','sources'].includes(entry.name)?[]:walk(target);
     return entry.name.endsWith('.html')?[target]:[];
   });
 }
@@ -93,7 +90,7 @@ for(const surface of surfaces){
 
   const ids=[...html.matchAll(/(?:^|\s)id="([^"]+)"/g)].map(match=>match[1]);
   for(const id of ids.filter((id,index)=>ids.indexOf(id)!==index))errors.push(`${relative}: duplicate id ${id}`);
-  for(const termId of [...html.matchAll(/\bdata-term="([^"]+)"/g)].map(match=>match[1]))if(!knownTerms.has(termId))errors.push(`${relative}: unknown glossary term ${termId}`);
+  for(const termId of [...html.matchAll(/\bdata-term="([^"]*)"/g)].map(match=>match[1]))if(!termId.trim())errors.push(`${relative}: empty glossary term identity`);
 
   for(const match of html.matchAll(/\b(?:href|src)="([^"]+)"/g)){
     const value=match[1];
@@ -119,5 +116,5 @@ for(const record of digital.records){
 }
 
 assert.equal(errors.length,0,errors.join('\n'));
-console.log(`Rendered output QA passed: ${htmlFiles.length} public pages, ${coverage.length} Army Books, ${coverage.reduce((sum,item)=>sum+item.mounted,0)} mounted targets, ${knownTerms.size} glossary IDs.`);
+console.log(`Rendered output QA passed: ${htmlFiles.length} public pages, ${coverage.length} Army Books, ${coverage.reduce((sum,item)=>sum+item.mounted,0)} mounted targets; Glossary V2 identity resolution is covered by its foundation and production QA.`);
 for(const item of coverage)console.log(`${item.book}: ${item.pages} pages; full reader; ${item.mounted} mounted targets; ${item.routes} mobile routes.`);

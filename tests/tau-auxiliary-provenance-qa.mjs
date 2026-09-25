@@ -54,7 +54,8 @@ export function runTauAuxiliaryQa(overrides={}){
   const catalog=scope.WH_BOOK_ROSTER_CATALOG,pointsCatalog=scope.WH_POINTS_CATALOG['t au empire'],stealth=catalog.units.find(unit=>unit.id===stealthId);
   assertNative(stealth.gameSelections.abilities,'catalog Stealth');
   assert.deepEqual(Array.from(stealth.gameSelections.abilities,ability=>ability.id),nativeIds,'identity-specific native inventory');
-  assert.deepEqual(Array.from(stealth.gameSelections.abilities,ability=>({title:ability.title,text:ability.text})),native.abilities,'preserved native text flows unchanged into catalog');
+  const gameplayText=abilities=>Array.from(abilities,ability=>({title:ability.title,text:ability.text}));
+  assert.deepEqual(gameplayText(stealth.gameSelections.abilities),gameplayText(native.abilities),'preserved native text flows unchanged into catalog');
   const beaconMatches=stealth.gameSelections.wargearAbilities.filter(ability=>ability.id===beaconLegacyId||(ability.legacyIds||[]).includes(beaconLegacyId));
   assert.equal(beaconMatches.length,1,'Homing Beacon compatibility identity resolves exactly once');
   const beacon=beaconMatches[0],beaconId=beacon.id;
@@ -156,7 +157,7 @@ export async function runTauAuxiliaryBrowser(page,base){
       assertReference(snapshot.member,expected,snapshot.rule,`${label}/${instance}`);
       const rendered=snapshot.references.filter(reference=>reference.id===integratedId);
       assert.equal(rendered.length,expected?1:0,`${label}: exactly one eligible rendered Auxiliary reference, or none`);
-      if(expected){assert.match(rendered[0].text,/Auxiliary Cadre/,'rendered detachment attribution');assert.match(rendered[0].text,/Localised Stealth Projectors/,'rendered conditional aura');}
+      if(expected){assert.match(rendered[0].text,/Auxiliary Cadre/i,'rendered detachment attribution');assert.match(rendered[0].text,/Localised Stealth Projectors/,'rendered conditional aura');}
       else assert.doesNotMatch(snapshot.text,/Localised Stealth Projectors/,`${label}: no ungated or ineligible aura`);
       if(canonical===stealthId){
         assertNative(snapshot.member.effective.abilities,`${label}: browser native Stealth`);

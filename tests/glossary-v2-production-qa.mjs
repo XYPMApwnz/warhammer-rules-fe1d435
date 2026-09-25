@@ -368,7 +368,7 @@ for(const file of fs.readdirSync(path.join(root,'books/core-rules/reader')).filt
 }
 
 const viewer=read('glossary/viewer.js'),viewerHtml=read('glossary/index.html');
-assert.match(viewer,/const terms=api\.standaloneEntries\(\)/,'main browse must use standalone entries');
+assert.match(viewer,/const terms=api\.standaloneEntries\(\{bookId\}\)/,'main browse must use contextual standalone entries');
 assert.match(viewer,/source=query\?allTerms:terms/,'search must include scoped children');
 assert.match(viewerHtml,/v2\/generated\/index\.en\.js/);
 assert.match(viewerHtml,/v2\/runtime\/glossary-v2-runtime\.js/);

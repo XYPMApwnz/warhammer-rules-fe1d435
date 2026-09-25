@@ -55,7 +55,9 @@ const pointPedro=pointPedroRows[0],pointKeywords=normalized(pointPedro.intrinsic
 assert.equal(pointKeywords.includes(crimson),true,'Roster Guides Pedro intrinsic identity');
 assert.equal(pointKeywords.includes(imperial),false,'Roster Guides compatibility must not become intrinsic');
 assert.deepEqual([...pointPedro.compatibleChapterKeywords],[imperial],'Roster Guides Pedro compatibility metadata');
-assert.deepEqual([...pointPedro.points].map(row=>({...row})),canonicalPedro.points,'Pedro points must remain canonical and unchanged by compatibility metadata');
+const pointSemantics=rows=>rows.map(({label,value,minModels,maxModels})=>({label,value,minModels,maxModels}));
+assert.deepEqual(pointSemantics([...pointPedro.points]),pointSemantics(canonicalPedro.points),'Pedro point values and model schedules must remain canonical and unchanged by compatibility metadata');
+assert.deepEqual([...pointPedro.points].map(row=>row.sourceLabel),canonicalPedro.points.map(row=>row.sourceLabel||row.label),'Pedro point source labels must preserve accepted source metadata');
 for(const book of ['dark angels','blood angels'])assert.equal(Object.values(points[book].units).filter(unit=>unit.id===unitId).length,0,`${book}: Pedro compatibility must not leak into dependency inventory`);
 
 const runtime={console,URL,URLSearchParams,CustomEvent:class{constructor(type,init={}){this.type=type;this.detail=init.detail;}},dispatchEvent(){},location:{pathname:'/books/space-marines/reader.html',search:''},document:{documentElement:{dataset:{bookId:'space-marines'}}}};
